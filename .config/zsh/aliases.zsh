@@ -3,9 +3,6 @@
 #nvim
 alias {v,vim}=nvim
 
-# dotfiles config alias
-alias config='/usr/bin/git --git-dir=/home/ben/dotfiles --work-tree=/home/ben'
-
 # .dotfiles git alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dotfiles-private='/usr/bin/git --git-dir=$HOME/.dotfiles-private --work-tree=$HOME'
