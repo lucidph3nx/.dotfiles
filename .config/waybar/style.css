@@ -1,0 +1,98 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 18px;
+  font-weight: 500; 
+}
+
+window#waybar {
+  background-color: #282c34;
+  color: #abb2bf;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window {
+  font-family: JetBrainsMono Nerd Font, monospace;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces {
+  padding: 0px 0px 0px 0px;
+}
+
+#workspaces button.focused {
+  background-color: #98c379;
+  color: #282c34;
+}
+
+#workspaces button.urgent {
+  background-color: #cc241d;
+}
+
+#scratchpad {
+    background-color: #61afef;
+    color: #282c34;
+    padding: 2px 5px;
+}
+
+#mode {
+
+  padding-left: 0px;
+  padding-right: 50px;
+  
+  background-color: #98c379;
+  color: #3b4252;
+}
+
+widget > * {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.modules-left > widget:first-child > * {
+  margin-left: 0px;
+}
+
+.modules-left > widget:last-child > * {
+  margin-right: 18px;
+}
+
+.modules-right > widget > * {
+  padding: 0 12px;
+  margin-left: 0;
+  margin-right: 0;
+  color: #282828;
+  background-color: #98c379;
+}
+
+@keyframes blink {
+  to {
+    color: #98c379;
+  }
+}
+
+#tray {
+  background: #000000;
+}
+
+#pulseaudio {
+    padding-right: 0px;
+}
+
+label:focus {
+  background-color: #282828;
+}
+
+tooltip {
+  background: #504945;
+}
+
+tooltip label {
+  color: #98c379;
+}
+

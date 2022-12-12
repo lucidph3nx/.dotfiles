@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Prospect Mail
+Exec="/opt/Prospect Mail/prospect-mail" %U
+Terminal=false
+Type=Application
+Icon=ms-outlook
+StartupWMClass=prospect-mail
+Comment=Unofficial desktop client for Microsoft Outlook
+Categories=Mail;Network;Office;

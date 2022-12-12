@@ -1,0 +1,268 @@
+# one day
+# xwayland disable
+# NOTE: last time I tried, steam client wouldnt start..@.
+
+# Mouse 
+focus_follows_mouse no
+
+# Keyboard
+# modifier keys
+set $super Mod4
+set $alt Mod1
+
+# other keys that need good names
+set $pageup Prior
+set $pagedown Next
+
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Applications
+set $terminal kitty 
+set $browser firefox
+set $menu wofi --show drun | xargs swaymsg exec --
+set $runmenu wofi --show run | xargs swaymsg exec --
+
+# Scripts
+# add an item to the notion shopping list
+set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css | xargs zsh ~/scripts/add-item-to-shopping-list.sh
+
+# Monitors
+# main (super-ultrawide) monitor
+output DP-3 {
+pos 0,0
+mode 5120x1440
+}
+# virtual monitor
+# still needs to be created with:
+# swaymsg create_output HEADLESS-1
+# currently cannot be unplugged, have to wait for sway1.8
+output HEADLESS-1 {
+pos 5120,0
+mode 1920x1080
+}
+
+# Wallpaper
+set $wallpapers $HOME/Pictures/wallpapers/current
+output * bg $(find $wallpapers -type f | shuf -n 1) fill
+
+# Styling
+font pango:JetBrainsMono Nerd Font Medium, NotoSans, NotoEmoji 10
+default_border pixel 2
+hide_edge_borders none
+# class                 border  backgr. text    indicator child_border
+client.focused          #98c379 #98c379 #000000 #98c379 #98c379
+client.focused_inactive #61afef #5c6370 #ffffff #98c379 #5c6370
+client.unfocused        #61afef #5c6370 #abb2bf #98c379 #5c6370
+# general gaps on windows
+gaps inner 5
+# solo window should be centered
+smart_gaps inverse_outer
+# solo window should be 50% width horizontal padding for single window, make life bearable with a super-ultrawide
+gaps horizontal 1280 
+
+### Key bindings
+
+## Basics
+bindsym --to-code {
+    # Start a terminal
+    $super+Return exec $terminal
+    # Kill focused window
+    $super+q kill
+    # Start your launcher
+    $super+Space exec $menu
+    $super+d exec $runmenu
+    # Reload the configuration file
+    $super+Shift+c reload
+    # screenshot tool
+    # pipe to wl-copy due to this issue
+    # https://github.com/flameshot-org/flameshot/issues/2063
+    $super+Shift+s exec flameshot gui -r | wl-copy
+    # emoji picker
+    $super+period exec emote
+    # browser
+    $super+Shift+b exec $browser
+
+    # add something to shopping list
+    $super+Shift+l exec $addtoshoppinglist
+}
+
+## Media Controls
+bindsym --to-code {
+    XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    XF86AudioPlay exec playerctl play-pause
+    XF86AudioStop exec playerctl stop
+    XF86AudioNext exec playerctl next
+    XF86AudioPrev exec playerctl previous
+}
+
+# Exit menu
+set $mode_exit "\
+    <span> Lock</span> <span foreground='#e06c75'>(<b>l</b>)</span> \
+    <span> Logout</span> <span foreground='#e06c75'>(<b>L</b>)</span> \
+    <span>ﰇ Reboot</span> <span foreground='#e06c75'>(<b>r</b>)</span> \
+    <span>襤 Shutdown</span> <span foreground='#e06c75'>(<b>s</b>)</span>"
+mode --pango_markup $mode_exit {
+    bindsym --to-code {
+        l exec swaylock, mode "default"
+        Shift+l exec loginctl terminate-user $USER, mode "default"
+        r exec systemctl reboot, mode "default"
+        s exec systemctl poweroff, mode "default"
+
+    }
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# activate Exit menu
+bindsym --to-code $super+Shift+e mode $mode_exit
+
+
+
+#
+# Moving around:
+#
+    # Move your focus around
+    bindsym $super+$left focus left
+    bindsym $super+$down focus down
+    bindsym $super+$up focus up
+    bindsym $super+$right focus right
+    # Or use $super+[up|down|left|right]
+    bindsym $super+Left focus left
+    bindsym $super+Down focus down
+    bindsym $super+Up focus up
+    bindsym $super+Right focus right
+
+    # Move the focused window with the same, but add Shift
+    bindsym $super+Shift+$left move left
+    bindsym $super+Shift+$down move down
+    bindsym $super+Shift+$up move up
+    bindsym $super+Shift+$right move right
+    # Ditto, with arrow keys
+    bindsym $super+Shift+Left move left
+    bindsym $super+Shift+Down move down
+    bindsym $super+Shift+Up move up
+    bindsym $super+Shift+Right move right
+#
+# Workspaces:
+#
+    # Switch to workspace
+    bindsym $super+1 workspace number 1
+    bindsym $super+2 workspace number 2
+    bindsym $super+3 workspace number 3
+    bindsym $super+4 workspace number 4
+    bindsym $super+5 workspace number 5
+    bindsym $super+6 workspace number 6
+    bindsym $super+7 workspace number 7
+    bindsym $super+8 workspace number 8
+    bindsym $super+9 workspace number 9
+    bindsym $super+0 workspace number 10
+    # Move focused container to workspace
+    bindsym $super+Shift+1 move container to workspace number 1
+    bindsym $super+Shift+2 move container to workspace number 2
+    bindsym $super+Shift+3 move container to workspace number 3
+    bindsym $super+Shift+4 move container to workspace number 4
+    bindsym $super+Shift+5 move container to workspace number 5
+    bindsym $super+Shift+6 move container to workspace number 6
+    bindsym $super+Shift+7 move container to workspace number 7
+    bindsym $super+Shift+8 move container to workspace number 8
+    bindsym $super+Shift+9 move container to workspace number 9
+    bindsym $super+Shift+0 move container to workspace number 10
+    # Note: workspaces can have any name you want, not just numbers.
+    # We just use 1-10 as the default.
+
+
+# next new window either horizontal or vertical
+bindsym $super+b splith
+bindsym $super+v splitv
+
+# switch all windows to tabbed, vertical or horizontal
+bindsym $super+t layout tabbed
+bindsym $super+w layout splitv
+bindsym $super+s layout splith
+
+# Make the current focus fullscreen
+bindsym $super+f fullscreen
+
+# floating windows
+floating_modifier $super normal
+# Toggle current window to floating
+bindsym $super+Shift+space floating toggle
+# Swap focus between the tiling area and the floating area
+bindsym $super+$alt+space focus mode_toggle
+
+# Move focus to the parent container
+bindsym $super+a focus parent
+
+# Scratchpad:
+bindsym $super+Shift+minus move scratchpad
+bindsym $super+minus scratchpad show
+
+# Resizing containers:
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# Enter resize mode
+bindsym $super+r mode "resize"
+
+# use waybar instead of swaybar
+bar {
+    swaybar_command waybar
+}
+
+# home automation
+bindsym $super+$pageup exec zsh /home/ben/scripts/hass-open-blinds.sh
+bindsym $super+$pagedown exec zsh /home/ben/scripts/hass-close-blinds.sh
+
+# Application specific settings
+for_window [app_id="pavucontrol"] floating enable, resize set width 500 px height 600 px
+for_window [instance="plexamp"] resize set width 7 ppt
+for_window [app_id="gedit"] floating enable, resize set width 800 px height 600 px
+for_window [app_id="org.gnome.Calculator"] floating enable, resize set width 300 px height 500 px
+
+# Notification Daemon
+exec swaync
+
+# Toggle control center
+bindsym $super+Shift+n exec swaync-client -t -sw
+
+# ensure dbus is aware of env vars (for flameshot)
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+# might need this for screen sharing obs?
+exec --no-startup-id /usr/lib/xdg-desktop-portal -r 
+
+# gui app permissions using gnome tool (needed for things like input-remapper)
+exec /usr/bin/lxpolkit
+
+#autoload imput remapper
+exec input-remapper-control --command autoload
+
+# Many apps have tray icons, so wait for tray to be ready before starting them
+exec "gdbus wait --session org.kde.StatusNotifierWatcher && dex -a -s ~/.config/autostart/"
+
+include /etc/sway/config.d/*
