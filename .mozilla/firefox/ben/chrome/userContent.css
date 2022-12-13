@@ -1,0 +1,10 @@
+/* webpage specific css */
+
+/* for debugging, if no valid style detected, this file does not appear in style editor */
+/* body {background-color: red} */
+
+/* gmail checker extension */
+@-moz-document url-prefix("moz-extension://c99d673f-ecaa-4c0f-8dc7-f7da7a89e166") {
+  .share-button { display: none !important }
+
+}
