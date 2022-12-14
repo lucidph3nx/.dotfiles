@@ -84,10 +84,10 @@ bindsym --to-code {
     # emoji picker
     $super+period exec emote
     # browser
-    $super+Shift+b exec $browser
+    $alt+b exec $browser
 
     # add something to shopping list
-    $super+Shift+l exec $addtoshoppinglist
+    $alt+l exec $addtoshoppinglist
 }
 
 ## Media Controls
