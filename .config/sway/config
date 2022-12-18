@@ -80,7 +80,8 @@ bindsym --to-code {
     # screenshot tool
     # pipe to wl-copy due to this issue
     # https://github.com/flameshot-org/flameshot/issues/2063
-    $super+Shift+s exec flameshot gui -r | wl-copy
+    $super+Shift+s exec flameshot gui 
+    #-r | wl-copy
     # emoji picker
     $super+period exec emote
     # browser
