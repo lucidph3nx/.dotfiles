@@ -18,55 +18,12 @@ k9s:
   currentContext: tinfoilforest
   currentCluster: tinfoilforest
   clusters:
-    on-prem-prod-takanini:
-      namespace:
-        active: wealth
-        lockFavorites: false
-        favorites:
-        - all
-        - networking
-        - wealth
-        - shared
-      view:
-        active: ctx
-      featureGates:
-        nodeShell: false
-      shellPod:
-        image: busybox:1.35.0
-        command: []
-        args: []
-        namespace: default
-        limits:
-          cpu: 100m
-          memory: 100Mi
-      portForwardAddress: localhost
-    on-prem-uat-takanini:
-      namespace:
-        active: wealth
-        lockFavorites: false
-        favorites:
-        - all
-        - networking
-        - wealth
-        - shared
-      view:
-        active: pods
-      featureGates:
-        nodeShell: false
-      shellPod:
-        image: busybox:1.35.0
-        command: []
-        args: []
-        namespace: default
-        limits:
-          cpu: 100m
-          memory: 100Mi
-      portForwardAddress: localhost
     tinfoilforest:
       namespace:
         active: all
         lockFavorites: false
         favorites:
+        - pihole
         - all
         - default
         - networking

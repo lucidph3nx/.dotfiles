@@ -16,14 +16,21 @@ map('v', '<leader>p', '"+p', opts)
 map('v', '<leader>P', '"+P', opts)
 
 -- when something is highlighted, move up and down with J & K
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+map("v", "J", ":m '>+1<CR>gv=gv", opts)
+map("v", "K", ":m '<-2<CR>gv=gv", opts)
+
+map("n", "<C-k>", "<cmd>cnext<CR>", opts)
+map("n", "<C-j>", "<cmd>cprev<CR>", opts)
+map("n", "<leader>k", "<cmd>lnext<CR>", opts)
+map("n", "<leader>j", "<cmd>lprev<CR>", opts)
 
 -- switch to new session in tmux
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+map("n", "<C-f>", "<cmd>!tmux neww tmux-sessionizer<CR>", opts)
 
 -- start a replace with current word
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
+-- same but with current visual selection
+-- cant get this to work, TODO
+--map("v", "<leader>s", [[y<Esc>:%s/<C-R>"//g<Left><Left>]], opts)
 -- make current file executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+map("n", "<leader>x", "<cmd>!chmod +x %<CR>", opts)
