@@ -28,3 +28,4 @@ alias sbt=sbt -ivy "$XDG_DATA_HOME"/ivy2 -sbt-dir "$XDG_DATA_HOME"/sbt
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 # wget
 alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
+
