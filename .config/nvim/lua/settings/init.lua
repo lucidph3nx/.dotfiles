@@ -1,5 +1,9 @@
 local set = vim.opt
 
+set.relativenumber = true
+set.nu = true
+set.cursorline = true
+
 set.tabstop = 2
 set.shiftwidth = 2
 set.expandtab = true
@@ -11,7 +15,6 @@ set.wrap = false
 
 set.swapfile = false
 set.backup = false
-set.undodir = vim.env.XDG_CONFIG_HOME .. "/nvim/.undo"
 set.undofile = true
 
 set.hlsearch = false
@@ -22,9 +25,7 @@ set.termguicolors = true
 set.splitbelow = true
 set.splitright = true
 set.scrolloff = 8
- 
-set.relativenumber = true
-set.nu = true
-set.cursorline = true
-set.smartindent = true
+
+set.updatetime = 50
+
 
