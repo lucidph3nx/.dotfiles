@@ -14,7 +14,7 @@ c.tabs.padding = {
 
 # ranger as browser file picker
 config.set("fileselect.handler", "external")
-config.set("fileselect.single_file.command", ['kitty', '--class', 'ranger,ranger', '-e', 'ranger', '--choosefile', '{}'])
-config.set("fileselect.multiple_files.command", ['kitty', '--class', 'ranger,ranger', '-e', 'ranger', '--choosefile', '{}'])
+config.set("fileselect.single_file.command", ['kitty', '--class', 'ranger-filepicker', '-e', 'ranger', '--choosefile', '{}'])
+config.set("fileselect.multiple_files.command", ['kitty', '--class', 'ranger-filepicker', '-e', 'ranger', '--choosefiles', '{}'])
 
 config.load_autoconfig()
