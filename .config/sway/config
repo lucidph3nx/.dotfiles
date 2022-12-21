@@ -75,6 +75,9 @@ bindsym --to-code {
     # Start your launcher
     $super+Space exec $menu
     $super+d exec $runmenu
+    # Start password manager via wofi
+    # note, dependencies rofi-rbw, rbw, wtype
+    $super+p exec rofi-rbw
     # Reload the configuration file
     $super+Shift+c reload
     # screenshot tool
@@ -103,11 +106,11 @@ bindsym --to-code {
 }
 
 # Exit menu
-set $mode_exit "\
+set $mode_exit "<span> \
     <span> Lock</span> <span foreground='#e06c75'>(<b>l</b>)</span> \
     <span> Logout</span> <span foreground='#e06c75'>(<b>L</b>)</span> \
     <span>ﰇ Reboot</span> <span foreground='#e06c75'>(<b>r</b>)</span> \
-    <span>襤 Shutdown</span> <span foreground='#e06c75'>(<b>s</b>)</span>"
+    <span>襤 Shutdown</span> <span foreground='#e06c75'>(<b>s</b>)</span> </span>"
 mode --pango_markup $mode_exit {
     bindsym --to-code {
         l exec swaylock, mode "default"
@@ -239,15 +242,14 @@ bindsym $super+$pagedown exec zsh /home/ben/scripts/hass-close-blinds.sh
 
 # Application specific settings
 for_window [app_id="pavucontrol"] floating enable, resize set width 500 px height 600 px
-for_window [instance="plexamp"] resize set width 7 ppt
+for_window [instance="plexamp"] floating enable, resize set width 300 px height 600 px
 for_window [app_id="gedit"] floating enable, resize set width 800 px height 600 px
 for_window [app_id="org.gnome.Calculator"] floating enable, resize set width 300 px height 500 px
 for_window [app_id="ranger-filepicker"] floating enable, resize set width 900 px height 600 px
 
 # Notification Daemon
 exec swaync
-
-# Toggle control center
+# Toggle notification sidebar
 bindsym $super+Shift+n exec swaync-client -t -sw
 
 # ensure dbus is aware of env vars (for flameshot)

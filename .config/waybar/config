@@ -7,7 +7,7 @@
 
   "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["custom/office-temp", "tray", "pulseaudio", "custom/pulseaudio-cycle", "custom/notification", "clock"],
+  "modules-right": ["tray", "pulseaudio", "custom/pulseaudio-cycle", "custom/office-temp", "custom/notification", "clock"],
   
   "sway/workspaces": {
     "all-outputs": false,
