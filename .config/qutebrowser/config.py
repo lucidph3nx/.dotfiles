@@ -1,4 +1,4 @@
-c.colors.webpage.darkmode.enabled = True
+#c.colors.webpage.darkmode.enabled = True
 
 # font
 c.fonts.default_size = "10pt"
