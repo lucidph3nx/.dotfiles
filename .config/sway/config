@@ -1,30 +1,35 @@
 # one day
 # xwayland disable
-# NOTE: last time I tried, steam client wouldnt start..@.
+# NOTE: last time I tried, steam client wouldnt start...
 
 # Mouse 
 focus_follows_mouse no
 
 # Keyboard
-# modifier keys
+# super for "window actions"
 set $super Mod4
+# alt for "application actions"
 set $alt Mod1
 
-# other keys that need good names
+# other keys that need better names
 set $pageup Prior
 set $pagedown Next
-
-# Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
+# Window Utilities 
+set $emojipicker emote
+set $screenshotutil flameshot gui 
 
 # Applications
 set $terminal kitty 
 set $browser firefox
 set $menu wofi --show drun | xargs swaymsg exec --
 set $runmenu wofi --show run | xargs swaymsg exec --
+set $passwordmanager rofi-rbw
+# note, dependencies rofi-rbw, rbw, wtype
 
 # Scripts
 # add an item to the notion shopping list
@@ -33,16 +38,16 @@ set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css 
 # Monitors
 # main (super-ultrawide) monitor
 output DP-3 {
-pos 0,0
-mode 5120x1440
+  pos 0,0
+  mode 5120x1440
 }
 # virtual monitor
 # still needs to be created with:
 # swaymsg create_output HEADLESS-1
 # currently cannot be unplugged, have to wait for sway1.8
 output HEADLESS-1 {
-pos 5120,0
-mode 1920x1080
+  pos 5120,0
+  mode 1920x1080
 }
 
 # Wallpaper
@@ -66,32 +71,21 @@ gaps horizontal 1280
 
 ### Key bindings
 
-## Basics
+## Window Bindings
 bindsym --to-code {
-    # Start a terminal
-    $super+Return exec $terminal
-    # Kill focused window
-    $super+q kill
-    # Start your launcher
-    $super+Space exec $menu
-    $super+d exec $runmenu
-    # Start password manager via wofi
-    # note, dependencies rofi-rbw, rbw, wtype
-    $super+p exec rofi-rbw
-    # Reload the configuration file
-    $super+Shift+c reload
-    # screenshot tool
-    # pipe to wl-copy due to this issue
-    # https://github.com/flameshot-org/flameshot/issues/2063
-    $super+Shift+s exec flameshot gui 
-    #-r | wl-copy
-    # emoji picker
-    $super+period exec emote
-    # browser
-    $alt+b exec $browser
+  $super+q kill
+  $super+Shift+c reload
+  $super+Shift+s exec $screenshotutil 
+  $super+period exec $emojipicker
+  $super+p exec $passwordmanager 
+}
 
-    # add something to shopping list
-    $alt+l exec $addtoshoppinglist
+## Application Bindings
+bindsym --to-code {
+  $alt+Return exec $terminal
+  $alt+Space exec $menu
+  $alt+b exec $browser
+  $alt+l exec $addtoshoppinglist
 }
 
 ## Media Controls
@@ -105,7 +99,7 @@ bindsym --to-code {
     XF86AudioPrev exec playerctl previous
 }
 
-# Exit menu
+## Exit menu
 set $mode_exit "<span> \
     <span> Lock</span> <span foreground='#e06c75'>(<b>l</b>)</span> \
     <span> Logout</span> <span foreground='#e06c75'>(<b>L</b>)</span> \
@@ -126,8 +120,6 @@ mode --pango_markup $mode_exit {
 # activate Exit menu
 bindsym --to-code $super+Shift+e mode $mode_exit
 
-
-
 #
 # Moving around:
 #
@@ -136,22 +128,11 @@ bindsym --to-code $super+Shift+e mode $mode_exit
     bindsym $super+$down focus down
     bindsym $super+$up focus up
     bindsym $super+$right focus right
-    # Or use $super+[up|down|left|right]
-    bindsym $super+Left focus left
-    bindsym $super+Down focus down
-    bindsym $super+Up focus up
-    bindsym $super+Right focus right
-
     # Move the focused window with the same, but add Shift
     bindsym $super+Shift+$left move left
     bindsym $super+Shift+$down move down
     bindsym $super+Shift+$up move up
     bindsym $super+Shift+$right move right
-    # Ditto, with arrow keys
-    bindsym $super+Shift+Left move left
-    bindsym $super+Shift+Down move down
-    bindsym $super+Shift+Up move up
-    bindsym $super+Shift+Right move right
 #
 # Workspaces:
 #
@@ -185,11 +166,6 @@ bindsym --to-code $super+Shift+e mode $mode_exit
 bindsym $super+b splith
 bindsym $super+v splitv
 
-# switch all windows to tabbed, vertical or horizontal
-bindsym $super+t layout tabbed
-bindsym $super+w layout splitv
-bindsym $super+s layout splith
-
 # Make the current focus fullscreen
 bindsym $super+f fullscreen
 
@@ -217,12 +193,6 @@ mode "resize" {
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
     bindsym $right resize grow width 10px
-
-    # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -260,10 +230,10 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # might need this for screen sharing obs?
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r 
 
-# gui app permissions using gnome tool (needed for things like input-remapper)
+# gui app permissions (needed for things like input-remapper)
 exec /usr/bin/lxpolkit
 
-#autoload imput remapper
+# autoload imput remapper
 exec input-remapper-control --command autoload
 
 # Many apps have tray icons, so wait for tray to be ready before starting them
