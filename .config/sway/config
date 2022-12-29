@@ -38,20 +38,20 @@ set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css 
 # Monitors
 # main (super-ultrawide) monitor
 output DP-3 {
-  pos 0,0
-  mode 5120x1440
+pos 0,0
+mode 5120x1440
 }
 # virtual monitor
 # still needs to be created with:
 # swaymsg create_output HEADLESS-1
 # currently cannot be unplugged, have to wait for sway1.8
 output HEADLESS-1 {
-  pos 5120,0
-  mode 1920x1080
+pos 5120,0
+mode 1920x1080
 }
 
 # Wallpaper
-set $wallpapers $HOME/Pictures/wallpapers/current
+set $wallpapers $HOME/pictures/wallpapers/current
 output * bg $(find $wallpapers -type f | shuf -n 1) fill
 
 # Styling
