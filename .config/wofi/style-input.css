@@ -1,0 +1,61 @@
+#window {
+    background-color: transparent;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    animation: fadeIn;
+    animation-duration: 0.1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#outer-box {
+    background-color: #282C34;
+    box-shadow: 0px 0px 5px 0 #0F0F0F;
+}
+
+#inner-box {
+    color: #5c6370;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+#input {
+    color: #abb2bf;
+    border: 2px solid #98c379;
+    background-color: #282C34;
+    padding: 6px;
+    margin: 15px;
+    margin-bottom: 15px; /* style-input.css ONLY */
+    font-size: 16px;
+    border-radius: 0px;
+}
+
+#input > image.left {
+  -gtk-icon-transform:scaleX(0);
+}
+
+#entry {
+    padding: 7px;
+    margin: 0px 5px 0px 5px;
+}
+
+
+#entry:selected {
+    background-color: #61afef;
+}
+     
+#text:selected {
+    color: #000000;
+}
+
+#text {
+    font-size: 16px;
+    padding: 7px;
+    color: #abb2bf;
+} 
+
+#img {
+    padding: 4px;
+}
