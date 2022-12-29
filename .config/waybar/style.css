@@ -9,8 +9,6 @@
 window#waybar {
   background-color: #282c34;
   color: #abb2bf;
-  transition-property: background-color;
-  transition-duration: 0.5s;
 }
 
 window {
@@ -34,17 +32,22 @@ window#waybar.hidden {
   background-color: #cc241d;
 }
 
+#workspaces button:hover {
+  transition-duration: 0s;
+  box-shadow: none;
+  background: transparent;
+  color: #282c34;
+}
+
 #scratchpad {
-    background-color: #61afef;
-    color: #282c34;
-    padding: 2px 5px;
+  background-color: #61afef;
+  color: #282c34;
+  padding: 2px 5px;
 }
 
 #mode {
   padding-left: 10px;
   padding-right: 10px;
-  /* padding-left: 0px; */
-  /* padding-right: 50px; */
   background-color: #98c379;
   color: #3b4252;
 }

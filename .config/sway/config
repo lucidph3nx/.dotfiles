@@ -37,18 +37,18 @@ set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css 
 
 # Monitors
 # main (super-ultrawide) monitor
-output DP-3 {
-pos 0,0
-mode 5120x1440
-}
-# virtual monitor
-# still needs to be created with:
-# swaymsg create_output HEADLESS-1
-# currently cannot be unplugged, have to wait for sway1.8
-output HEADLESS-1 {
-pos 5120,0
-mode 1920x1080
-}
+# output DP-3 {
+#   pos 0,0
+#   mode 5120x1440
+# }
+# # virtual monitor
+# # still needs to be created with:
+# # swaymsg create_output HEADLESS-1
+# # currently cannot be unplugged, have to wait for sway1.8
+# output HEADLESS-1 {
+#   pos 5120,0
+#   mode 1920x1080
+# }
 
 # Wallpaper
 set $wallpapers $HOME/pictures/wallpapers/current
@@ -235,6 +235,18 @@ exec /usr/bin/lxpolkit
 
 # autoload imput remapper
 exec input-remapper-control --command autoload
+
+# GTK theming
+set $gnome-schema "org.gnome.desktop.interface"
+seat seat0 xcursor_theme Breeze 24
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Adwaita'
+    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+    gsettings set $gnome-schema cursor-theme 'Breeze'
+    gsettings set $gnome-schema cursor-size '24'
+    gsettings set $gnome-schema gtk-application-prefer-dark-theme true
+}
+
 
 # Many apps have tray icons, so wait for tray to be ready before starting them
 exec "gdbus wait --session org.kde.StatusNotifierWatcher && dex -a -s ~/.config/autostart/"
