@@ -1,4 +1,5 @@
 #c.colors.webpage.darkmode.enabled = True
+config.source('themes/onedark.py')
 
 # font
 c.fonts.default_size = "10pt"
