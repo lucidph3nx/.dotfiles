@@ -85,6 +85,7 @@ bindsym --to-code {
   $alt+Return exec $terminal
   $alt+Space exec $menu
   $alt+b exec $browser
+  $alt+q exec qutebrowser
   $alt+l exec $addtoshoppinglist
 }
 
@@ -136,6 +137,7 @@ bindsym --to-code $super+Shift+e mode $mode_exit
 #
 # Workspaces:
 #
+    bindsym $super+Tab workspace back_and_forth
     # Switch to workspace
     bindsym $super+1 workspace number 1
     bindsym $super+2 workspace number 2

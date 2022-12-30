@@ -1,4 +1,5 @@
 #c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.preferred_color_scheme = "dark"
 config.source('themes/onedark.py')
 
 # font

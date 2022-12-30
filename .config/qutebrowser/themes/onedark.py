@@ -53,7 +53,7 @@ c.colors.completion.category.border.top = bg_default
 c.colors.completion.category.border.bottom = bg_default
 
 # Foreground color of the selected completion item.
-c.colors.completion.item.selected.fg = fg_default
+c.colors.completion.item.selected.fg = fg_selection
 
 # Background color of the selected completion item.
 c.colors.completion.item.selected.bg = bg_selection
