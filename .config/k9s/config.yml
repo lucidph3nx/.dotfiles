@@ -28,7 +28,7 @@ k9s:
         - default
         - networking
       view:
-        active: pods
+        active: helmrelease
       featureGates:
         nodeShell: false
       shellPod:

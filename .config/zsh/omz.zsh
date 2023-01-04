@@ -16,6 +16,7 @@ plugins=(
   history
 	kubectl
 	asdf
+  vi-mode
 )
 
 # source
