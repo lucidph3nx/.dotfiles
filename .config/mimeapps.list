@@ -1,3 +1,4 @@
 
 [Default Applications]
 inode/directory=ranger.desktop
+application/pdf=org.pwmt.zathura.desktop

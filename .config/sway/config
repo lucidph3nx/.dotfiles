@@ -26,15 +26,17 @@ set $screenshotutil flameshot gui
 # Applications
 set $terminal kitty 
 set $browser firefox
+set $filebrowser $terminal ranger
 set $menu wofi --show drun | xargs swaymsg exec --
 set $runmenu wofi --show run | xargs swaymsg exec --
 set $passwordmanager rofi-rbw
+set $musicplayer $terminal ncmpcpp
 # note, dependencies rofi-rbw, rbw, wtype
 
 # Scripts
 # add an item to the notion shopping list
 set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css | xargs zsh ~/scripts/add-item-to-shopping-list.sh
-
+set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
 # Monitors
 # main (super-ultrawide) monitor
 # output DP-3 {
@@ -86,7 +88,10 @@ bindsym --to-code {
   $alt+Space exec $menu
   $alt+b exec $browser
   $alt+q exec qutebrowser
+  $alt+f exec $filebrowser
+  $alt+m exec $musicplayer
   $alt+l exec $addtoshoppinglist
+  $alt+Shift+l exec $openshoppinglist
 }
 
 ## Media Controls
@@ -237,6 +242,10 @@ exec /usr/bin/lxpolkit
 
 # autoload imput remapper
 exec input-remapper-control --command autoload
+
+# mpd and mpd-mpris
+#exec mpd 
+#exec sleep 1 && mpd-mpris
 
 # GTK theming
 set $gnome "org.gnome.desktop.interface"
