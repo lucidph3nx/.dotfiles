@@ -3,7 +3,6 @@
   "layer": "top",
   "position": "top",
   "height": 25,
-  
 
   "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "mpd"],
   "modules-center": ["sway/window"],
@@ -80,7 +79,7 @@
         "notification": "<span foreground='#cc241d'><sup></sup></span>",
         "none": "",
         "dnd-notification": "<span foreground='#cc241d'><sup></sup></span>",
-        "dnd-none": "",
+        "dnd-none": ""
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -88,6 +87,6 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  },
+  }
 }
 

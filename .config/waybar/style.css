@@ -34,8 +34,9 @@ window#waybar.hidden {
 
 #workspaces button:hover {
   transition-duration: 0s;
-  box-shadow: none;
-  background: transparent;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background: #61afef;
   color: #282c34;
 }
 
