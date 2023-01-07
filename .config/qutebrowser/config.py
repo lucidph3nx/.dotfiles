@@ -1,4 +1,12 @@
-#c.colors.webpage.darkmode.enabled = True
+# homepage
+c.url.start_pages = ['about:blank']
+c.url.default_page = 'about:blank'
+c.colors.webpage.bg = "#282c34"
+
+# search engine
+c.url.searchengines = { 'DEFAULT': 'https://google.com/search?hl=en&q={}' }
+
+# theming
 c.colors.webpage.preferred_color_scheme = "dark"
 config.source('themes/onedark.py')
 
