@@ -20,7 +20,7 @@ k9s:
   clusters:
     tinfoilforest:
       namespace:
-        active: all
+        active: default
         lockFavorites: false
         favorites:
         - pihole
@@ -28,7 +28,7 @@ k9s:
         - default
         - networking
       view:
-        active: deploy
+        active: pods
       featureGates:
         nodeShell: false
       shellPod:

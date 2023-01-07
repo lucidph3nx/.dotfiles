@@ -1,5 +1,8 @@
 # --- Aliases ---
 
+# preserve env when using sudo
+alias sudo='sudo -E -s'
+
 #nvim
 alias {v,vim}=nvim
 
@@ -7,6 +10,10 @@ alias {v,vim}=nvim
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dotfiles-private='/usr/bin/git --git-dir=$HOME/.dotfiles-private --work-tree=$HOME'
 
+alias ds='dotfiles status'
+alias da='dotfiles add'
+alias dc='dotfiles commit'
+alias dp='dotfiles push'
 
 # kubectl in a docker container for legacy jarden on prem k8s
 alias kop="~/code/dev-tools/kubectl-1.3.7-docker/kubectl.sh"
