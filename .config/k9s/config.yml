@@ -20,7 +20,7 @@ k9s:
   clusters:
     tinfoilforest:
       namespace:
-        active: all
+        active: default
         lockFavorites: false
         favorites:
         - pihole

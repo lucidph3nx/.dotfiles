@@ -52,6 +52,11 @@ set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-Lis
 #   mode 1920x1080
 # }
 
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
 # Wallpaper
 set $wallpapers $HOME/pictures/wallpapers/current
 output * bg $(find $wallpapers -type f | shuf -n 1) fill
