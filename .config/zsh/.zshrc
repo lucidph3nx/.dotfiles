@@ -8,7 +8,7 @@ if [[ -r "${XDG_CACHE_HOME}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 fi
 
 # add to path
-eval export PATH="${PATH}:/home/ben/.local/scripts/"
+eval export PATH="${PATH}:$HOME/.local/scripts/"
 
 # source brew if on macos
 if [[ "$OSTYPE" == "darwin"* ]]; then

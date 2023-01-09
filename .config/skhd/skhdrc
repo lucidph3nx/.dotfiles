@@ -7,7 +7,7 @@ cmd - j : yabai -m window --focus south
 cmd - k : yabai -m window --focus north
 cmd - l : yabai -m window --focus east
 
-# switching spaces
+# switching spaces - NOTE: doesnt work with sip enabled, ive mapped keys in karabiner instead
 cmd - z : yabai -m space --focus recent
 cmd - 1 : yabai -m space --focus 1
 cmd - 2 : yabai -m space --focus 2
