@@ -7,6 +7,13 @@ cmd - j : yabai -m window --focus south
 cmd - k : yabai -m window --focus north
 cmd - l : yabai -m window --focus east
 
+# move (warp) windows
+cmd + shift - h : yabai -m window --warp west
+cmd + shift - j : yabai -m window --warp south
+cmd + shift - k : yabai -m window --warp north
+cmd + shift - l : yabai -m window --warp east
+
+
 # switching spaces - NOTE: doesnt work with sip enabled, ive mapped keys in karabiner instead
 cmd - z : yabai -m space --focus recent
 cmd - 1 : yabai -m space --focus 1
