@@ -10,6 +10,10 @@ fi
 # add to path
 eval export PATH="${PATH}:/home/ben/.local/scripts/"
 
+# source brew if on macos
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # ENVS
 # --- Environment Variables
