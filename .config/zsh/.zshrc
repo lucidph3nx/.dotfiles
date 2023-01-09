@@ -22,11 +22,6 @@ source $XDG_CONFIG_HOME/zsh/secrets.zsh
 source $XDG_CONFIG_HOME/zsh/omz.zsh
 source $XDG_CONFIG_HOME/zsh/p10k.zsh
 
-# plugins
-# sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # --- utils
 source $XDG_CONFIG_HOME/zsh/utils.zsh
 

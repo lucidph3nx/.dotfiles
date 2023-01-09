@@ -16,9 +16,9 @@ plugins=(
   history
 	kubectl
 	asdf
-  vi-mode
   zsh-autosuggestions
   zsh-syntax-highlighting
+  vi-mode
 )
 
 # source
