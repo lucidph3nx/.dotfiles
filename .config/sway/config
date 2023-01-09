@@ -20,7 +20,7 @@ set $up k
 set $right l
 
 # Window Utilities 
-set $emojipicker emote
+set $emojipicker bemoji -t
 set $screenshotutil flameshot gui 
 
 # Applications
