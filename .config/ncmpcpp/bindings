@@ -30,6 +30,8 @@ def_key "="
     volume_up
 
 # some handy key shortcuts
+def_key "d"
+  delete_playlist_items
 def_key "v"
   show_visualizer
 def_key "f"
