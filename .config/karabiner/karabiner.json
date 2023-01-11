@@ -67,7 +67,7 @@
                                 "from": { "key_code": "1",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "1",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
@@ -79,7 +79,7 @@
                                 "from": { "key_code": "2",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "2",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
@@ -91,7 +91,7 @@
                                 "from": { "key_code": "3",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "3",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
@@ -103,7 +103,7 @@
                                 "from": { "key_code": "4",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "4",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
@@ -115,7 +115,7 @@
                                 "from": { "key_code": "5",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "5",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
@@ -127,7 +127,7 @@
                                 "from": { "key_code": "6",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "6",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
@@ -139,7 +139,7 @@
                                 "from": { "key_code": "7",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "7",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
@@ -151,7 +151,7 @@
                                 "from": { "key_code": "8",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "8",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
@@ -163,7 +163,7 @@
                                 "from": { "key_code": "9",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "9",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
@@ -175,7 +175,7 @@
                                 "from": { "key_code": "0",
                                           "modifiers": { "mandatory": ["command"]}},
                                 "to": { "key_code": "0",
-                                          "modifiers": [ "control" ]},
+                                          "modifiers": [ "option" ]},
                                 "type": "basic"
                             }
                         ]
