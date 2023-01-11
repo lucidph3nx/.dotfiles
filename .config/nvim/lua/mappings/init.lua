@@ -15,6 +15,10 @@ map('n', '<leader>P', '"+P', opts)
 map('v', '<leader>p', '"+p', opts)
 map('v', '<leader>P', '"+P', opts)
 
+-- Helix inspired redo
+map('n', 'U', '<C-r>', opts)
+
+
 -- when something is highlighted, move up and down with J & K
 map("v", "J", ":m '>+1<CR>gv=gv", opts)
 map("v", "K", ":m '<-2<CR>gv=gv", opts)
