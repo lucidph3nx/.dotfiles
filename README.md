@@ -23,7 +23,7 @@ I plan to try to keep them able to apply to both, but might need to split them o
 ## MacOS Details
 
 - os: [macos ventura](https://en.wikipedia.org/wiki/MacOS_Ventura)
-- wm: [yabai](https://swaywm.org/)
+- wm: [yabai](https://github.com/koekeishiya/yabai)
 - shell: [zsh](https://www.zsh.org/)
 - editor: [neovim](https://neovim.io/)
 - terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
