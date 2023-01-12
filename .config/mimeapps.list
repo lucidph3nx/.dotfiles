@@ -2,3 +2,4 @@
 [Default Applications]
 inode/directory=ranger.desktop
 application/pdf=org.pwmt.zathura.desktop
+x-scheme-handler/obsidian=obsidian.desktop
