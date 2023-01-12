@@ -21,7 +21,7 @@ set $right l
 
 # Window Utilities 
 set $emojipicker bemoji -t
-set $screenshotutil flameshot gui 
+set $screenshotutil flameshot gui -r | wl-copy
 
 # Applications
 set $terminal kitty 
@@ -31,6 +31,7 @@ set $menu wofi --show drun | xargs swaymsg exec --
 set $runmenu wofi --show run | xargs swaymsg exec --
 set $passwordmanager rofi-rbw
 set $musicplayer $terminal ncmpcpp
+set $obsidian xdg-open obsidian://vault/obsidian
 # note, dependencies rofi-rbw, rbw, wtype
 
 # Scripts
@@ -39,18 +40,19 @@ set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css 
 set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
 # Monitors
 # main (super-ultrawide) monitor
-# output DP-3 {
-#   pos 0,0
-#   mode 5120x1440
-# }
-# # virtual monitor
-# # still needs to be created with:
-# # swaymsg create_output HEADLESS-1
-# # currently cannot be unplugged, have to wait for sway1.8
-# output HEADLESS-1 {
-#   pos 5120,0
-#   mode 1920x1080
-# }
+output DP-3 {
+  pos 0,0
+  mode 5120x1440
+}
+# virtual monitor
+output HEADLESS-1 {
+  pos 5120,0
+  mode 2560x1440
+}
+# add headless monitor
+bindsym $super+Shift+m exec swaymsg create_output HEADLESS-1
+# remove headless monitor (not always HEADLESS-1 since names arent reused for session)
+bindsym $super+m exec swaymsg output $(swaymsg -t get_outputs | jq -r '.[1]'.name) unplug
 
 exec swayidle -w \
          timeout 600 'swaylock -f -c 000000' \
@@ -97,6 +99,7 @@ bindsym --to-code {
   $alt+m exec $musicplayer
   $alt+l exec $addtoshoppinglist
   $alt+Shift+l exec $openshoppinglist
+  $alt+o exec $obsidian
 }
 
 ## Media Controls
