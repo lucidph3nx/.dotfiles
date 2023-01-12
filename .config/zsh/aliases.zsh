@@ -14,7 +14,7 @@ alias ds='dotfiles status'
 alias da='dotfiles add'
 alias dc='dotfiles commit'
 alias dp='dotfiles push'
-
+alias dP='dotfiles pull --rebase'
 # kubectl in a docker container for legacy jarden on prem k8s
 alias kop="~/code/dev-tools/kubectl-1.3.7-docker/kubectl.sh"
 
