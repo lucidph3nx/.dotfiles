@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
   use 'theprimeagen/harpoon'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive' -- git integraton
+  use 'lewis6991/gitsigns.nvim' -- inline git commit history
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- comment visually selected regions with "gc"
