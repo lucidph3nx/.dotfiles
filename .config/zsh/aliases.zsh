@@ -36,3 +36,5 @@ alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 # wget
 alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
 
+# terminal calculator
+alias c=calc
