@@ -1,6 +1,4 @@
-require('bootstrap')
-require('settings')
-require('mappings')
-require('plugins')
-require('nvim-tree-config')
-require('nvim-treesitter')
+-- i dont think i have this set up correctly, TODO
+--require('bootstrap')
+--require('plugins')
+require('lucidph3nx')
