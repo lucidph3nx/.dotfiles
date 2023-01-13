@@ -15,4 +15,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end
 })
 
-vim.keymap.set('n', '<leader>et', vim.cmd.NvimTreeToggle)
+vim.keymap.set('n', '<leader>et', vim.cmd.NvimTreeToggle, { desc = '[E]xplorer [T]oggle' })
+vim.keymap.set('n', '<leader>ef', vim.cmd.NvimTreeFindFile, { desc = '[E]xplorer [F]ind File' })
+vim.keymap.set('n', '<leader>ec', vim.cmd.NvimTreeCollapse, { desc = '[E]xplorer [C]ollapse Folders' })
+

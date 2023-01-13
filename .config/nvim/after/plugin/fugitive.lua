@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
+vim.keymap.set('n', '<leader>gs', vim.cmd.Git, { desc = '[G]it [S]tatus in Fugitive'})
 
 local fugitive_lucidph3nx = vim.api.nvim_create_augroup("fugitive_lucidph3nx", {})
 
