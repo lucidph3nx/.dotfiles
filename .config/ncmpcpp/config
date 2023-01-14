@@ -17,7 +17,7 @@ empty_tag_color = 7
 
 playlist_display_mode = "classic"
 song_list_format = "$5%t $R$5 %a   %l"
-
-current_item_prefix = "$5$r"
+current_item_prefix = $3$r
+current_item_inactive_column_prefix = $5$r
 
 media_library_primary_tag = album_artist
