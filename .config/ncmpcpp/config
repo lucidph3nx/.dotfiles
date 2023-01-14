@@ -20,3 +20,4 @@ song_list_format = "$5%t $R$5 %a   %l"
 
 current_item_prefix = "$5$r"
 
+media_library_primary_tag = album_artist
