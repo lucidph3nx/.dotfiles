@@ -55,8 +55,8 @@ bindsym $super+Shift+m exec swaymsg create_output HEADLESS-1
 bindsym $super+m exec swaymsg output $(swaymsg -t get_outputs | jq -r '.[1]'.name) unplug
 
 exec swayidle -w \
-         timeout 600 'swaylock -f -c 000000' \
-         timeout 900 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         timeout 1200 'swaylock -f -c 000000' \
+         timeout 1800 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock -f -c 000000'
 
 # Wallpaper
