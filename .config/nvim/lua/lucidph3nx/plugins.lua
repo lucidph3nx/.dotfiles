@@ -36,5 +36,6 @@ return require('packer').startup(function(use)
     }
   }
   use 'windwp/nvim-autopairs' -- automatically close brackets
+  use 'akinsho/toggleterm.nvim' -- terminal
 end)
 
