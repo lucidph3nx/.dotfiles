@@ -3,6 +3,11 @@ require('nvim-tree').setup({
        --disable the filtering out of dotfiles
         dotfiles = false
     },
+    git = {
+      enable = true,
+      ignore = false,
+      timeout = 500,
+    },
 })
 
 -- attempt at autoclose
