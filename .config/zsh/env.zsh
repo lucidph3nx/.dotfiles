@@ -1,6 +1,6 @@
 # History file
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
-export HIST_STAMPS="yyy-mm-dd"
+
 # editor
 export EDITOR=nvim
 # oh-my-zsh
