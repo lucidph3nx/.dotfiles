@@ -1,4 +1,17 @@
+local telescope = require('telescope')
 local builtin = require('telescope.builtin')
+
+telescope.setup {
+  pickers = {
+    find_files = {
+      hidden = true
+    },
+    grep_string = {
+      hidden = true
+    }
+  }
+}
+
 
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>st', builtin.git_files, { desc = '[S]earch [T]racked files (git)' })
