@@ -38,6 +38,15 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs' -- automatically close brackets
   use 'akinsho/toggleterm.nvim' -- terminal
   use 'norcalli/nvim-colorizer.lua' -- show hex colours etc
-  use 'github/copilot.vim'
+  --use 'github/copilot.vim'
+  use {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require "user.copilot"
+      end, 100)
+    end,
+  }
 end)
 
