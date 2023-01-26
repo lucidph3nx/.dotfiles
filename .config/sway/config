@@ -130,15 +130,23 @@ mode --pango_markup $mode_exit {
         Shift+l exec loginctl terminate-user $USER, mode "default"
         r exec systemctl reboot, mode "default"
         s exec systemctl poweroff, mode "default"
-
+        Escape mode "default"
     }
-    # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
 }
-# activate Exit menu
 bindsym --to-code $super+Shift+e mode $mode_exit
 
+## Application Launch Mode
+mode "QuickAppLaunch" {
+    bindsym --to-code {
+        b exec $browser, mode "default"
+        q exec qutebrowser, mode "default"
+        f exec $filebrowser, mode "default"
+        m exec $musicplayer, mode "default"
+        o exec $obsidian, mode "default"
+        Escape mode "default"
+    }
+}
+bindsym --to-code $super+a mode "QuickAppLaunch"
 #
 # Moving around:
 #
@@ -197,7 +205,7 @@ bindsym $super+Shift+space floating toggle
 bindsym $super+$alt+space focus mode_toggle
 
 # Move focus to the parent container
-bindsym $super+a focus parent
+#bindsym $super+a focus parent
 
 # Scratchpad:
 bindsym $super+Shift+minus move scratchpad
