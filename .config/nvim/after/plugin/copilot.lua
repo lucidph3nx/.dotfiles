@@ -27,7 +27,7 @@ require('copilot').setup({
 })
 
 -- suggestion keybindings for insert mode
-vim.keymap.set("i", "<CR>", function()
+vim.keymap.set("i", "<C-Enter>", function()
   vim.cmd.Copilot('suggestion accept')
 end, {desc = 'Accept suggestion'})
 
@@ -51,8 +51,8 @@ autocmd("BufWinEnter", {
     group = copilot_lucidph3nx,
     pattern = "*",
     callback = function()
-        -- only applies to files with filetype fugitive
-        if vim.bo.ft ~= "Bot" then
+        -- only applies to files with filename copilot.lua
+        if vim.fn.expand("%:t") ~= "copilot.lua" then
             return
         end
 
@@ -73,6 +73,16 @@ autocmd("BufWinEnter", {
 
         vim.keymap.set("n", "<CR>", function()
           vim.cmd.Copilot('panel accept')
+        end, opts)
+        
+        vim.keymap.set("n", "q", ":quit!<CR>", opts)
+
+        vim.keymap.set("n", "j", function()
+          vim.cmd.Copilot('panel next')
+        end, opts)
+
+        vim.keymap.set("n", "k", function()
+          vim.cmd.Copilot('panel prev')
         end, opts)
     end,
 })
