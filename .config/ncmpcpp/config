@@ -1,6 +1,6 @@
 ## options ##
 display_bitrate = yes
-
+user_interface = "alternative"
 
 ## visualiser ##
 visualizer_fifo_path = "/tmp/mpd.fifo"
