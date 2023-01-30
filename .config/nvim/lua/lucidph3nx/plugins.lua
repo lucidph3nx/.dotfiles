@@ -1,18 +1,18 @@
 local fn = vim.fn
 
 -- Automatically install packer
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 ---@diagnostic disable-next-line: missing-parameter
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
+    'git',
+    'clone',
+    '--depth',
+    '1',
+    'https://github.com/wbthomason/packer.nvim',
     install_path,
   }
-  print "Installing packer close and reopen Neovim..."
+  print 'Installing packer close and reopen Neovim...'
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -25,21 +25,21 @@ vim.cmd [[
 ]]
 
 -- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
+local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
   return
 end
 
 -- Have packer use a popup window
 packer.init {
-  -- snapshot = "july-24",
-  snapshot_path = fn.stdpath "config" .. "/snapshots",
+  -- snapshot = 'july-24',
+  snapshot_path = fn.stdpath 'config' .. '/snapshots',
   max_jobs = 50,
   display = {
     open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+      return require('packer.util').float { border = 'rounded' }
     end,
-    prompt_border = "rounded", -- Border style of prompt popups.
+    prompt_border = 'rounded', -- Border style of prompt popups.
   },
 }
 return require('packer').startup(function(use)
@@ -60,7 +60,7 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim' -- inline git commit history
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
-  use 'numToStr/Comment.nvim' -- comment visually selected regions with "gc"
+  use 'numToStr/Comment.nvim' -- comment visually selected regions with 'gc'
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -85,22 +85,15 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs' -- automatically close brackets
   use 'akinsho/toggleterm.nvim' -- terminal
   use 'norcalli/nvim-colorizer.lua' -- show hex colours etc
+  use 'epwalsh/obsidian.nvim'
   -- AI
   --use 'github/copilot.vim'
-  use {
-    "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require "user.copilot"
-      end, 100)
-    end,
-  }
+  use 'zbirenbaum/copilot.lua'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
-    require("packer").sync()
+    require('packer').sync()
   end
 end)
 
