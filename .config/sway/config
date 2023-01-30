@@ -264,10 +264,6 @@ exec /usr/bin/lxpolkit
 # autoload imput remapper
 exec input-remapper-control --command autoload
 
-# mpd and mpd-mpris
-#exec mpd 
-#exec sleep 1 && mpd-mpris
-
 # GTK theming
 set $gnome "org.gnome.desktop.interface"
 seat seat0 xcursor_theme Breeze 24
@@ -283,6 +279,7 @@ exec_always {
 
 
 # Many apps have tray icons, so wait for tray to be ready before starting them
+# Then autostart all XDG autostart .desktop files using dex
 exec "gdbus wait --session org.kde.StatusNotifierWatcher && dex -a -s ~/.config/autostart/"
 
 include /etc/sway/config.d/*
