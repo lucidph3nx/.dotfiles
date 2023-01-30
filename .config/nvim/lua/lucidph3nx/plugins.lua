@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs' -- automatically close brackets
   use 'akinsho/toggleterm.nvim' -- terminal
   use 'norcalli/nvim-colorizer.lua' -- show hex colours etc
-  use 'epwalsh/obsidian.nvim'
+  -- use 'epwalsh/obsidian.nvim'
   -- AI
   --use 'github/copilot.vim'
   use 'zbirenbaum/copilot.lua'
