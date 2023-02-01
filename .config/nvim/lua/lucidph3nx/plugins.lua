@@ -63,6 +63,7 @@ return require('packer').startup(function(use)
   use 'numToStr/Comment.nvim' -- comment visually selected regions with 'gc'
   use {
     'VonHeikemen/lsp-zero.nvim',
+    branch = 'v1.x',
     requires = {
       -- LSP Support
       {'neovim/nvim-lspconfig'},
