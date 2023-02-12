@@ -27,7 +27,7 @@ require('copilot').setup({
 })
 
 -- suggestion keybindings for insert mode
-vim.keymap.set("i", "<C-Enter>", function()
+vim.keymap.set("i", "<C-L>", function()
   vim.cmd.Copilot('suggestion accept')
 end, {desc = 'Accept suggestion'})
 

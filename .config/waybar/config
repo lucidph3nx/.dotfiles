@@ -62,8 +62,8 @@
         "1": "蓼" 
     },
     "exec": "pactl --format=json list sinks | jq -cM --unbuffered \"map(select(.name == \\\"$(pactl get-default-sink)\\\"))[0] | {alt:(.\\\"index\\\")}\"",
-     "exec-if": "sleep 0.5", // Give enough time for `pactl get-default-sink` to update
-     "on-click": "pactl --format=json list sinks short | jq -cM --unbuffered \"[.[].name] | .[((index(\\\"$(pactl get-default-sink)\\\")+1)%length)]\" | xargs pactl set-default-sink"
+    "exec-if": "sleep 0.5", // Give enough time for `pactl get-default-sink` to update
+    "on-click": "pactl --format=json list sinks short | jq -cM --unbuffered \"[.[].name] | .[((index(\\\"$(pactl get-default-sink)\\\")+1)%length)]\" | xargs pactl set-default-sink"
     },
  
   "clock": {

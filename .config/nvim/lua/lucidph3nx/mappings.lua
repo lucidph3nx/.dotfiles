@@ -23,8 +23,11 @@ map('n', 'U', '<C-r>', opts)
 map("v", "J", ":m '>+1<CR>gv=gv", opts)
 map("v", "K", ":m '<-2<CR>gv=gv", opts)
 
+-- quickfix list
+map("n", "<leader>q", "<cmd>copen<CR>", opts)
 map("n", "<C-k>", "<cmd>cnext<CR>", opts)
 map("n", "<C-j>", "<cmd>cprev<CR>", opts)
+-- quickfix on current window
 map("n", "<leader>k", "<cmd>lnext<CR>", opts)
 map("n", "<leader>j", "<cmd>lprev<CR>", opts)
 
@@ -41,3 +44,4 @@ map("n", "<leader>x", "<cmd>!chmod +x %<CR>", opts)
 -- encrypt file with sops
 map("n", "<leader>en", "<cmd>!sops --encrypt --in-place %<CR>", opts)
 map("n", "<leader>de", "<cmd>!sops --decrypt --in-place %<CR>", opts)
+
