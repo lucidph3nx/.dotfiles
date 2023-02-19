@@ -39,21 +39,26 @@ set $obsidian xdg-open obsidian://vault/obsidian
 # add an item to the notion shopping list
 set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css | xargs zsh ~/scripts/add-item-to-shopping-list.sh
 set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
-# Monitors
-# main (super-ultrawide) monitor
-output DP-3 {
-  pos 0,0
-  mode 5120x1440
-}
-# virtual monitor
-output HEADLESS-1 {
-  pos 5120,0
-  mode 2560x1440
-}
-# add headless monitor
-bindsym $super+Shift+m exec swaymsg create_output HEADLESS-1
-# remove headless monitor (not always HEADLESS-1 since names arent reused for session)
-bindsym $super+m exec swaymsg output $(swaymsg -t get_outputs | jq -r '.[1]'.name) unplug
+
+
+# differnt configs per hostname
+include ~/.config/sway/$(hostname)/*
+
+# # Monitors
+# # main (super-ultrawide) monitor
+# output DP-3 {
+#   pos 0,0
+#   mode 5120x1440
+# }
+# # virtual monitor
+# output HEADLESS-1 {
+#   pos 5120,0
+#   mode 2560x1440
+# }
+# # add headless monitor
+# bindsym $super+Shift+m exec swaymsg create_output HEADLESS-1
+# # remove headless monitor (not always HEADLESS-1 since names arent reused for session)
+# bindsym $super+m exec swaymsg output $(swaymsg -t get_outputs | jq -r '.[1]'.name) unplug
 
 exec swayidle -w \
          timeout 1200 'swaylock -f -c 000000' \
@@ -74,10 +79,10 @@ client.focused_inactive #61afef #5c6370 #ffffff #98c379 #5c6370
 client.unfocused        #61afef #5c6370 #abb2bf #98c379 #5c6370
 # general gaps on windows
 gaps inner 5
-# solo window should be centered
-smart_gaps inverse_outer
-# solo window should be 50% width horizontal padding for single window, make life bearable with a super-ultrawide
-gaps horizontal 1280 
+# # solo window should be centered
+# smart_gaps inverse_outer
+# # solo window should be 50% width horizontal padding for single window, make life bearable with a super-ultrawide
+# gaps horizontal 1280 
 
 ### Key bindings
 
