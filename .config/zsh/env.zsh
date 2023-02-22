@@ -16,3 +16,7 @@ export PF_INFO="ascii title os kernel pkgs wm shell editor"
 # kubernetes
 export KUBECONFIG=/home/ben/.config/kube/config-home
 # export KUBECONFIG=/home/ben/.config/kube/config-work
+
+# bun
+export BUN_INSTALL="$HOME/.bun" 
+export PATH="$BUN_INSTALL/bin:$PATH" 
