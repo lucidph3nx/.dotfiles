@@ -1,5 +1,6 @@
 {
     "global": {
+        "ask_for_confirmation_before_quitting": true,
         "check_for_updates_on_startup": true,
         "show_in_menu_bar": true,
         "show_profile_name_in_menu_bar": false,
@@ -11,7 +12,7 @@
                 "parameters": {
                     "basic.simultaneous_threshold_milliseconds": 50,
                     "basic.to_delayed_action_delay_milliseconds": 500,
-                    "basic.to_if_alone_timeout_milliseconds": 1000,
+                    "basic.to_if_alone_timeout_milliseconds": 500,
                     "basic.to_if_held_down_threshold_milliseconds": 500,
                     "mouse_motion_to_scroll.speed": 100
                 },
@@ -20,9 +21,19 @@
                         "description": "Open Terminal on Comand Enter",
                         "manipulators": [
                             {
-                                "from": { "key_code": "return_or_enter",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": [ { "shell_command": "open -a '/Applications/kitty.app' --new"}],
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a '/Applications/kitty.app' --new"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -31,9 +42,19 @@
                         "description": "Open Terminal on option enter",
                         "manipulators": [
                             {
-                                "from": { "key_code": "return_or_enter",
-                                          "modifiers": { "mandatory": ["option"]}},
-                                "to": [ { "shell_command": "open -a '/Applications/kitty.app' --new"}],
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a '/Applications/kitty.app' --new"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -42,9 +63,19 @@
                         "description": "Open Firefox on option b",
                         "manipulators": [
                             {
-                                "from": { "key_code": "b",
-                                          "modifiers": { "mandatory": ["option"]}},
-                                "to": [ { "shell_command": "open -a '/Applications/Firefox.app' --new"}],
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a '/Applications/Firefox.app' --new"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -53,9 +84,19 @@
                         "description": "Open Ranger option f",
                         "manipulators": [
                             {
-                                "from": { "key_code": "f",
-                                          "modifiers": { "mandatory": ["option"]}},
-                                "to": [ { "shell_command": "open -a '/Applications/Kitty.app' --new --args ranger"}],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a '/Applications/Kitty.app' --new --args ranger"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -64,10 +105,20 @@
                         "description": "Switch to Space 1",
                         "manipulators": [
                             {
-                                "from": { "key_code": "1",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "1",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "1",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -76,10 +127,20 @@
                         "description": "Switch to Space 2",
                         "manipulators": [
                             {
-                                "from": { "key_code": "2",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "2",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "2",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -88,10 +149,20 @@
                         "description": "Switch to Space 3",
                         "manipulators": [
                             {
-                                "from": { "key_code": "3",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "3",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "3",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -100,10 +171,20 @@
                         "description": "Switch to Space 4",
                         "manipulators": [
                             {
-                                "from": { "key_code": "4",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "4",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "4",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -112,10 +193,20 @@
                         "description": "Switch to Space 5",
                         "manipulators": [
                             {
-                                "from": { "key_code": "5",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "5",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "5",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "5",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -124,10 +215,20 @@
                         "description": "Switch to Space 6",
                         "manipulators": [
                             {
-                                "from": { "key_code": "6",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "6",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "6",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "6",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -136,10 +237,20 @@
                         "description": "Switch to Space 7",
                         "manipulators": [
                             {
-                                "from": { "key_code": "7",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "7",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "7",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "7",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -148,10 +259,20 @@
                         "description": "Switch to Space 8",
                         "manipulators": [
                             {
-                                "from": { "key_code": "8",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "8",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "8",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "8",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -160,10 +281,20 @@
                         "description": "Switch to Space 9",
                         "manipulators": [
                             {
-                                "from": { "key_code": "9",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "9",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "9",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "9",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -172,10 +303,20 @@
                         "description": "Switch to Space 10",
                         "manipulators": [
                             {
-                                "from": { "key_code": "0",
-                                          "modifiers": { "mandatory": ["command"]}},
-                                "to": { "key_code": "0",
-                                          "modifiers": [ "option" ]},
+                                "from": {
+                                    "key_code": "0",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "0",
+                                    "modifiers": [
+                                        "option"
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -1199,6 +1340,33 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Post Esc if Caps is tapped, Control if held.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1543,7 +1711,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "escape"
+                            "key_code": "left_control"
                         }
                     ]
                 }
