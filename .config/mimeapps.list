@@ -3,3 +3,4 @@
 inode/directory=ranger.desktop
 application/pdf=org.pwmt.zathura.desktop
 x-scheme-handler/obsidian=obsidian.desktop
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
