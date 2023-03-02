@@ -28,8 +28,7 @@ set $terminal kitty
 set $browser firefox
 set $filebrowser $terminal ranger
 set $menu wofi --show drun | xargs swaymsg exec --
-set $runmenu wofi --show run | xargs swaymsg exec --
-set $runscripts ls ~/.local/scripts | wofi -d -M fuzzy | xargs -I {} swaymsg exec ~/.local/scripts/{}
+set $runscripts ls ~/.local/scripts | wofi -d -M fuzzy -p scripts | xargs -I {} swaymsg exec ~/.local/scripts/{}
 set $passwordmanager rofi-rbw
 set $musicplayer $terminal ncmpcpp
 set $obsidian xdg-open obsidian://vault/obsidian
@@ -37,7 +36,7 @@ set $obsidian xdg-open obsidian://vault/obsidian
 
 # Scripts
 # add an item to the notion shopping list
-set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css | xargs zsh ~/scripts/add-item-to-shopping-list.sh
+set $addtoshoppinglist wofi -p --show dmenu --style ~/.config/wofi/style-input.css | xargs zsh ~/scripts/add-item-to-shopping-list.sh
 set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
 
 
