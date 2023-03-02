@@ -55,7 +55,7 @@
   "custom/pulseaudio-cycle": {
     "return-type": "json",
     "exec-on-event": true,
-    "interval": 5,
+    "interval": 1,
     "format": "{icon}",
     "format-icons": {
         "0": "",
