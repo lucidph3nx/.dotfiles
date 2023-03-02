@@ -35,9 +35,9 @@ map("n", "<leader>j", "<cmd>lprev<CR>", opts)
 map("n", "<C-f>", "<cmd>!tmux neww tmux-sessionizer<CR>", opts)
 
 -- start a replace with current word
-map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
+map("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 -- same but with current visual selection
-map("v", "<leader>s", [[y<Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
+map("v", "<leader>fr", [[y<Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 -- make current file executable
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", opts)
 
