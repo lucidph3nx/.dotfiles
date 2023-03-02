@@ -1,6 +1,13 @@
-
 [Default Applications]
 inode/directory=ranger.desktop
 application/pdf=org.pwmt.zathura.desktop
 x-scheme-handler/obsidian=obsidian.desktop
 x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+image/webp=vimiv.desktop
+image/jpeg=vimiv.desktop
+image/png=vimiv.desktop
+
+[Added Associations]
+image/jpeg=gimp.desktop;vimiv.desktop;
+image/webp=vimiv.desktop;
+image/png=vimiv.desktop;
