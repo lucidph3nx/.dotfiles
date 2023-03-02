@@ -32,7 +32,7 @@ set $runscripts ls ~/.local/scripts | wofi -d -M fuzzy -p scripts | xargs -I {} 
 set $passwordmanager rofi-rbw
 set $musicplayer $terminal ncmpcpp
 set $obsidian xdg-open obsidian://vault/obsidian
-# note, dependencies rofi-rbw, rbw, wtype
+# note, passwordmanager dependencies: rofi-rbw, rbw, wtype
 
 # Scripts
 # add an item to the notion shopping list
@@ -43,22 +43,7 @@ set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-Lis
 # differnt configs per hostname
 include ~/.config/sway/$(hostname)/*
 
-# # Monitors
-# # main (super-ultrawide) monitor
-# output DP-3 {
-#   pos 0,0
-#   mode 5120x1440
-# }
-# # virtual monitor
-# output HEADLESS-1 {
-#   pos 5120,0
-#   mode 2560x1440
-# }
-# # add headless monitor
-# bindsym $super+Shift+m exec swaymsg create_output HEADLESS-1
-# # remove headless monitor (not always HEADLESS-1 since names arent reused for session)
-# bindsym $super+m exec swaymsg output $(swaymsg -t get_outputs | jq -r '.[1]'.name) unplug
-
+# swayidle config
 exec swayidle -w \
          timeout 1200 'swaylock -f -c 000000' \
          timeout 1800 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
