@@ -22,7 +22,6 @@ set $right l
 # Window Utilities 
 set $emojipicker bemoji -t
 set $screenshotutil flameshot gui -r | wl-copy
-set $switchaudiosource .local/scripts/switch-audio-output
 
 # Applications
 set $terminal kitty 
@@ -30,6 +29,7 @@ set $browser firefox
 set $filebrowser $terminal ranger
 set $menu wofi --show drun | xargs swaymsg exec --
 set $runmenu wofi --show run | xargs swaymsg exec --
+set $runscripts ls ~/.local/scripts | wofi -d -M fuzzy | xargs -I {} swaymsg exec ~/.local/scripts/{}
 set $passwordmanager rofi-rbw
 set $musicplayer $terminal ncmpcpp
 set $obsidian xdg-open obsidian://vault/obsidian
@@ -93,6 +93,7 @@ bindsym --to-code {
   $super+Shift+s exec $screenshotutil 
   $super+period exec $emojipicker
   $super+p exec $passwordmanager
+  $super+s exec $runscripts
 }
 
 ## Application Bindings
@@ -106,7 +107,6 @@ bindsym --to-code {
   $alt+l exec $addtoshoppinglist
   $alt+Shift+l exec $openshoppinglist
   $alt+o exec $obsidian
-  $alt+a exec $switchaudiosource
 }
 
 ## Media Controls

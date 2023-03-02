@@ -5,9 +5,9 @@
 .titlebar-buttonbox-container{ display:none } 
 .titlebar-spacer{ display:none }
 .tab-close-button{ display: none }
-toolbarbutton#back-button { display: none }
-toolbarbutton#forward-button { display: none }
-toolbarbutton#reload-button { display: none }
+/* toolbarbutton#back-button { display: none } */
+/* toolbarbutton#forward-button { display: none } */
+/* toolbarbutton#reload-button { display: none } */
 /* its hip to be square */
 :root {
   font-family: 'JetBrainsMono Nerd Font', monospace !important;
@@ -23,6 +23,15 @@ toolbarbutton#reload-button { display: none }
   --toolbarbutton-hover-background: #282c34 !important;
   --tab-block-margin: 2px !important;
 }
+
+/*hide navigation bar when it is not focused; use Ctrl+L to get focus */
+/* #main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) { */
+/*   margin-top: -145px; */
+/* } */
+/* #navigator-toolbox { */
+/*   transition: 0.2s margin-top ease-out; */
+/* } */
+/**/
 #widget-overflow, #appMenu-popup {
   font-family: 'JetBrainsMono Nerd Font', monospace !important;
 }
