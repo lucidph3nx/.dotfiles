@@ -8,6 +8,11 @@ require('nvim-tree').setup({
       ignore = false,
       timeout = 500,
     },
+    update_focused_file = {
+        enable = true,
+        update_root = true,
+        ignore_list = {},
+      },
 })
 
 -- Open For Directories And Change Neovim's Directory
@@ -15,6 +20,8 @@ local function open_nvim_tree(data)
   -- buffer is a directory
   local directory = vim.fn.isdirectory(data.file) == 1
   if not directory then
+    -- change to the directory of the file
+    vim.cmd.cd(vim.fn.fnamemodify(data.file, ":h"))
     return
   end
   -- create a new, empty buffer
