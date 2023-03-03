@@ -36,7 +36,7 @@ set $obsidian xdg-open obsidian://vault/obsidian
 
 # Scripts
 # add an item to the notion shopping list
-set $addtoshoppinglist wofi -p --show dmenu --style ~/.config/wofi/style-input.css | xargs zsh ~/scripts/add-item-to-shopping-list.sh
+set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css | xargs zsh ~/scripts/add-item-to-shopping-list.sh
 set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
 
 
