@@ -215,6 +215,20 @@ mode "resize" {
 # Enter resize mode
 bindsym $super+r mode "resize"
 
+# move mode, to move floating windows around
+mode "Move" {
+        bindsym $left move left 20px
+        bindsym $down move down  20px
+        bindsym $up move up 20px
+        bindsym $right move right 20px
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $super+m mode "default"
+}
+bindsym $super+Shift+m mode "Move"
+
 # use waybar instead of swaybar
 bar {
     swaybar_command waybar
