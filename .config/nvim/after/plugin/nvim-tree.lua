@@ -21,7 +21,7 @@ local function open_nvim_tree(data)
   local directory = vim.fn.isdirectory(data.file) == 1
   if not directory then
     -- change to the directory of the file
-    vim.cmd.cd(vim.fn.fnamemodify(data.file, ":h"))
+    -- vim.cmd.cd(vim.fn.fnamemodify(data.file, ":h"))
     return
   end
   -- create a new, empty buffer
