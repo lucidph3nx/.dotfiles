@@ -42,4 +42,5 @@ cmd + shift - 0 : yabai -m window --space 10; yabai -m space --focus 10
 cmd + shift - space : yabai -m window --toggle float;\
                       yabai -m window --grid 4:4:1:1:2:2
 
-
+# toggle window native fullscreen
+cmd - f : yabai -m window --toggle native-fullscreen
