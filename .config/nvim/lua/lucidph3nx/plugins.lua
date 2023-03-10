@@ -90,6 +90,8 @@ return require('packer').startup(function(use)
   -- AI
   --use 'github/copilot.vim'
   use 'zbirenbaum/copilot.lua'
+  -- platform.io
+  use 'normen/vim-pio'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
