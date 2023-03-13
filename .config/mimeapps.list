@@ -11,3 +11,4 @@ image/png=vimiv.desktop
 image/jpeg=gimp.desktop;vimiv.desktop;
 image/webp=vimiv.desktop;
 image/png=vimiv.desktop;
+application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;calibre-ebook-viewer.desktop;
