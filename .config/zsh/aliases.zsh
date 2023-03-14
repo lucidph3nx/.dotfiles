@@ -9,12 +9,15 @@ alias {v,vim}=nvim
 # .dotfiles git alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dotfiles-private='/usr/bin/git --git-dir=$HOME/.dotfiles-private --work-tree=$HOME'
+alias dotfiles-nvim='GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME nvim'
 
 alias ds='dotfiles status'
 alias da='dotfiles add'
 alias dc='dotfiles commit'
 alias dp='dotfiles push'
 alias dP='dotfiles pull --rebase'
+alias dv='dotfiles-nvim'
+
 # kubectl in a docker container for legacy jarden on prem k8s
 alias kop="~/code/dev-tools/kubectl-1.3.7-docker/kubectl.sh"
 
