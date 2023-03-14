@@ -18,6 +18,7 @@ vim.keymap.set('n', '<leader>st', builtin.git_files, { desc = '[S]earch [T]racke
 vim.keymap.set('n', '<leader>sc', builtin.git_commits, { desc = '[S]earch [C]ommits (git)' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
+vim.keymap.set('v', '<leader>ss', builtin.grep_string, { desc = '[S]earch [S]election' })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 
