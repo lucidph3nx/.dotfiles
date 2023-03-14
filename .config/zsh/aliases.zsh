@@ -26,8 +26,12 @@ alias ytm-download="yt-dlp  --add-metadata --format m4a --youtube-skip-dash-mani
 
 alias jstx="zsh ~/scripts/jarden-ssh-tmux.sh"
 
-# go-task
-# alias task=go-task
+# os specific aliases
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # no macos specific alises
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  alias task=go-task
+fi
 
 # for sshing into things that don't know alacritty
 alias ssh='TERM=xterm-256color ssh'
