@@ -4,3 +4,5 @@ bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^k "k9s\n"
 # Ctrl-v open nvim in current directory
 bindkey -s ^v "nvim .\n"
+# Ctrl-p open python
+bindkey -s ^p "python\n"

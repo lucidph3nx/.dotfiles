@@ -45,5 +45,7 @@ alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
 
 # terminal calculator
 alias c=calc
+# better terminal calc
+alias py=python
 
 alias neofetch=neowofetch
