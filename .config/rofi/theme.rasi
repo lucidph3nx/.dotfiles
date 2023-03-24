@@ -14,8 +14,8 @@
 window {
   location: 0;
   background-color: @backgroundcolor;
-  border-color: @accentcolor;
-  border: 0;
+  border-color: #454C59;
+  border: 2;
   width: 20%;
 }
 
