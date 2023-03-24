@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Calendar
+Exec=firefox -new-tab "calendar.google.com/"
+Icon=calendar
+Terminal=false
+StartupNotify=true

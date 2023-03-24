@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Type=Application
+Name=Home Assistant
+Exec=firefox -new-tab "https://home-assistant.tinfoilforest.nz/lovelace/default_view"
+Icon=/usr/share/icons/Home_Assistant_Logo.png
+Terminal=false
+StartupNotify=true
