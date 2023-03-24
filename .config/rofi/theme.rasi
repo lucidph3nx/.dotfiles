@@ -1,7 +1,7 @@
 * {
-  accentcolor: #98c379;
+  accentcolorgreen: #98c379;
+  accentcolormegenta: #c678dd;
   backgroundcolor: #282C34;
-  separatorcolor: transparent;
   foregroundcolor: #abb2bf;
   selectioncolor: #61afef;
   
@@ -24,7 +24,7 @@ mainbox {
 }
 
 inputbar {
-  border-color: @accentcolor;
+  border-color: @accentcolorgreen;
   border: 2px;
   children: [prompt, entry];
 }
