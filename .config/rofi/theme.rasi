@@ -1,0 +1,67 @@
+* {
+  accentcolor: #98c379;
+  backgroundcolor: #282C34;
+  separatorcolor: transparent;
+  foregroundcolor: #abb2bf;
+  selectioncolor: #61afef;
+  
+  background-color: transparent;
+  text-color: @foregroundcolor;
+
+  font: "JetbrainsMono Nerd Font Medium 16px";
+}
+
+window {
+  location: 0;
+  background-color: @backgroundcolor;
+  border-color: @accentcolor;
+  border: 0;
+  width: 20%;
+}
+
+mainbox {
+  margin: 15px;
+}
+
+inputbar {
+  border-color: @accentcolor;
+  border: 2px;
+  children: [prompt, entry];
+}
+
+prompt {
+  color: #abb2bf;
+  padding: 10px;
+  padding-top: 5px;
+}
+
+entry {
+  padding: 10px;
+  padding-top: 5px;
+  placeholder-color: #5c6370;
+}
+
+
+listview {
+  margin: 5px 0px 0px 0px;
+  lines: 7;
+}
+
+element {
+  padding: 7px;
+}
+
+element-text {
+  padding: 7px;
+}
+
+element-icon {
+  size: 35px;
+}
+
+element selected {
+  background-color: @selectioncolor;
+}
+element-text selected {
+  color: #000000;
+}
