@@ -33,8 +33,9 @@ set $emojipicker rofi -show emoji -theme-str $rofi_style_emojipicker
 set $screenshotutil grim -g "$(slurp -c "#98c379FF" -b '#4d515d80')" - | wl-copy
 
 set $tmuxsesionizerpath ~/.local/scripts/tmux-sessionizer
+set $tmuxprojectgetterpath ~/.local/scripts/tmux-projectgetter
 set $searchpaths ~/code ~/.config
-set $tmuxsessionizer selection=$(find $searchpaths -mindepth 1 -maxdepth 1 -type d | rofi -dmenu -theme-str $rofi_style_tmuxsessionizer) && [ -n "$selection" ] && xargs -I{} $terminal $tmuxsesionizerpath "{}" 2> /dev/null <<<"$selection"
+set $tmuxsessionizer selection=$($tmuxprojectgetterpath | rofi -dmenu -theme-str $rofi_style_tmuxsessionizer) && [ -n "$selection" ] && xargs -I{} $terminal $tmuxsesionizerpath "{}" 2> /dev/null <<<"$selection"
 
 
 # Applications
@@ -93,8 +94,8 @@ bindsym --to-code {
   $super+p exec $passwordmanager
   $super+Space exec $runscripts
   $super+c exec $calculator
-  $super+h exec $clipboardmanager
-  $super+Shift+h exec $clearclipboard
+  $super+y exec $clipboardmanager
+  $super+Shift+y exec $clearclipboard
   $super+f exec $tmuxsessionizer
 }
 

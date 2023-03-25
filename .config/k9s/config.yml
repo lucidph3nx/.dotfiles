@@ -29,7 +29,7 @@ k9s:
         - default
         - networking
       view:
-        active: pods
+        active: kustomization
       featureGates:
         nodeShell: false
       shellPod:
