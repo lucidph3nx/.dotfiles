@@ -33,6 +33,8 @@ set $menu rofi -show drun -theme-str 'entry { placeholder: "drun"; }'
 set $runscripts ls ~/.local/scripts | rofi -dmenu -i -theme-str 'inputbar { children: [entry];} entry { placeholder: "Select Command"; }  element-icon { enabled: false; }' | xargs -I {} swaymsg exec ~/.local/scripts/{}
 set $passwordmanager rofi-rbw
 set $calculator rofi -show calc -no-history -calc-command 'wl-copy "{result}"' -theme-str 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Calculator"; } element-icon { enabled: false; }'
+set $clipboardmanager cliphist list | rofi -dmenu -i -theme-str 'inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Clipboard History"; } element-icon { enabled: false; }' | cliphist decode | wl-copy
+set $clearclipboard cliphist wipe
 set $musicplayer $terminal ncmpcpp
 set $obsidian xdg-open obsidian://vault/obsidian
 # note, passwordmanager dependencies: rofi, rofi-rbw, rbw, wtype
@@ -78,6 +80,8 @@ bindsym --to-code {
   $super+p exec $passwordmanager
   $super+s exec $runscripts
   $super+c exec $calculator
+  $super+h exec $clipboardmanager
+  $super+Shift+h exec $clearclipboard
 }
 
 ## Application Bindings
@@ -278,6 +282,8 @@ exec_always {
     gsettings set $gnome color-scheme 'prefer-dark'
 }
 
+# begin cliphist - clipboard history tool
+exec "wl-paste --watch cliphist store"
 
 # Many apps have tray icons, so wait for tray to be ready before starting them
 # Then autostart all XDG autostart .desktop files using dex
