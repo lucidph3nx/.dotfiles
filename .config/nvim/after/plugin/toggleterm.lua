@@ -1,6 +1,6 @@
 
 require("toggleterm").setup {
-    -- open_mapping = [[<c-\>]],
+    open_mapping = [[<C-Space>]],
     size = 15,
     shell = "zsh",
     hide_numbers = true,
@@ -13,6 +13,3 @@ require("toggleterm").setup {
         winblend = 3,
     },
 }
-
-vim.keymap.set('n', '<tab>', vim.cmd.ToggleTerm, { desc = 'Toggle Terminal' })
-vim.keymap.set('t', '<tab>', vim.cmd.ToggleTerm, { desc = 'Toggle Terminal' })
