@@ -42,7 +42,7 @@ set $terminal kitty
 set $browser firefox
 set $calendar firefox -new-tab 'https://calendar.google.com'
 set $filebrowser $terminal ranger
-set $menu rofi -show drun -theme-str $rofi_style_clipboard
+set $menu rofi -show drun -theme-str $rofi_style_dmenu
 set $runscripts ls ~/.local/scripts | rofi -dmenu -i -theme-str $rofi_style_runscripts | xargs -I {} swaymsg exec ~/.local/scripts/{}
 set $passwordmanager rofi-rbw
 set $calculator rofi -show calc -no-history -calc-command 'wl-copy "{result}"' -theme-str $rofi_style_calculator
