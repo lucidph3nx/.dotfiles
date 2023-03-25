@@ -25,7 +25,7 @@ local function open_nvim_tree(data)
     return
   end
   -- create a new, empty buffer
-  vim.cmd.enew()
+  -- vim.cmd.enew()
   -- wipe the directory buffer
   vim.cmd.bw(data.buf)
   -- change to the directory
@@ -35,7 +35,7 @@ local function open_nvim_tree(data)
 end
 
 -- automatically run open_nvim_tree on open
-vim.api.nvim_create_autocmd("VimEnter", { callback = open_nvim_tree })
+-- vim.api.nvim_create_autocmd("VimEnter", { callback = open_nvim_tree })
 
 -- attempt at autoclose
 vim.api.nvim_create_autocmd("BufEnter", {
