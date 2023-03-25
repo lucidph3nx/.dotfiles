@@ -22,7 +22,7 @@ set $right l
 # Window Utilities 
 # set $emojipicker bemoji -t
 set $emojipicker rofi -show emoji -theme-str 'inputbar { children: [entry]; border-color: @accentcolorgreen;} entry { placeholder: "Select Emoji"; } element-icon { enabled: false; }'
-set $screenshotutil flameshot gui -r | wl-copy
+set $screenshotutil grim -g "$(slurp -c "#98c379" -b '#4d515d80')" - | wl-copy
 
 # Applications
 set $terminal kitty 
