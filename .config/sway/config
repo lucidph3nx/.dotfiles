@@ -20,26 +20,26 @@ set $up k
 set $right l
 
 # Window Utilities 
-set $emojipicker bemoji -t
+# set $emojipicker bemoji -t
+set $emojipicker rofi -show emoji -theme-str 'inputbar { children: [entry]; border-color: @accentcolorgreen;} entry { placeholder: "Select Emoji"; } element-icon { enabled: false; }'
 set $screenshotutil flameshot gui -r | wl-copy
 
 # Applications
 set $terminal kitty 
 set $browser firefox
+set $calendar firefox -new-tab 'https://calendar.google.com'
 set $filebrowser $terminal ranger
-# set $menu wofi --show drun | xargs swaymsg exec --
 set $menu rofi -show drun -theme-str 'entry { placeholder: "drun"; }'
-# set $runscripts ls ~/.local/scripts | wofi -d -M fuzzy -p scripts | xargs -I {} swaymsg exec ~/.local/scripts/{}
-set $runscripts ls ~/.local/scripts | rofi -dmenu -i -theme-str 'inputbar { children: [entry];} entry { placeholder: "Select Command"; }' | xargs -I {} swaymsg exec ~/.local/scripts/{}
+set $runscripts ls ~/.local/scripts | rofi -dmenu -i -theme-str 'inputbar { children: [entry];} entry { placeholder: "Select Command"; }  element-icon { enabled: false; }' | xargs -I {} swaymsg exec ~/.local/scripts/{}
 set $passwordmanager rofi-rbw
+set $calculator rofi -show calc -no-history -calc-command 'wl-copy "{result}"' -theme-str 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Calculator"; } element-icon { enabled: false; }'
 set $musicplayer $terminal ncmpcpp
 set $obsidian xdg-open obsidian://vault/obsidian
-# note, passwordmanager dependencies: rofi-rbw, rbw, wtype
+# note, passwordmanager dependencies: rofi, rofi-rbw, rbw, wtype
 
 # Scripts
 # add an item to the notion shopping list
 set $addtoshoppinglist rofi -dmenu -i -theme-str 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolormegenta;} entry { placeholder: "Add Item to Shopping List"; }' | xargs zsh ~/scripts/add-item-to-shopping-list.sh
-# set $addtoshoppinglist wofi --show dmenu --style ~/.config/wofi/style-input.css | xargs zsh ~/scripts/add-item-to-shopping-list.sh
 set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
 
 
@@ -66,10 +66,6 @@ client.focused_inactive #61afef #5c6370 #ffffff #98c379 #5c6370
 client.unfocused        #61afef #5c6370 #abb2bf #98c379 #5c6370
 # general gaps on windows
 gaps inner 5
-# # solo window should be centered
-# smart_gaps inverse_outer
-# # solo window should be 50% width horizontal padding for single window, make life bearable with a super-ultrawide
-# gaps horizontal 1280 
 
 ### Key bindings
 
@@ -81,6 +77,7 @@ bindsym --to-code {
   $super+period exec $emojipicker
   $super+p exec $passwordmanager
   $super+s exec $runscripts
+  $super+c exec $calculator
 }
 
 ## Application Bindings
@@ -88,6 +85,7 @@ bindsym --to-code {
   $alt+Return exec $terminal
   $alt+Space exec $menu
   $alt+b exec $browser
+  $alt+c exec $calendar
   $alt+q exec qutebrowser
   $alt+f exec $filebrowser
   $alt+m exec $musicplayer

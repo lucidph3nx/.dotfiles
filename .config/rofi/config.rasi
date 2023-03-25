@@ -1,5 +1,5 @@
 configuration {
-    modi: "run,drun";
+    modi: "run,drun,emoji,calc";
 
     steal-focus: true;
 
