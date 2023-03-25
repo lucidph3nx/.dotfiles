@@ -78,7 +78,7 @@ bindsym --to-code {
   $super+Shift+s exec $screenshotutil 
   $super+period exec $emojipicker
   $super+p exec $passwordmanager
-  $super+s exec $runscripts
+  $super+Space exec $runscripts
   $super+c exec $calculator
   $super+h exec $clipboardmanager
   $super+Shift+h exec $clearclipboard
@@ -230,7 +230,6 @@ mode "Move" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
-    bindsym $super+m mode "default"
 }
 bindsym $super+Shift+m mode "Move"
 
@@ -256,9 +255,9 @@ exec swaync
 bindsym $super+Shift+n exec swaync-client -t -sw
 
 # ensure dbus is aware of env vars (for flameshot)
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+# exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+# exec hash dbus-update-activation-environment 2>/dev/null && \
+#      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 # might need this for screen sharing obs?
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r 
