@@ -19,21 +19,34 @@ set $down j
 set $up k
 set $right l
 
+
+# rofi styles
+set $rofi_style_dmenu 'entry { placeholder: "drun"; }'
+set $rofi_style_shoppinglistentry 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolormegenta;} entry { placeholder: "Add Item to Shopping List"; }'
+set $rofi_style_runscripts 'inputbar { children: [entry];} entry { placeholder: "Select Command"; }  element-icon { enabled: false; }'  
+set $rofi_style_calculator 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Calculator"; } element-icon { enabled: false; }'
+set $rofi_style_clipboard 'inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Clipboard History"; } element-icon { enabled: false; }' 
+set $rofi_style_emojipicker  'inputbar { children: [entry]; border-color: @accentcolorgreen;} entry { placeholder: "Select Emoji"; } element-icon { enabled: false; }'
+set $rofi_style_tmuxsessionizer 'inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Select Project"; } element-icon { enabled: false; }'
 # Window Utilities 
-# set $emojipicker bemoji -t
-set $emojipicker rofi -show emoji -theme-str 'inputbar { children: [entry]; border-color: @accentcolorgreen;} entry { placeholder: "Select Emoji"; } element-icon { enabled: false; }'
-set $screenshotutil grim -g "$(slurp -c "#98c379" -b '#4d515d80')" - | wl-copy
+set $emojipicker rofi -show emoji -theme-str $rofi_style_emojipicker
+set $screenshotutil grim -g "$(slurp -c "#98c379FF" -b '#4d515d80')" - | wl-copy
+
+set $tmuxsesionizerpath ~/.local/scripts/tmux-sessionizer
+set $searchpaths ~/code ~/.config
+set $tmuxsessionizer selection=$(find $searchpaths -mindepth 1 -maxdepth 1 -type d | rofi -dmenu -theme-str $rofi_style_tmuxsessionizer) && [ -n "$selection" ] && xargs -I{} $terminal $tmuxsesionizerpath "{}" 2> /dev/null <<<"$selection"
+
 
 # Applications
 set $terminal kitty 
 set $browser firefox
 set $calendar firefox -new-tab 'https://calendar.google.com'
 set $filebrowser $terminal ranger
-set $menu rofi -show drun -theme-str 'entry { placeholder: "drun"; }'
-set $runscripts ls ~/.local/scripts | rofi -dmenu -i -theme-str 'inputbar { children: [entry];} entry { placeholder: "Select Command"; }  element-icon { enabled: false; }' | xargs -I {} swaymsg exec ~/.local/scripts/{}
+set $menu rofi -show drun -theme-str $rofi_style_clipboard
+set $runscripts ls ~/.local/scripts | rofi -dmenu -i -theme-str $rofi_style_runscripts | xargs -I {} swaymsg exec ~/.local/scripts/{}
 set $passwordmanager rofi-rbw
-set $calculator rofi -show calc -no-history -calc-command 'wl-copy "{result}"' -theme-str 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Calculator"; } element-icon { enabled: false; }'
-set $clipboardmanager cliphist list | rofi -dmenu -i -theme-str 'inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Clipboard History"; } element-icon { enabled: false; }' | cliphist decode | wl-copy
+set $calculator rofi -show calc -no-history -calc-command 'wl-copy "{result}"' -theme-str $rofi_style_calculator
+set $clipboardmanager cliphist list | rofi -dmenu -i -theme-str $rofi_style_clipboard | cliphist decode | wl-copy
 set $clearclipboard cliphist wipe
 set $musicplayer $terminal ncmpcpp
 set $obsidian xdg-open obsidian://vault/obsidian
@@ -41,7 +54,7 @@ set $obsidian xdg-open obsidian://vault/obsidian
 
 # Scripts
 # add an item to the notion shopping list
-set $addtoshoppinglist rofi -dmenu -i -theme-str 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolormegenta;} entry { placeholder: "Add Item to Shopping List"; }' | xargs zsh ~/scripts/add-item-to-shopping-list.sh
+set $addtoshoppinglist rofi -dmenu -i -theme-str $rofi_style_shoppinglistentry | xargs zsh ~/scripts/add-item-to-shopping-list.sh
 set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
 
 
@@ -82,6 +95,7 @@ bindsym --to-code {
   $super+c exec $calculator
   $super+h exec $clipboardmanager
   $super+Shift+h exec $clearclipboard
+  $super+f exec $tmuxsessionizer
 }
 
 ## Application Bindings
@@ -185,9 +199,6 @@ bindsym --to-code $super+a mode "QuickAppLaunch"
 bindsym $super+b splith
 bindsym $super+v splitv
 
-# Make the current focus fullscreen
-bindsym $super+f fullscreen
-
 # floating windows
 floating_modifier $super normal
 # Toggle current window to floating
@@ -227,11 +238,14 @@ mode "Move" {
     bindsym $up move up 20px
     bindsym $right move right 20px
 
+    # fullscreen toggle and exit
+    bindsym f fullscreen toggle ; mode "default"
+
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $super+Shift+m mode "Move"
+bindsym $super+m mode "Move"
 
 # use waybar instead of swaybar
 bar {

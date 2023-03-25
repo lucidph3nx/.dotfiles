@@ -1,7 +1,6 @@
 # vim: set ft=swayconfig:
 
 # Monitors
-# main (super-ultrawide) monitor
 output Unknown-1 {
   pos 0,0
   mode 3456x2160
