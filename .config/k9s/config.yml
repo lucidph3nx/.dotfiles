@@ -24,12 +24,11 @@ k9s:
         active: all
         lockFavorites: false
         favorites:
-        - pihole
+        - kube-system
         - all
         - default
-        - networking
       view:
-        active: kustomization
+        active: pods
       featureGates:
         nodeShell: false
       shellPod:
