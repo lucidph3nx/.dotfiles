@@ -6,7 +6,7 @@
 
   "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "mpd"],
   "modules-center": ["sway/window"],
-  "modules-right": ["tray", "pulseaudio", "custom/pulseaudio-cycle", "custom/office-temp", "custom/notification", "clock"],
+  "modules-right": ["tray", "pulseaudio", "custom/pulseaudio-cycle", "custom/office-temp", "custom/notification", "network", "battery", "clock"],
   
   "sway/workspaces": {
     "all-outputs": false,
@@ -87,6 +87,30 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  }
+  },
+
+ "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+},
+  "battery": {
+    "bat": "macsmc-battery",
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+}
 }
 
