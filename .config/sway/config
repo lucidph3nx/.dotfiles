@@ -34,7 +34,6 @@ set $screenshotutil grim -g "$(slurp -c "#98c379FF" -b '#4d515d80')" - | wl-copy
 
 set $tmuxsesionizerpath ~/.local/scripts/tmux-sessionizer
 set $tmuxprojectgetterpath ~/.local/scripts/tmux-projectgetter
-set $searchpaths ~/code ~/.config
 set $tmuxsessionizer selection=$($tmuxprojectgetterpath | rofi -dmenu -theme-str $rofi_style_tmuxsessionizer) && [ -n "$selection" ] && xargs -I{} $terminal $tmuxsesionizerpath "{}" 2> /dev/null <<<"$selection"
 
 
