@@ -9,6 +9,7 @@ fi
 
 # add to path
 eval export PATH="${PATH}:$HOME/.local/scripts/"
+eval export PATH="${PATH}:$HOME/.local/bin/"
 
 # source brew if on macos
 if [[ "$OSTYPE" == "darwin"* ]]; then
