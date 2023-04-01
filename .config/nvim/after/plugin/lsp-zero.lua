@@ -1,11 +1,12 @@
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
-
+ -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#configurations
 lsp.ensure_installed({
   'tsserver',
   'eslint',
   'lua_ls',
+  'ltex',
 })
 
 -- Fix Undefined global 'vim'
@@ -17,6 +18,23 @@ lsp.configure('lua_ls', {
             }
         }
     }
+})
+
+lsp.configure('ltex', {
+  settings = {
+    ltex = {
+      language = 'en-NZ',
+      additionalRules = {
+        enablePickyRules = false,
+      },
+      dictionary = {
+        ['en-NZ'] = { 'neovim' }
+      },
+      checkFrequency = 'edit',
+      hiddenFalsePositives = {},
+      hiddenTruePositives = {},
+    }
+  }
 })
 
 local cmp = require('cmp')
