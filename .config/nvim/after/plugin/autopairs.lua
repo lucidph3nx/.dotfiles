@@ -1,6 +1,7 @@
-require('nvim-autopairs').setup({
-  disable_filetype = {
-    "TelescopePrompt",
-    "vim"
-  },
-})
+-- I keep going back and forth on if i need this plugin...
+-- require('nvim-autopairs').setup({
+--   disable_filetype = {
+--     "TelescopePrompt",
+--     "vim"
+--   },
+-- })

@@ -49,25 +49,18 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
-  -- if client.name == "eslint" then
-  --     vim.cmd.LspStop('eslint')
-  --     return
-  -- end
-
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-  vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-  vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, opts)
-  vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-  vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
-  vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
-  vim.keymap.set("n", "<leader>]", vim.diagnostic.goto_next, opts)
-  vim.keymap.set("n", "<leader>[", vim.diagnostic.goto_prev, opts)
-  vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
-  vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts)
-  vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
-  vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
-  vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, opts)
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, make_opts("[g]et [D]eclaration", opts))
+  vim.keymap.set("n", "gd", vim.lsp.buf.definition, make_opts("[g]et [d]efinition", opts))
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, make_opts("[g]et [i]mplementation", opts))
+  vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, make_opts("[g]et [t]ype definition", opts))
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, make_opts("[K]eyword", opts))
+  vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, make_opts("[v]iew [d]iagnostics", opts))
+  vim.keymap.set("n", "<leader>]", vim.diagnostic.goto_next, make_opts("Next Diagnostic", opts))
+  vim.keymap.set("n", "<leader>[", vim.diagnostic.goto_prev, make_opts("Previous Diagnostic", opts))
+  vim.keymap.set("n", "<leader>lca", vim.lsp.buf.code_action, make_opts("[l]sp [c]ode [a]ction", opts))
+  vim.keymap.set("n", "<leader>lrr", vim.lsp.buf.references, make_opts("[l]sp [r]eferences (quickfix)", opts))
+  vim.keymap.set("n", "<leader>lrn", vim.lsp.buf.rename, make_opts("[l]sp [r]ename", opts))
+  vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, make_opts("[f]ormat", opts))
 end)
 
 lsp.setup()
