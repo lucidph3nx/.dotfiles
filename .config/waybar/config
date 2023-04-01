@@ -4,7 +4,7 @@
   "position": "top",
   "height": 25,
 
-  "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "mpd"],
+  "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "mpd", "wlr/taskbar"],
   "modules-center": ["sway/window"],
   "modules-right": ["tray", "pulseaudio", "custom/pulseaudio-cycle", "custom/office-temp", "custom/notification", "network", "battery", "clock"],
   
@@ -19,6 +19,15 @@
     "tooltip": true,
     "tooltip-format": "{app}: {title}"
   },
+
+    "wlr/taskbar": {
+    	"format": "{icon}",
+    	"icon-size": 16,
+    	"tooltip-format": "{title}",
+    	"on-click": "activate",
+    	"on-click-middle": "minimize",
+    	"on-click-right": "close"
+    },
 
   "mpd": {
     "format": "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
