@@ -40,8 +40,10 @@ alias ssh='TERM=xterm-256color ssh'
 alias sbt=sbt -ivy "$XDG_DATA_HOME"/ivy2 -sbt-dir "$XDG_DATA_HOME"/sbt
 # yarn (XDG Compliance)
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
-# wget
+# wget (XDG Compliance)
 alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
+# yarn (XDG Compliance)
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 # terminal calculator
 alias c=calc
