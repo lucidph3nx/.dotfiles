@@ -25,6 +25,8 @@ autocmd("BufWinEnter", {
     end,
 })
 
-vim.keymap.set('n', 'gh', '<cmd>diffget //2<CR>', make_opts('Get left side of diff', {noremap = true}))')
-vim.keymap.set('n', 'gl', '<cmd>diffget //3<CR>', make_opts('Get right side of diff', {noremap = true}))')
+vim.keymap.set('n', 'gh',
+  '<cmd>diffget //2<CR>', make_opts('Get left side of diff', {noremap = true}));
+vim.keymap.set('n', 'gl',
+  '<cmd>diffget //3<CR>', make_opts('Get right side of diff', {noremap = true}));
 
