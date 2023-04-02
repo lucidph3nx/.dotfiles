@@ -4,7 +4,7 @@
   "position": "top",
   "height": 25,
 
-  "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "mpd", "wlr/taskbar"],
+  "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "mpd"],
   "modules-center": ["sway/window"],
   "modules-right": ["tray", "pulseaudio", "custom/pulseaudio-cycle", "custom/office-temp", "custom/notification", "network", "battery", "clock"],
   
