@@ -84,7 +84,6 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
-  use 'windwp/nvim-autopairs'       -- automatically close brackets
   use 'akinsho/toggleterm.nvim'     -- terminal
   use 'norcalli/nvim-colorizer.lua' -- show hex colours etc
   -- use 'epwalsh/obsidian.nvim'
