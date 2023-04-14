@@ -84,6 +84,7 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
+  use 'simrat39/symbols-outline.nvim' -- show symbols
   use 'akinsho/toggleterm.nvim'     -- terminal
   use 'norcalli/nvim-colorizer.lua' -- show hex colours etc
   -- use 'epwalsh/obsidian.nvim'
