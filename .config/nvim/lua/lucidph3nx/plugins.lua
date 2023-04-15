@@ -95,6 +95,10 @@ return require('packer').startup(function(use)
   use 'normen/vim-pio'
   -- quickfix
   use 'stefandtw/quickfix-reflector.vim'
+  -- rocks
+  use_rocks 'lyaml'
+  use_rocks 'lrexlib-pcre'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

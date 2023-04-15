@@ -42,6 +42,6 @@ map("v", "<leader>fr", [[y<Esc>:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", opts)
 
 -- encrypt file with sops
-map("n", "<leader>en", "<cmd>!sops --encrypt --in-place %<CR>", opts)
-map("n", "<leader>de", "<cmd>!sops --decrypt --in-place %<CR>", opts)
+map('n', '<leader>ds', ':lua sops_helper.decrypt()<CR>', opts)
+map('n', '<leader>es', ':lua sops_helper.encrypt()<CR>', opts)
 
