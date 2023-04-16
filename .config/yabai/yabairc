@@ -34,5 +34,6 @@ yabai -m config external_bar all:30:0
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 
-# force forefox to behave
+# force some appliactions to behave, mostly those that might be running in the background before yabai starts
 yabai -m rule --add label="Firefox" manage=on
+yabai -m rule --add label="Zscaler" manage=on
