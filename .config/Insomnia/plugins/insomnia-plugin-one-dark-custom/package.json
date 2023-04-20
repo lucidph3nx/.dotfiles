@@ -1,0 +1,15 @@
+{
+  "name": "insomnia-plugin-one-dark-custom",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.js",
+  "insomnia": {
+    "name": "one-dark-custom",
+    "displayName": "One Dark Custom",
+    "description": "a better onedark theme",
+    "unlisted": true
+  },
+  "dependencies": [],
+  "devDependencies": []
+}
+
