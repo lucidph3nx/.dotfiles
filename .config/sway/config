@@ -187,6 +187,11 @@ bindsym --to-code $super+Shift+e mode $mode_exit
 bindsym $super+b splith
 bindsym $super+v splitv
 
+# autotiling script
+# https://github.com/nwg-piotr/autotiling
+# `yay -S autotiling ;) (it is in AUR)
+exec_always --no-startup-id autotiling
+
 # floating windows
 floating_modifier $super normal
 # Toggle current window to floating
