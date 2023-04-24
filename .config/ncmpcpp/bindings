@@ -9,6 +9,9 @@ def_key "k"
 def_key "j"
   scroll_down
 
+def_key "L"
+  show_lyrics
+
 def_key "G"
   move_end
 def_key "g"
