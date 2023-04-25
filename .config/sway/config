@@ -189,7 +189,7 @@ bindsym $super+v splitv
 
 # autotiling script
 # https://github.com/nwg-piotr/autotiling
-# `yay -S autotiling ;) (it is in AUR)
+# yay -S autotiling
 exec_always --no-startup-id autotiling
 
 # floating windows
