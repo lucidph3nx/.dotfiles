@@ -29,7 +29,8 @@ set $rofi_style_clipboard 'inputbar { children: [entry]; border-color: @accentco
 set $rofi_style_emojipicker  'inputbar { children: [entry]; border-color: @accentcolorgreen;} entry { placeholder: "Select Emoji"; } element-icon { enabled: false; }'
 set $rofi_style_tmuxsessionizer 'inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Select Project"; } element-icon { enabled: false; }'
 # Window Utilities 
-set $emojipicker rofi -show emoji -theme-str $rofi_style_emojipicker
+set $custom_emoji_list ~/.config/rofi-emoji/custom_emoji_list.txt
+set $emojipicker rofi -show emoji -emoji-file $custom_emoji_list -theme-str $rofi_style_emojipicker 
 set $screenshotutil grim -g "$(slurp -c "#98c379FF" -b '#4d515d80')" - | wl-copy
 
 set $tmuxsesionizerpath ~/.local/scripts/tmux-sessionizer
