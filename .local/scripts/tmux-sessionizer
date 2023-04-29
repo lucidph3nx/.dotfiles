@@ -14,6 +14,9 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
+# set window title to be selected_name
+echo -ne "\033]0;${selected_name}\007"
+
 # Check if the selected item is a file or if the directory contains a single file
 if [[ -f $selected ]]; then
     selected_file="$selected"
