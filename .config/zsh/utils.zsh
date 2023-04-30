@@ -17,7 +17,9 @@ fi
 export PATH="${PATH}:${HOME}/.krew/bin"
 
 # --- asdf version manager
-# . /opt/asdf-vm/asdf.sh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+   . /opt/asdf-vm/asdf.sh
+fi
 
 # --- jenv - java version manager
 # eval export PATH="/home/ben/.jenv/shims:${PATH}"
