@@ -16,11 +16,6 @@ fi
 # krew (kubectl package manager)
 export PATH="${PATH}:${HOME}/.krew/bin"
 
-# --- asdf version manager
-if [[ "$OSTYPE" == "darwin"* ]]; then
-   . /opt/asdf-vm/asdf.sh
-fi
-
 # --- jenv - java version manager
 # eval export PATH="/home/ben/.jenv/shims:${PATH}"
 # export JENV_SHELL=zsh
