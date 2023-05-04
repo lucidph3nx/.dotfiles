@@ -37,6 +37,12 @@ lsp.configure('ltex', {
   }
 })
 
+lsp.configure('sqlls', {
+  cmd = { 'sql-language-server', 'up', '--method', 'stdio' },
+  filetypes = { 'sql' },
+  root_dir = require('lspconfig.util').root_pattern('.git', vim.fn.getcwd()),
+})
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
