@@ -67,8 +67,8 @@
     "interval": 1,
     "format": "{icon}",
     "format-icons": {
-        "0": "",
-        "1": "蓼" 
+        "0": "󰋋",
+        "1": "󰓃" 
     },
     "exec": "pactl --format=json list sinks | jq -cM --unbuffered \"map(select(.name == \\\"$(pactl get-default-sink)\\\"))[0] | {alt:(.\\\"index\\\")}\"",
     "exec-if": "sleep 0.5", // Give enough time for `pactl get-default-sink` to update
