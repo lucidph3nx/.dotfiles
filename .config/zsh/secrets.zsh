@@ -1,5 +1,5 @@
 ## load secrets from sops
-export SOPS_AGE_KEY_FILE="$XDG_CONFIG_HOME/sops/age/age/keys.txt"
+export SOPS_AGE_KEY_FILE="$XDG_CONFIG_HOME/sops/age/keys.txt"
 SECRETS_FILE="$XDG_CONFIG_HOME/secrets/encrypted.sops"
 # decrypt secrets if age key is present
 if [[ -f $SOPS_AGE_KEY_FILE ]] && [[ -f $SECRETS_FILE ]]; then
