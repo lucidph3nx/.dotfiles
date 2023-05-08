@@ -23,7 +23,7 @@ require('copilot').setup({
     ["."] = true,
   },
   -- pin to specific node binary
-  copilot_node_command = vim.fn.expand("$HOME") .. "/.local/share/nvm/versions/node/v18.13.0/bin/node",
+  copilot_node_command = vim.fn.expand("$HOME") .. "/.local/share/nvm/versions/node/v18.16.0/bin/node",
 })
 
 -- suggestion keybindings for insert mode
