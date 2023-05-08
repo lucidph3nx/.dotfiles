@@ -10,3 +10,7 @@ output Unknown-1 {
 input "type:keyboard" {
   xkb_options altwin:swap_lalt_lwin,caps:escape
 }
+
+input "type:touchpad" {
+  natural_scroll enabled
+}
