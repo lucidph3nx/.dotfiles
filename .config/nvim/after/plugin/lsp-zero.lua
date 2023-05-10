@@ -28,7 +28,9 @@ lsp.configure('ltex', {
         enablePickyRules = false,
       },
       dictionary = {
-        ['en-NZ'] = { 'neovim' }
+        ['en-NZ'] = {
+          'neovim', 'Ness',
+        }
       },
       checkFrequency = 'edit',
       hiddenFalsePositives = {},
