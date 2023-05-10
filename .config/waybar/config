@@ -6,7 +6,16 @@
 
   "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "mpd"],
   "modules-center": ["sway/window"],
-  "modules-right": ["tray", "pulseaudio", "custom/pulseaudio-cycle", "custom/office-temp", "custom/notification", "network", "battery", "clock"],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "custom/pulseaudio-cycle",
+    "custom/office-temp",
+    "custom/notification",
+    "network",
+    "battery",
+    "clock"
+  ],
   
   "sway/workspaces": {
     "all-outputs": false,
