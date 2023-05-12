@@ -87,6 +87,7 @@ return require('packer').startup(function(use)
   use 'simrat39/symbols-outline.nvim' -- show symbols
   use 'akinsho/toggleterm.nvim'     -- terminal
   use 'norcalli/nvim-colorizer.lua' -- show hex colours etc
+  use 'mrjones2014/nvim-ts-rainbow' -- rainbow brackets
   -- use 'epwalsh/obsidian.nvim'
   -- AI
   --use 'github/copilot.vim'
