@@ -7,13 +7,13 @@ lsp.ensure_installed({
   'eslint',
   'lua_ls',
   'ltex',
-  'clojure-lsp',
+  'clojure_lsp',
   'yamlls',
   'sqlls',
   'jsonls',
   'cssls',
   'dockerls',
-  'graphql',
+  'graphql'
 })
 
 -- Fix Undefined global 'vim'
