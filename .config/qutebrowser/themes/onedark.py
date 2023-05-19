@@ -20,7 +20,7 @@ bg_lightest = "#c8ccd4"         # main shade lightest
 fg_error = "#e06c75"            # red
 # "#d19a66"                     # orange
 bg_hint = "#e5c07b"             # yellow
-fg_matched_text = "#98c379"     # green
+fg_matched_text = "#61afef"     # green
 bg_passthrough_mode = "#56b6c2" # teal
 bg_insert_mode = "#61afef"      # blue
 bg_warning = "#c678dd"          # purple
