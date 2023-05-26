@@ -14,7 +14,6 @@ plugins=(
 	git
   git-auto-fetch
   history
-	kubectl
 	asdf
   zsh-autosuggestions
   zsh-syntax-highlighting
