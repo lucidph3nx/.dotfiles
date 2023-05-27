@@ -3,13 +3,17 @@
 # preserve env when using sudo
 alias sudo='sudo -E -s'
 
+# exa instead of ls
+alias ls='exa'
+alias l='exa -la'
+alias tree='exa --tree -la'
+
 #nvim
 alias {v,vim}=nvim
 
 # .dotfiles git alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dotfiles-private='/usr/bin/git --git-dir=$HOME/.dotfiles-private --work-tree=$HOME'
-alias dotfiles-nvim='GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME nvim'
 
 alias ds='dotfiles status'
 alias da='dotfiles add'
@@ -23,8 +27,6 @@ alias kop="~/code/dev-tools/kubectl-1.3.7-docker/kubectl.sh"
 
 # youtube download script for music
 alias ytm-download="yt-dlp  --add-metadata --format m4a --youtube-skip-dash-manifest -i -o '/nfs/music/%(artist)s/%(album)s/%(title)s.%(ext)s' --sponsorblock-remove 'music_offtopic'"
-
-alias jstx="zsh ~/scripts/jarden-ssh-tmux.sh"
 
 # os specific aliases
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -51,3 +53,4 @@ alias c=calc
 alias py=python
 
 alias neofetch=neowofetch
+

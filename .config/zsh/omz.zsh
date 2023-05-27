@@ -6,6 +6,9 @@ export ZSH="$XDG_CONFIG_HOME/zsh/oh-my-zsh"
 # set theme
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# disable to omz ls colors
+DISABLE_LS_COLORS=true
+
 
 zstyle ':omz:update' mode auto      # update automatically without asking
 
