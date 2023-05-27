@@ -8,6 +8,12 @@ alias ls='exa'
 alias l='exa -la'
 alias tree='exa --tree -la'
 
+# bat instead of cat
+alias cat='bat'
+
+# ripgrep instead of grep
+alias grep='rg'
+
 #nvim
 alias {v,vim}=nvim
 
