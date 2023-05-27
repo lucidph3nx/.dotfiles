@@ -1,0 +1,13 @@
+[user]
+	email = ben@tinfoilforest.nz
+	name = lucidph3nx
+[credential]
+	helper = store
+[push]
+	autoSetupRemote = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "https://github.com/rust-lang/crates.io-index"]
+        insteadOf = https://github.com/rust-lang/crates.io-index
+[protocol "file"]
+	allow = always
