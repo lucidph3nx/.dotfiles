@@ -13,7 +13,8 @@ lsp.ensure_installed({
   'jsonls',
   'cssls',
   'dockerls',
-  'graphql'
+  'graphql',
+  'rust_analyzer',
 })
 
 -- Fix Undefined global 'vim'
@@ -69,6 +70,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ["<C-Space>"] = cmp.mapping.complete(),
 })
 
+
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
@@ -87,3 +89,10 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+vim.diagnostic.config({
+  underline = true,
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+})
