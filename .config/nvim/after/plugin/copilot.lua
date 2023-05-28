@@ -21,9 +21,10 @@ require('copilot').setup({
     svn = false,
     cvs = false,
     ["."] = true,
+    rust = false, -- while learning rust, no copilot
   },
   -- pin to specific node binary
-  copilot_node_command = vim.fn.expand("$HOME") .. "/.local/share/nvm/versions/node/v18.16.0/bin/node",
+  -- copilot_node_command = vim.fn.expand("$HOME") .. "/.local/share/nvm/versions/node/v18.16.0/bin/node",
 })
 
 -- suggestion keybindings for insert mode
