@@ -1,3 +1,6 @@
+# for when you want to debug zsh startup (also uncomment zprof below)
+# zmodload zsh/zprof
+
 # XDG Environment Variable load First!
 source $HOME/.config/zsh/xdg.zsh
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -35,3 +38,6 @@ source $XDG_CONFIG_HOME/zsh/mappings.zsh
 
 # bun completions
 [ -s "/home/ben/.bun/_bun" ] && source "/home/ben/.bun/_bun"
+
+# for when you want to debug zsh startup
+#zprof
