@@ -42,6 +42,7 @@ set $tmuxsessionizer selection=$($tmuxprojectgetterpath | rofi -dmenu -theme-str
 set $terminal kitty 
 set $browser firefox
 set $calendar firefox -new-tab 'https://calendar.google.com'
+set $home_assistant firefox -new-tab "https://home-assistant.$SECRET_DOMAIN"
 set $filebrowser $terminal ranger
 set $menu rofi -show drun -theme-str $rofi_style_dmenu
 set $runscripts ls ~/.local/scripts | rofi -dmenu -i -theme-str $rofi_style_runscripts | xargs -I {} swaymsg exec ~/.local/scripts/{}
@@ -105,6 +106,7 @@ bindsym --to-code {
   $alt+Space exec $menu
   $alt+b exec $browser
   $alt+c exec $calendar
+  $alt+h exec $home_assistant
   $alt+q exec qutebrowser
   $alt+f exec $filebrowser
   $alt+m exec $musicplayer
