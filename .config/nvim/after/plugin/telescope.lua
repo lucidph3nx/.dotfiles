@@ -26,13 +26,27 @@ telescope.setup {
   }
 }
 
+function vim.getVisualSelection()
+	vim.cmd('noau normal! "vy"')
+	local text = vim.fn.getreg('v')
+	vim.fn.setreg('v', {})
+
+	text = string.gsub(text, "\n", "")
+	if #text > 0 then
+		return text
+	else
+		return ''
+	end
+end
 
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>st', builtin.git_files, { desc = '[S]earch [T]racked files (git)' })
 vim.keymap.set('n', '<leader>sc', builtin.git_commits, { desc = '[S]earch [C]ommits (git)' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-vim.keymap.set('v', '<leader>ss', builtin.grep_string, { desc = '[S]earch [S]election' })
+vim.keymap.set('v', '<leader>ss', function()
+	local text = vim.getVisualSelection()
+	builtin.live_grep({ default_text = text }) end, { desc = '[S]earch [S]election' })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
