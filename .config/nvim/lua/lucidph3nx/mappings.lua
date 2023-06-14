@@ -18,7 +18,6 @@ map('v', '<leader>P', '"+P', opts)
 -- Helix inspired redo
 map('n', 'U', '<C-r>', make_opts('Redo', opts))
 
-
 -- when something is highlighted, move up and down with J & K
 map("v", "J", ":m '>+1<CR>gv=gv", make_opts('Move line down', opts))
 map("v", "K", ":m '<-2<CR>gv=gv", make_opts('Move line up', opts))
@@ -42,3 +41,6 @@ map("n", "<leader>x", "<cmd>!chmod +x %<CR>", make_opts('Make file executable', 
 map('n', '<leader>ds', ':lua sops_helper.decrypt()<CR>', make_opts('[D]ecrypt [S]ops file', opts))
 map('n', '<leader>es', ':lua sops_helper.encrypt()<CR>', make_opts('[E]ncrypt [S]ops file', opts))
 
+-- toggles
+map('n', '<leader>tw', ':set wrap!<CR>', make_opts('[T]oggle [W]rap', opts))
+map('n', '<leader>tl', ':set relativenumber!<CR>', make_opts('[T]oggle [L]ine numbers', opts))
