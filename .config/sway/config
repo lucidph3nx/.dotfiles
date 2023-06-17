@@ -75,12 +75,12 @@ output * bg $(find $wallpapers -type f | shuf -n 1) fill
 
 # Styling
 font pango:JetBrainsMono Nerd Font Medium, NotoSans, NotoEmoji 10
-default_border pixel 2
+default_border pixel 3
 hide_edge_borders none
 # class                 border  backgr. text    indicator child_border
 client.focused          #98c379 #98c379 #000000 #98c379 #98c379
-client.focused_inactive #61afef #5c6370 #ffffff #98c379 #5c6370
-client.unfocused        #61afef #5c6370 #abb2bf #98c379 #5c6370
+client.focused_inactive #61afef #5c6370 #ffffff #5c6370 #5c6370
+client.unfocused        #61afef #5c6370 #abb2bf #5c6370 #5c6370
 # general gaps on windows
 gaps inner 5
 
@@ -187,7 +187,7 @@ bindsym --to-code $super+Shift+e mode $mode_exit
 
 
 # next new window either horizontal or vertical
-bindsym $super+b splith
+bindsym $super+b split4
 bindsym $super+v splitv
 
 # autotiling script
