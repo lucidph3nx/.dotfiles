@@ -170,7 +170,7 @@ bindsym --to-code $super+Shift+e mode $mode_exit
     bindsym $super+7 workspace number 7
     bindsym $super+8 workspace number 8
     bindsym $super+9 workspace number 9
-    bindsym $super+0 workspace number 10
+    bindsym $super+0 workspace number 0
     # Move focused container to workspace
     bindsym $super+Shift+1 move container to workspace number 1
     bindsym $super+Shift+2 move container to workspace number 2
@@ -181,7 +181,7 @@ bindsym --to-code $super+Shift+e mode $mode_exit
     bindsym $super+Shift+7 move container to workspace number 7
     bindsym $super+Shift+8 move container to workspace number 8
     bindsym $super+Shift+9 move container to workspace number 9
-    bindsym $super+Shift+0 move container to workspace number 10
+    bindsym $super+Shift+0 move container to workspace number 0
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 
@@ -249,8 +249,10 @@ bar {
 }
 
 # home automation
-bindsym $super+$pageup exec zsh /home/ben/scripts/hass-open-blinds.sh
-bindsym $super+$pagedown exec zsh /home/ben/scripts/hass-close-blinds.sh
+# bindsym $super+$pageup exec zsh /home/ben/scripts/hass-open-blinds.sh
+# bindsym $super+$pagedown exec zsh /home/ben/scripts/hass-close-blinds.sh
+bindsym $super+$pageup exec zsh /home/ben/.local/scripts/home.office.openBlinds
+bindsym $super+$pagedown exec zsh /home/ben/.local/scripts/home.office.closeBlinds
 
 # Application specific settings
 for_window [app_id="pavucontrol"] floating enable, resize set width 500 px height 600 px
