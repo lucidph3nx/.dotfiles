@@ -1,7 +1,7 @@
 # a place to install various utils, mostly version managers
 
 # rtx version manager - hopefully the last I'll ever need
-eval "$(/usr/bin/rtx activate zsh)"
+eval "$(rtx activate zsh)"
 
 # adds cargo binaries to path
 export PATH="${PATH}:${HOME}/.local/share/cargo/bin"
