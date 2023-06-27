@@ -15,3 +15,5 @@ tmux new-window -t $session:4 -n "prod-s1t"
 tmux send-keys -t $session:4 "ssh prod-s1t" C-m
 tmux new-window -t $session:5 -n "oneview-uat"
 tmux send-keys -t $session:5 "ssh oneview-uat" C-m
+tmux new-window -t $session:6 -n "prod-s1w"
+tmux send-keys -t $session:6 "ssh prod-s1w" C-m
