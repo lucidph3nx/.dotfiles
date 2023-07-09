@@ -28,4 +28,4 @@ set.scrolloff = 8
 
 set.updatetime = 50
 
-
+set.mouse=nil
