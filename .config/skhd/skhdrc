@@ -13,6 +13,16 @@ cmd + shift - j : yabai -m window --warp south
 cmd + shift - k : yabai -m window --warp north
 cmd + shift - l : yabai -m window --warp east
 
+focus_window () {
+    SPACE_NAME=$(yabai -m query --spaces --space | jq ".label")
+    WINDOW_ID=$(yabai -m query --windows --space | jq ".[] | select (.app=${SPACE_NAME}).id")
+    yabai -m window --focus "${WINDOW_ID}"
+}
+# focus window after active space changes
+yabai -m signal --add event=space_changed action="focus_window"
+
+# focus window after active display changes
+yabai -m signal --add event=display_changed action="focus_window"
 
 # switching spaces - NOTE: doesnt work with sip enabled, ive mapped keys in karabiner instead
 cmd - z : yabai -m space --focus recent
