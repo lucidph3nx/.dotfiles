@@ -27,4 +27,11 @@ config.set("fileselect.handler", "external")
 config.set("fileselect.single_file.command", ['kitty', '--class', 'ranger-filepicker', '-e', 'ranger', '--choosefile', '{}'])
 config.set("fileselect.multiple_files.command", ['kitty', '--class', 'ranger-filepicker', '-e', 'ranger', '--choosefiles', '{}'])
 
+
+# keybindings
+# Leader ( )
+config.bind(' l', 'spawn --userscript qute-bitwarden')
+# yank to clipboard
+config.bind(' y', 'yank selection')
+
 config.load_autoconfig()
