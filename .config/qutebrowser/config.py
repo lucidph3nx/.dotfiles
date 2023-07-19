@@ -10,6 +10,9 @@ c.url.searchengines = { 'DEFAULT': 'https://google.com/search?hl=en&q={}' }
 c.colors.webpage.preferred_color_scheme = "dark"
 config.source('themes/onedark.py')
 
+# disable window decorations (wont work unti using Qt6)
+# config.set ("window.hide_decoration", True)
+
 # font
 c.fonts.default_size = "10pt"
 c.fonts.default_family = "JetbrainsMonoNerdFont"
