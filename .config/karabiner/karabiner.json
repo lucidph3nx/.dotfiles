@@ -114,10 +114,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 1"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 1",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "1",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 1"
                                 },
                                 "type": "basic"
                             }
@@ -136,10 +153,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 2"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 2",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "2",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 2"
                                 },
                                 "type": "basic"
                             }
@@ -158,10 +192,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 3"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 3",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "3",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 3"
                                 },
                                 "type": "basic"
                             }
@@ -180,10 +231,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 4"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 4",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "4",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 4"
                                 },
                                 "type": "basic"
                             }
@@ -202,10 +270,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 5"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 5",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "5",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 5"
                                 },
                                 "type": "basic"
                             }
@@ -224,10 +309,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 6"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 6",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "6",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 6"
                                 },
                                 "type": "basic"
                             }
@@ -246,10 +348,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 7"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 7",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "7",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 7"
                                 },
                                 "type": "basic"
                             }
@@ -268,10 +387,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 8"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 8",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "8",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 8"
                                 },
                                 "type": "basic"
                             }
@@ -290,10 +426,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 9"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 9",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "9",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 9"
                                 },
                                 "type": "basic"
                             }
@@ -312,10 +465,27 @@
                                     }
                                 },
                                 "to": {
+                                    "shell_command": "~/.config/yabai/mac-focus-space-SIP.sh 0"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Move Window to Space 10",
+                        "manipulators": [
+                            {
+                                "from": {
                                     "key_code": "0",
-                                    "modifiers": [
-                                        "option"
-                                    ]
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "shell_command": "~/.config/yabai/mac-move-space-SIP.sh 0"
                                 },
                                 "type": "basic"
                             }
@@ -1367,6 +1537,33 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Close window with Command+Q, not whole application",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "q",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "w",
+                                        "modifiers": [
+                                            "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1573,6 +1770,34 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 134,
+                        "vendor_id": 5426
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
+                    "simple_modifications": [],
+                    "treat_as_built_in_keyboard": false
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 134,
+                        "vendor_id": 5426
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false,
                     "simple_modifications": [],
                     "treat_as_built_in_keyboard": false
                 }

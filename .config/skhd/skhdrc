@@ -13,44 +13,37 @@ cmd + shift - j : yabai -m window --warp south
 cmd + shift - k : yabai -m window --warp north
 cmd + shift - l : yabai -m window --warp east
 
-focus_window () {
-    SPACE_NAME=$(yabai -m query --spaces --space | jq ".label")
-    WINDOW_ID=$(yabai -m query --windows --space | jq ".[] | select (.app=${SPACE_NAME}).id")
-    yabai -m window --focus "${WINDOW_ID}"
-}
-# focus window after active space changes
-yabai -m signal --add event=space_changed action="focus_window"
+# Note to self, a lot of working with spaces using yabai doesnt work well without System Integrity Protection disabled
+# skhd also has issues with mapping to command, which i use heavily to match my linux setup
+# I've made bash scripts which I call via karibiner instead
 
-# focus window after active display changes
-yabai -m signal --add event=display_changed action="focus_window"
-
-# switching spaces - NOTE: doesnt work with sip enabled, ive mapped keys in karabiner instead
-cmd - z : yabai -m space --focus recent
-cmd - 1 : yabai -m space --focus 1
-cmd - 2 : yabai -m space --focus 2
-cmd - 3 : yabai -m space --focus 3
-cmd - 4 : yabai -m space --focus 4
-cmd - 5 : yabai -m space --focus 5
-cmd - 6 : yabai -m space --focus 6
-cmd - 7 : yabai -m space --focus 7
-cmd - 8 : yabai -m space --focus 8
-cmd - 9 : yabai -m space --focus 9
-cmd - 0 : yabai -m space --focus 10
+# switching spaces
+# cmd - z : ~/.config/yabai/mac-focus-space-SIP.sh recent
+# cmd - 1 : ~/.config/yabai/mac-focus-space-SIP.sh 1
+# cmd - 2 : ~/.config/yabai/mac-focus-space-SIP.sh 2
+# cmd - 3 : ~/.config/yabai/mac-focus-space-SIP.sh 3
+# cmd - 4 : ~/.config/yabai/mac-focus-space-SIP.sh 4
+# cmd - 5 : ~/.config/yabai/mac-focus-space-SIP.sh 5
+# cmd - 6 : ~/.config/yabai/mac-focus-space-SIP.sh 6
+# cmd - 7 : ~/.config/yabai/mac-focus-space-SIP.sh 7
+# cmd - 8 : ~/.config/yabai/mac-focus-space-SIP.sh 8
+# cmd - 9 : ~/.config/yabai/mac-focus-space-SIP.sh 9
+# cmd - 0 : ~/.config/yabai/mac-focus-space-SIP.sh 10
 
 # move windows to spaces
-cmd + shift - 1 : yabai -m window --space  1; yabai -m space --focus 1
-cmd + shift - 2 : yabai -m window --space  2; yabai -m space --focus 2
-cmd + shift - 3 : yabai -m window --space  3; yabai -m space --focus 3
-cmd + shift - 4 : yabai -m window --space  4; yabai -m space --focus 4
-cmd + shift - 5 : yabai -m window --space  5; yabai -m space --focus 5
-cmd + shift - 6 : yabai -m window --space  6; yabai -m space --focus 6
-cmd + shift - 7 : yabai -m window --space  7; yabai -m space --focus 7
-cmd + shift - 8 : yabai -m window --space  8; yabai -m space --focus 8
-cmd + shift - 9 : yabai -m window --space  9; yabai -m space --focus 9
-cmd + shift - 0 : yabai -m window --space 10; yabai -m space --focus 10
+# cmd + shift - 1 : ~/.config/yabai/mac-focus-space-SIP.sh 1
+# cmd + shift - 2 : yabai -m window --space  2; ~/.config/yabai/mac-focus-space-SIP.sh 2
+# cmd + shift - 3 : yabai -m window --space  3; ~/.config/yabai/mac-focus-space-SIP.sh 3
+# cmd + shift - 4 : yabai -m window --space  4; ~/.config/yabai/mac-focus-space-SIP.sh 4
+# cmd + shift - 5 : yabai -m window --space  5; ~/.config/yabai/mac-focus-space-SIP.sh 5
+# cmd + shift - 6 : yabai -m window --space  6; ~/.config/yabai/mac-focus-space-SIP.sh 6
+# cmd + shift - 7 : yabai -m window --space  7; ~/.config/yabai/mac-focus-space-SIP.sh 7
+# cmd + shift - 8 : yabai -m window --space  8; ~/.config/yabai/mac-focus-space-SIP.sh 8
+# cmd + shift - 9 : yabai -m window --space  9; ~/.config/yabai/mac-focus-space-SIP.sh 9
+# cmd + shift - 0 : yabai -m window --space 10; ~/.config/yabai/mac-focus-space-SIP.sh 10
 
 cmd + shift - space : yabai -m window --toggle float;\
                       yabai -m window --grid 4:4:1:1:2:2
 
 # toggle window native fullscreen
-cmd - f : yabai -m window --toggle native-fullscreen
+# cmd - f : yabai -m window --toggle native-fullscreen
