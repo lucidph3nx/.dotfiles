@@ -21,7 +21,8 @@ else
   osascript -e "tell application \"System Events\" to key code ${keycode[${tgt_space}]} using {option down}"
 fi
 
-# if window is weirdly not on the space, focus first instead
+# if no window is focused, focus first window
+echo $(yabai -m query --windows --window | jq '.title')
 if [[ $(yabai -m query --windows --window | jq '.space') != ${tgt_space} ]]; then
   yabai -m window --focus first
 fi
