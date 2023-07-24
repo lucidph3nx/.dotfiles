@@ -4,6 +4,7 @@
 
 # Mouse 
 focus_follows_mouse no
+mouse_warping none
 
 # Keyboard
 # super for "window actions"
