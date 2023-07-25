@@ -11,3 +11,5 @@
         insteadOf = https://github.com/rust-lang/crates.io-index
 [protocol "file"]
 	allow = always
+[init]
+	defaultBranch = main
