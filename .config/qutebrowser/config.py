@@ -33,7 +33,11 @@ config.set("fileselect.multiple_files.command", ['kitty', '--class', 'ranger-fil
 
 # keybindings
 # Leader ( )
-config.bind(' l', 'spawn --userscript qute-bitwarden')
+config.bind(' ll', 'spawn --userscript qute-bitwarden --totp')
+config.bind(' lu', 'spawn --userscript qute-bitwarden --username-only')
+config.bind(' lp', 'spawn --userscript qute-bitwarden --password-only')
+config.bind(' lt', 'spawn --userscript qute-bitwarden --totp-only')
+
 # yank to clipboard
 config.bind(' y', 'yank selection')
 
