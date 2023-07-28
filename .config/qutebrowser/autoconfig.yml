@@ -6,7 +6,18 @@
 
 config_version: 2
 settings:
+  bindings.commands:
+    global:
+      normal:
+        <Space>ll: spawn --userscript qute-bitwarden --totp
+        <Space>lp: spawn --userscript qute-bitwarden --password-only
+        <Space>lt: spawn --userscript qute-bitwarden --totp-only
+        <Space>lu: spawn --userscript qute-bitwarden --username-only
+        <Space>y: yank selection
   content.notifications.enabled:
+    https://calendar.google.com: false
     https://postimg.cc: false
     https://www.reddit.com: false
     https://www.youtube.com: false
+  content.register_protocol_handler:
+    https://calendar.google.com?cid=%25s: true
