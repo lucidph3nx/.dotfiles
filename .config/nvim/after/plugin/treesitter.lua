@@ -12,6 +12,7 @@ require'nvim-treesitter.configs'.setup {
     "lua",
     "rust",
     "clojure",
+    "python",
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
