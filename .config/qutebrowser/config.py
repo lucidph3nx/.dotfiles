@@ -39,7 +39,7 @@ config.set("fileselect.multiple_files.command", ['kitty', '--class', 'ranger-fil
 
 # keybindings
 # Leader ( )
-c.bind('<Space>ll', 'spawn --userscript qute-bitwarden --totp')
+config.bind('<Space>ll', 'spawn --userscript qute-bitwarden --totp')
 config.bind('<Space>lu', 'spawn --userscript qute-bitwarden --username-only')
 config.bind('<Space>lp', 'spawn --userscript qute-bitwarden --password-only')
 config.bind('<Space>lt', 'spawn --userscript qute-bitwarden --totp-only')
