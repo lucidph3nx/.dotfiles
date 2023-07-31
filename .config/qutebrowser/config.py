@@ -23,11 +23,11 @@ config.source('themes/onedark.py')
 c.fonts.default_size = "10pt"
 c.fonts.default_family = "JetbrainsMonoNerdFont"
 # tabs
-c.tabs.favicons.scale = 1.5
+c.tabs.favicons.scale = 1
 c.tabs.padding = {
-    "bottom": 8,
+    "bottom": 6,
     "left": 5,
-    "top": 10,
+    "top": 6,
     "right": 5,
     }
 
