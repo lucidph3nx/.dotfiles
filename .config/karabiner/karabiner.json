@@ -1560,7 +1560,15 @@
                         ]
                     },
                     {
-                        "description": "Close window with Command+Q, not whole application",
+                        "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.mozilla\\.firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                        "description": "Close window with Command+Q, not whole application (App specific)",
                         "manipulators": [
                             {
                                 "from": {
