@@ -1,6 +1,0 @@
--- require("obsidian").setup({
---   dir = "~/documents/obsidian/obsidian/obsidian",
---   completion = {
---     nvim_cmp = false, -- if using nvim-cmp, otherwise set to false
---   }
--- })
