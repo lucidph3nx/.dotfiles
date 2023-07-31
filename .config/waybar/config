@@ -14,7 +14,7 @@
     "custom/notification",
     "network",
     "battery",
-    "clock"
+    "custom/clock"
   ],
   
   "sway/workspaces": {
@@ -84,9 +84,11 @@
     "on-click": "pactl --format=json list sinks short | jq -cM --unbuffered \"[.[].name] | .[((index(\\\"$(pactl get-default-sink)\\\")+1)%length)]\" | xargs pactl set-default-sink"
     },
  
-  "clock": {
+  "custom/clock": {
+    // this used to be just clock, but it started giving me decimal seconds so I switched to using the date coreutils
     "interval": 1,
-    "format": "{:%F %H:%M:%S}",
+    // "format": "{:%F %H:%M:%S}",
+    "exec": "date +'%F %T'",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
