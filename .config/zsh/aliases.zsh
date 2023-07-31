@@ -41,8 +41,8 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
   alias task=go-task
 fi
 
-# for sshing into things that don't know alacritty
-alias ssh='TERM=xterm-256color ssh'
+# for sshing into things that don't know kitty
+alias ssh='TERM=xterm-color ssh'
 
 # sbt (XDG Compliance)
 alias sbt=sbt -ivy "$XDG_DATA_HOME"/ivy2 -sbt-dir "$XDG_DATA_HOME"/sbt
