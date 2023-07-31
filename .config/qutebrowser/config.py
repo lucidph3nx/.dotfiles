@@ -31,6 +31,7 @@ c.tabs.padding = {
     "right": 5,
     }
 
+
 # ranger as browser file picker
 config.set("fileselect.handler", "external")
 config.set("fileselect.single_file.command", ['kitty', '--class', 'ranger-filepicker', '-e', 'ranger', '--choosefile', '{}'])
@@ -38,19 +39,18 @@ config.set("fileselect.multiple_files.command", ['kitty', '--class', 'ranger-fil
 
 
 # keybindings
-# Leader ( )
-config.bind('<Space>ll', 'spawn --userscript qute-bitwarden --totp')
-config.bind('<Space>lu', 'spawn --userscript qute-bitwarden --username-only')
-config.bind('<Space>lp', 'spawn --userscript qute-bitwarden --password-only')
-config.bind('<Space>lt', 'spawn --userscript qute-bitwarden --totp-only')
-
-# yank to clipboard
-config.bind('<Space>y', 'yank selection')
-
+# I did used to use a combination of config.bind and c.bindings, but my 'ch' with no leader did not work in config.bind
+# and having a combination of binding strategies caused them to interfere
 c.bindings.commands['normal'] = {
         # close tabs left and right
-        'ch': 'tab-only --prev',
-        'cl': 'tab-only --next',
+        'ch': 'tab-only --next',
+        'cl': 'tab-only --prev',
+        # bitwarden bindings
+        '<Space>ll': 'spawn --userscript qute-bitwarden --totp',
+        '<Space>lu': 'spawn --userscript qute-bitwarden --username-only',
+        '<Space>lp': 'spawn --userscript qute-bitwarden --password-only',
+        '<Space>lt': 'spawn --userscript qute-bitwarden --totp-only',
+        '<Space>y': 'yank selection',
         }
 
 config.load_autoconfig()

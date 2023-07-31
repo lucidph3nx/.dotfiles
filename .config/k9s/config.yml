@@ -16,19 +16,40 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: tinfoilforest
-  currentCluster: tinfoilforest
+  currentContext: prod-w
+  currentCluster: on-prem-prod-trentham
   clusters:
-    tinfoilforest:
+    on-prem-prod-trentham:
       namespace:
         active: all
         lockFavorites: false
         favorites:
-        - kube-system
         - all
+        - wealth
         - default
       view:
-        active: pods
+        active: deploy
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    on-prem-uat-takanini:
+      namespace:
+        active: wealth
+        lockFavorites: false
+        favorites:
+        - wealth
+        - default
+      view:
+        active: pod
       featureGates:
         nodeShell: false
       shellPod:
