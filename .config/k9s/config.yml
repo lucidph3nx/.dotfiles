@@ -16,19 +16,18 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: prod-w
-  currentCluster: on-prem-prod-trentham
+  currentContext: prod-t
+  currentCluster: on-prem-prod-takanini
   clusters:
-    on-prem-prod-trentham:
+    on-prem-prod-takanini:
       namespace:
-        active: all
+        active: wealth
         lockFavorites: false
         favorites:
-        - all
         - wealth
         - default
       view:
-        active: deploy
+        active: cronjob
       featureGates:
         nodeShell: false
       shellPod:
