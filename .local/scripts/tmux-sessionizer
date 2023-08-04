@@ -19,14 +19,23 @@ echo -ne "\033]0;${selected_name}\007"
 
 # Check if the selected item is a file or if the directory contains a single file
 if [[ -f $selected ]]; then
+    # is a file, open it
     selected_file="$selected"
     selected="$(dirname "$selected")"
 else
+    # is a folder
     file_count=$(find "$selected" -maxdepth 1 -type f | wc -l)
     if [[ $file_count -eq 1 ]]; then
+        # only one file here, open it
         selected_file=$(find "$selected" -maxdepth 1 -type f)
     else
+      # if many files, but one of them is a README.md, open that
+      readme_file="$(find "$1" -maxdepth 1 -type f -name "README.md")"
+      if [[ -n "$readme_file" ]]; then
+        selected_file="$readme_file"
+      else
         selected_file=""
+      fi
     fi
 fi
 
