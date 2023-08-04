@@ -10,7 +10,8 @@ locations=(
 specific_folders=(
   "~/.local/scripts/"
   "~/.ssh/"
-  "~/documents/obsidian/obsidian/obsidian/"
+  "~/documents/obsidian/personal-vault/"
+  "~/documents/obsidian/jarden-vault/"
 )
 
 # Array of specific files
