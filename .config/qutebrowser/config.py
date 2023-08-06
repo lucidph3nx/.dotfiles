@@ -42,6 +42,8 @@ config.set("fileselect.multiple_files.command", ['kitty', '--class', 'ranger-fil
 # I did used to use a combination of config.bind and c.bindings, but my 'ch' with no leader did not work in config.bind
 # and having a combination of binding strategies caused them to interfere
 c.bindings.commands['normal'] = {
+        # unbind
+        '<Ctrl-h>': 'nop',
         # close tabs left and right
         'ch': 'tab-only --next',
         'cl': 'tab-only --prev',
