@@ -143,6 +143,7 @@ mode --pango_markup $mode_exit {
         s exec systemctl poweroff, mode "default"
         Escape mode "default"
     }
+    bindsym Escape mode "default
 }
 bindsym --to-code $super+Shift+e mode $mode_exit
 
