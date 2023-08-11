@@ -25,9 +25,9 @@ c.fonts.default_family = "JetbrainsMonoNerdFont"
 # tabs
 c.tabs.favicons.scale = 1
 c.tabs.padding = {
-    "bottom": 6,
+    "bottom": 5,
     "left": 5,
-    "top": 6,
+    "top": 5,
     "right": 5,
     }
 

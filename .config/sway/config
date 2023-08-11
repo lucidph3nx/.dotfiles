@@ -41,10 +41,13 @@ set $tmuxsessionizer selection=$($tmuxprojectgetterpath | rofi -dmenu -theme-str
 
 # Applications
 set $terminal kitty 
-set $browser firefox
-set $calendar firefox -new-tab 'https://calendar.google.com'
-set $home_assistant firefox -new-tab "https://home-assistant.$SECRET_DOMAIN"
-set $plex firefox -new-tab "https://plex.$SECRET_DOMAIN"
+set $browser qutebrowser
+# set $calendar firefox -new-tab 'https://calendar.google.com'
+set $calendar qutebrowser 'https://calendar.google.com'
+# set $home_assistant firefox -new-tab "https://home-assistant.$SECRET_DOMAIN"
+set $home_assistant qutebrowser "https://home-assistant.$SECRET_DOMAIN"
+# set $plex firefox -new-tab "https://plex.$SECRET_DOMAIN"
+set $plex qutebrowser "https://plex.$SECRET_DOMAIN"
 set $filebrowser $terminal ranger
 set $menu rofi -show drun -theme-str $rofi_style_dmenu
 set $runscripts ls ~/.local/scripts | rofi -dmenu -i -theme-str $rofi_style_runscripts | xargs -I {} swaymsg exec ~/.local/scripts/{}
@@ -59,7 +62,7 @@ set $obsidian xdg-open obsidian://vault/personal-vault
 # Scripts
 # add an item to the notion shopping list
 set $addtoshoppinglist rofi -dmenu -i -theme-str $rofi_style_shoppinglistentry | xargs zsh ~/scripts/add-item-to-shopping-list.sh
-set $openshoppinglist firefox -new-tab 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
+set $openshoppinglist qutebrowser 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
 
 
 # differnt configs per hostname
