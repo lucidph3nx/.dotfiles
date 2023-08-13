@@ -23,6 +23,7 @@ config.source('themes/onedark.py')
 c.fonts.default_size = "10pt"
 c.fonts.default_family = "JetbrainsMonoNerdFont"
 # tabs
+c.tabs.show = "multiple" # only show tabs if multiple tabs are open
 c.tabs.favicons.scale = 1
 c.tabs.padding = {
     "bottom": 5,
@@ -42,17 +43,19 @@ config.set("fileselect.multiple_files.command", ['kitty', '--class', 'ranger-fil
 # I did used to use a combination of config.bind and c.bindings, but my 'ch' with no leader did not work in config.bind
 # and having a combination of binding strategies caused them to interfere
 c.bindings.commands['normal'] = {
-        # unbind
-        '<Ctrl-h>': 'nop',
-        # close tabs left and right
-        'ch': 'tab-only --next',
-        'cl': 'tab-only --prev',
-        # bitwarden bindings
-        '<Space>ll': 'spawn --userscript qute-bitwarden --totp',
-        '<Space>lu': 'spawn --userscript qute-bitwarden --username-only',
-        '<Space>lp': 'spawn --userscript qute-bitwarden --password-only',
-        '<Space>lt': 'spawn --userscript qute-bitwarden --totp-only',
-        '<Space>y': 'yank selection',
-        }
+    # unbind
+    '<Ctrl-h>': 'nop',
+    # close tabs left and right
+    'ch': 'tab-only --next',
+    'cl': 'tab-only --prev',
+    # bitwarden bindings
+    '<Space>ll': 'spawn --userscript qute-bitwarden --totp',
+    '<Space>lu': 'spawn --userscript qute-bitwarden --username-only',
+    '<Space>lp': 'spawn --userscript qute-bitwarden --password-only',
+    '<Space>lt': 'spawn --userscript qute-bitwarden --totp-only',
+    # youtube music download
+    '<Space>md': 'spawn --userscript ytm-download',
+    '<Space>y': 'yank selection',
+}
 
 config.load_autoconfig()

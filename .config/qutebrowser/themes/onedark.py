@@ -1,5 +1,8 @@
 # credit for the original here:
 # https://github.com/leosolid/qutebrowser-themes
+from qutebrowser.config.config import ConfigContainer  # noqa: F401
+c: ConfigContainer = c  # noqa: F821 pylint: disable=E0602,C0103
+
 
 ##########
 # COLORS #

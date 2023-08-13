@@ -17,11 +17,19 @@ settings:
         <Space>y: yank selection
         ch: tab-only --next
         cl: tab-only --prev
+  content.geolocation:
+    https://www.bunnings.co.nz: true
+    https://www.supercheapauto.co.nz: false
   content.notifications.enabled:
     https://calendar.google.com: false
     https://postimg.cc: false
+    https://www.facebook.com: false
     https://www.reddit.com: false
     https://www.youtube.com: false
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: true
     https://mail.google.com?extsrc=mailto&url=%25s: false
+  tabs.position:
+    global: top
+  tabs.show:
+    global: multiple
