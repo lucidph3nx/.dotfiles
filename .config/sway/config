@@ -56,7 +56,8 @@ set $calculator rofi -show calc -no-history -calc-command 'wl-copy "{result}"' -
 set $clipboardmanager cliphist list | rofi -dmenu -i -theme-str $rofi_style_clipboard | cliphist decode | wl-copy
 set $clearclipboard cliphist wipe
 set $musicplayer $terminal ncmpcpp
-set $obsidian xdg-open obsidian://vault/personal-vault
+# set $obsidian xdg-open obsidian://vault/personal-vault
+set $obsidian $terminal tmux-sessionizer /home/ben/documents/obsidian/personal-vault
 # note, passwordmanager dependencies: rofi, rofi-rbw, rbw, wtype
 
 # Scripts
