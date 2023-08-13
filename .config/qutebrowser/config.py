@@ -1,16 +1,16 @@
-# pylint: disable=C0111
-from qutebrowser.config.configfiles import ConfigAPI  # noqa: F401
-from qutebrowser.config.config import ConfigContainer  # noqa: F401
-
-config: ConfigAPI = config  # noqa: F821 pylint: disable=E0602,C0103
-c: ConfigContainer = c  # noqa: F821 pylint: disable=E0602,C0103
+# pylint: disable=C0111,W0127
+c = c  # noqa: F821 pylint: disable=E0602,C0103
+config = config  # noqa: F821 pylint: disable=E0602,C0103
 
 # homepage
 c.url.start_pages = ["about:blank"]
 c.url.default_page = "about:blank"
-
-# search engine
-c.url.searchengines = {"DEFAULT": "https://google.com/search?hl=en&q={}"}
+c.url.searchengines = {
+    "DEFAULT": "https://google.com/search?hl=en&q={}",
+    'y': 'https://www.youtube.com/results?search_query={}',
+}
+c.downloads.location.directory = '~/downloads'
+c.content.autoplay = False
 
 # theming
 c.colors.webpage.preferred_color_scheme = "dark"
@@ -35,21 +35,23 @@ c.tabs.padding = {
     "right": 5,
 }
 
-
 # ranger as browser file picker
 config.set("fileselect.handler", "external")
 config.set(
     "fileselect.single_file.command",
-    ["kitty", "--class", "ranger-filepicker", "-e", "ranger", "--choosefile", "{}"],
+    ["kitty", "--class",
+        "ranger-filepicker", "-e", "ranger", "--choosefile", "{}"],
 )
 config.set(
     "fileselect.multiple_files.command",
-    ["kitty", "--class", "ranger-filepicker", "-e", "ranger", "--choosefiles", "{}"],
+    ["kitty", "--class",
+        "ranger-filepicker", "-e", "ranger", "--choosefiles", "{}"],
 )
 
 
 # keybindings
-# I did used to use a combination of config.bind and c.bindings, but my 'ch' with no leader did not work in config.bind
+# I did used to use a combination of config.bind and c.bindings
+# but my 'ch' with no leader did not work in config.bind
 # and having a combination of binding strategies caused them to interfere
 c.bindings.commands["normal"] = {
     # unbind
