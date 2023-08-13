@@ -22,7 +22,8 @@ fg_default = "#abb2bf"
 bg_lightest = "#c8ccd4"         # main shade lightest
 fg_error = "#e06c75"            # red
 # "#d19a66"                     # orange
-bg_hint = "#e5c07b"             # yellow
+bg_hint = "#61afef"
+# "#e5c07b"                     # yellow
 fg_matched_text = "#61afef"     # green
 bg_passthrough_mode = "#56b6c2" # teal
 bg_insert_mode = "#61afef"      # blue
@@ -117,6 +118,7 @@ c.colors.downloads.error.fg = fg_error
 
 # Font color for hints.
 c.colors.hints.fg = bg_default
+c.hints.border = '1px solid ' + bg_lighter
 
 # Background color for hints. Note that you can use a `rgba(...)` value
 # for transparency.

@@ -268,6 +268,7 @@ for_window [instance="plexamp"] floating enable, resize set width 300 px height 
 for_window [app_id="gedit"] floating enable, resize set width 800 px height 600 px
 for_window [app_id="org.gnome.Calculator"] floating enable, resize set width 300 px height 500 px
 for_window [app_id="ranger-filepicker"] floating enable, resize set width 900 px height 600 px
+for_window [app_id="qute-editor"] floating enable, resize set width 900 px height 600 px
 
 # Notification Daemon
 exec swaync
