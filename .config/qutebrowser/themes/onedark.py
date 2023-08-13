@@ -309,4 +309,4 @@ c.colors.tabs.selected.even.bg = bg_selection
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
-# c.colors.webpage.bg = bg_default
+c.colors.webpage.bg = bg_default
