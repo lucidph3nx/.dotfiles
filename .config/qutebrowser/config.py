@@ -15,6 +15,8 @@ c.url.searchengines = {
 c.downloads.location.directory = '~/downloads'
 c.content.autoplay = False
 
+c.spellcheck.languages = ['en-AU']
+
 c.completion.open_categories = [
     'searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
 
