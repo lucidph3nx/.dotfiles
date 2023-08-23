@@ -30,7 +30,7 @@ else
         selected_file=$(find "$selected" -maxdepth 1 -type f)
     else
       # if many files, but one of them is a README.md, open that
-      readme_file="$(find "$1" -maxdepth 1 -type f -name "README.md")"
+      readme_file="$(find "$selected" -maxdepth 1 -type f -name "README.md")"
       if [[ -n "$readme_file" ]]; then
         selected_file="$readme_file"
       else
