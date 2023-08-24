@@ -75,4 +75,6 @@ c.bindings.commands['normal'] = {
     # youtube music download
     '<Space>md': 'spawn --userscript ytm-download',
     '<Space>y': 'yank selection',
+    # open in firefox
+    '<Space>ff': 'spawn --userscript open-firefox',
 }
