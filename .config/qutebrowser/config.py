@@ -13,7 +13,9 @@ c.url.searchengines = {
     'y': 'https://www.youtube.com/results?search_query={}',
 }
 c.downloads.location.directory = '~/downloads'
+# content settings
 c.content.autoplay = False
+c.content.javascript.clipboard = 'access'
 
 c.spellcheck.languages = ['en-AU']
 
