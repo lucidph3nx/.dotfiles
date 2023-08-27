@@ -33,9 +33,7 @@ set $custom_emoji_list ~/.config/rofi-emoji/custom_emoji_list.txt
 set $emojipicker rofi -show emoji -emoji-file $custom_emoji_list -theme-str $rofi_style_emojipicker 
 set $screenshotutil grim -g "$(slurp -c "#98c379FF" -b '#4d515d80')" - | wl-copy
 
-set $tmuxsesionizerpath ~/.local/scripts/tmux-sessionizer
-set $tmuxprojectgetterpath ~/.local/scripts/tmux-projectgetter
-set $tmuxsessionizer selection=$($tmuxprojectgetterpath | rofi -dmenu -theme-str $rofi_style_tmuxsessionizer) && [ -n "$selection" ] && xargs -I{} $terminal $tmuxsesionizerpath "{}" 2> /dev/null <<<"$selection"
+set $nvimSessionLauncher ~/.local/scripts/application.nvim.sessionLauncher
 
 
 # Applications
@@ -102,7 +100,7 @@ bindsym --to-code {
   $super+c exec $calculator
   $super+y exec $clipboardmanager
   $super+Shift+y exec $clearclipboard
-  $super+f exec $tmuxsessionizer
+  $super+f exec $nvimSessionLauncher
 }
 
 ## Application Bindings
