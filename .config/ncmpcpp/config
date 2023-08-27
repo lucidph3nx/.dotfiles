@@ -28,9 +28,3 @@ media_library_primary_tag = album_artist
 
 # Needed for tag editor and file operations to work.    
 mpd_music_dir = /home/ben/music/
-
-## lyrics ##
-follow_now_playing_lyrics = yes
-fetch_lyrics_for_current_song_in_background = yes
-lyrics_directory - "~/.config/ncmpcpp/lyrics"
-lyrics_fetchers = azlyrics, genius, musixmatch, sing365, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, zeneszoveg, internet
