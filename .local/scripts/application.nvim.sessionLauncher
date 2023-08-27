@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# rofi style
+rofi_style_tmuxsessionizer='inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Select Project"; } element-icon { enabled: false; }'
+
+echo $rofi_style_tmuxsessionizer
+
+# configurable values
+tmuxprojectgetterpath="~/.local/scripts/tmux-projectgetter"
+tmuxsesionizerpath="~/.local/scripts/tmux-sessionizer"
+terminal="kitty"
+
+
+# Get the selection from tmux project getter
+selection=$(~/.local/scripts/tmux-projectgetter | rofi -dmenu -theme-str "$rofi_style_tmuxsessionizer")
+# Check if selection is not empty
+if [ -n "$selection" ]; then
+  # Run the tmux sessionizer with the selected session
+  xargs -I{} $terminal ~/.local/scripts/tmux-sessionizer "{}" 2> /dev/null <<<"$selection"
+fi
+
