@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# rofi style
+rofi_style_calculator='listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Calculator"; } element-icon { enabled: false; }'
+
+# start rofi with calculator args
+rofi -show calc -no-history -calc-command 'wl-copy "{result}"' -theme-str "$rofi_style_calculator"

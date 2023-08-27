@@ -20,38 +20,31 @@ set $down j
 set $up k
 set $right l
 
-
-# rofi styles
-set $rofi_style_dmenu 'entry { placeholder: "drun"; }'
-set $rofi_style_runscripts 'inputbar { children: [entry];} entry { placeholder: "Select Command"; }  element-icon { enabled: false; }'  
-set $rofi_style_calculator 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Calculator"; } element-icon { enabled: false; }'
-set $rofi_style_clipboard 'inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Clipboard History"; } element-icon { enabled: false; }' 
 # Window Utilities 
 set $emojipicker ~/.local/scripts/application.rofi.emojipicker
 set $screenshotutil ~/.local/scripts/application.grim.screenshotToClipboard
 
+# launchers
+set $menu ~/.local/scripts/application.launcher
+set $runscripts ~/.local/scripts/application.scripts.launcher
 set $nvim_session_launcher ~/.local/scripts/application.nvim.sessionLauncher
-
-
 # Applications
 set $terminal kitty 
 set $browser qutebrowser
-# set $calendar firefox -new-tab 'https://calendar.google.com'
-set $calendar qutebrowser 'https://calendar.google.com'
-# set $home_assistant firefox -new-tab "https://home-assistant.$SECRET_DOMAIN"
-set $home_assistant qutebrowser "https://home-assistant.$SECRET_DOMAIN"
-# set $plex firefox -new-tab "https://plex.$SECRET_DOMAIN"
-set $plex qutebrowser "https://plex.$SECRET_DOMAIN"
+# browser based applications
+set $calendar $browser 'https://calendar.google.com'
+set $home_assistant $browser "https://home-assistant.$SECRET_DOMAIN"
+set $plex $browser "https://plex.$SECRET_DOMAIN"
+# terminal based applications
 set $filebrowser $terminal ranger
-set $menu rofi -show drun -theme-str $rofi_style_dmenu
-set $runscripts ~/.local/scripts/application.scripts.launcher
-set $passwordmanager rofi-rbw
-set $calculator rofi -show calc -no-history -calc-command 'wl-copy "{result}"' -theme-str $rofi_style_calculator
-set $clipboardmanager cliphist list | rofi -dmenu -i -theme-str $rofi_style_clipboard | cliphist decode | wl-copy
-set $clearclipboard cliphist wipe
 set $musicplayer $terminal ncmpcpp
-# set $obsidian xdg-open obsidian://vault/personal-vault
 set $obsidian $terminal tmux-sessionizer /home/ben/documents/obsidian/personal-vault
+# rofi based applications
+set $passwordmanager rofi-rbw
+set $calculator ~/local/scripts/application.rofi.calculator
+set $clipboardmanager ~/.local/scripts/application.cliphist.list
+set $clearclipboard ~/.local/scripts/application.cliphist.clear
+
 # note, passwordmanager dependencies: rofi, rofi-rbw, rbw, wtype
 
 # Scripts
