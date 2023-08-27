@@ -23,7 +23,6 @@ set $right l
 
 # rofi styles
 set $rofi_style_dmenu 'entry { placeholder: "drun"; }'
-set $rofi_style_shoppinglistentry 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolormegenta;} entry { placeholder: "Add Item to Shopping List"; }'
 set $rofi_style_runscripts 'inputbar { children: [entry];} entry { placeholder: "Select Command"; }  element-icon { enabled: false; }'  
 set $rofi_style_calculator 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Calculator"; } element-icon { enabled: false; }'
 set $rofi_style_clipboard 'inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Clipboard History"; } element-icon { enabled: false; }' 
@@ -62,7 +61,7 @@ set $obsidian $terminal tmux-sessionizer /home/ben/documents/obsidian/personal-v
 
 # Scripts
 # add an item to the notion shopping list
-set $addtoshoppinglist rofi -dmenu -i -theme-str $rofi_style_shoppinglistentry | xargs zsh ~/scripts/add-item-to-shopping-list.sh
+set $addtoshoppinglist ~/.local/scripts/home.shoppinglist.addItem
 set $openshoppinglist qutebrowser 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
 
 
