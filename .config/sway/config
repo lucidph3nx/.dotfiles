@@ -26,14 +26,11 @@ set $rofi_style_dmenu 'entry { placeholder: "drun"; }'
 set $rofi_style_runscripts 'inputbar { children: [entry];} entry { placeholder: "Select Command"; }  element-icon { enabled: false; }'  
 set $rofi_style_calculator 'listview { enabled: false;} inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Calculator"; } element-icon { enabled: false; }'
 set $rofi_style_clipboard 'inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Clipboard History"; } element-icon { enabled: false; }' 
-set $rofi_style_emojipicker  'inputbar { children: [entry]; border-color: @accentcolorgreen;} entry { placeholder: "Select Emoji"; } element-icon { enabled: false; }'
-set $rofi_style_tmuxsessionizer 'inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Select Project"; } element-icon { enabled: false; }'
 # Window Utilities 
-set $custom_emoji_list ~/.config/rofi-emoji/custom_emoji_list.txt
-set $emojipicker rofi -show emoji -emoji-file $custom_emoji_list -theme-str $rofi_style_emojipicker 
-set $screenshotutil grim -g "$(slurp -c "#98c379FF" -b '#4d515d80')" - | wl-copy
+set $emojipicker ~/.local/scripts/application.rofi.emojipicker
+set $screenshotutil ~/.local/scripts/application.grim.screenshotToClipboard
 
-set $nvimSessionLauncher ~/.local/scripts/application.nvim.sessionLauncher
+set $nvim_session_launcher ~/.local/scripts/application.nvim.sessionLauncher
 
 
 # Applications
@@ -47,7 +44,7 @@ set $home_assistant qutebrowser "https://home-assistant.$SECRET_DOMAIN"
 set $plex qutebrowser "https://plex.$SECRET_DOMAIN"
 set $filebrowser $terminal ranger
 set $menu rofi -show drun -theme-str $rofi_style_dmenu
-set $runscripts ls ~/.local/scripts | rofi -dmenu -i -theme-str $rofi_style_runscripts | xargs -I {} swaymsg exec ~/.local/scripts/{}
+set $runscripts ~/.local/scripts/application.scripts.launcher
 set $passwordmanager rofi-rbw
 set $calculator rofi -show calc -no-history -calc-command 'wl-copy "{result}"' -theme-str $rofi_style_calculator
 set $clipboardmanager cliphist list | rofi -dmenu -i -theme-str $rofi_style_clipboard | cliphist decode | wl-copy
@@ -100,7 +97,7 @@ bindsym --to-code {
   $super+c exec $calculator
   $super+y exec $clipboardmanager
   $super+Shift+y exec $clearclipboard
-  $super+f exec $nvimSessionLauncher
+  $super+f exec $nvim_session_launcher
 }
 
 ## Application Bindings
