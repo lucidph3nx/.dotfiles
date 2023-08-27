@@ -56,8 +56,8 @@
     "return-type": "string",
     "interval": 60,
     "format": "{}",
-    "exec": "$HOME/scripts/hass-office-temp.sh",
-    "on-click": "firefox -new-tab 'https://home-assistant.tinfoilforest.nz/lovelace/default_view'"
+    "exec": "$HOME/.local/scripts/cli.home.office.getTemperature",
+    "on-click": "qutebrowser --target window 'https://home-assistant.tinfoilforest.nz/lovelace/default_view'"
   },
 
   "tray": {
