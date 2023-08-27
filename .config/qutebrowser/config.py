@@ -6,8 +6,9 @@ config = config  # noqa: F821 pylint: disable=E0602,C0103
 config.load_autoconfig()
 
 # homepage
-c.url.start_pages = ['about:blank']
-c.url.default_page = 'about:blank'
+HOME_PAGE = 'file:///home/ben/.config/qutebrowser/homepage/home.html'
+c.url.start_pages = [HOME_PAGE]
+c.url.default_page = HOME_PAGE
 c.url.searchengines = {
     'DEFAULT': 'https://google.com/search?hl=en&q={}',
     'y': 'https://www.youtube.com/results?search_query={}',
