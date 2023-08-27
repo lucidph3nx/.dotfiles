@@ -30,6 +30,8 @@ export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"
 export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
 # cargo (rust)
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
+# rustup
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 # go
 export GOPATH="$XDG_DATA_HOME"/go
 # gtk2
@@ -44,6 +46,10 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 # nvm
 export NVM_DIR="$XDG_DATA_HOME"/nvm
+# platformio
+export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
+# pulse_audio
+export PULSE_COOKIE_DIR="$XDG_CACHE_HOME"/pulse
 # python
 export PYTHONPYCACHEPREFIX=$XDG_CACHE_HOME/python
 export PYTHONUSERBASE=$XDG_DATA_HOME/python
