@@ -24,9 +24,11 @@ alias dotfiles-private='/usr/bin/git --git-dir=$HOME/.dotfiles-private --work-tr
 alias ds='dotfiles status'
 alias da='dotfiles add'
 alias dc='dotfiles commit'
+alias dd='dotfiles diff'
+alias dr='dotfiles restore'
 alias dp='dotfiles push'
 alias dP='dotfiles pull --rebase'
-alias dv='dotfiles-nvim'
+
 
 # kubectl in a docker container for legacy jarden on prem k8s
 alias kop="~/code/dev-tools/kubectl-1.3.7-docker/kubectl.sh"
@@ -50,8 +52,6 @@ alias sbt=sbt -ivy "$XDG_DATA_HOME"/ivy2 -sbt-dir "$XDG_DATA_HOME"/sbt
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 # wget (XDG Compliance)
 alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
-# yarn (XDG Compliance)
-alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 # terminal calculator
 alias c=calc
