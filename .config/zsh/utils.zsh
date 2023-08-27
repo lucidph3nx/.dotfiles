@@ -12,3 +12,6 @@ export PATH="${PATH}:${HOME}/.local/share/python/bin"
 
 # rtx version manager - hopefully the last I'll ever need
 eval "$(rtx activate zsh)"
+
+# direnv env vars by directory
+eval "$(direnv hook zsh)"
