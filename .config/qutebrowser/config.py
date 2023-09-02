@@ -15,13 +15,22 @@ c.url.searchengines = {
 }
 c.downloads.location.directory = '~/downloads'
 # content settings
+
+# disable autoplay globally
 c.content.autoplay = False
+# allow autoplay on some sites
+config.set('content.autoplay',True, 'https://app.pluralsight.com/*')
+
 c.content.javascript.clipboard = 'access'
 
 c.spellcheck.languages = ['en-AU']
 
 c.completion.open_categories = [
-    'searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
+    'searchengines',
+    'quickmarks',
+    'bookmarks',
+    'history'
+]
 
 # theming
 c.colors.webpage.preferred_color_scheme = 'dark'
