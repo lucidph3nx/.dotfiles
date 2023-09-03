@@ -31,10 +31,11 @@ set $nvim_session_launcher ~/.local/scripts/application.nvim.sessionLauncher
 # Applications
 set $terminal kitty 
 set $browser qutebrowser
+set $browser_newwindow qutebrowser --target window
 # browser based applications
-set $calendar $browser 'https://calendar.google.com'
-set $home_assistant $browser "https://home-assistant.$SECRET_DOMAIN"
-set $plex $browser "https://plex.$SECRET_DOMAIN"
+set $calendar $browser_newwindow 'https://calendar.google.com'
+set $home_assistant $browser_newwindow "https://home-assistant.$SECRET_DOMAIN"
+set $plex $browser $browser_newwindow "https://plex.$SECRET_DOMAIN"
 # terminal based applications
 set $filebrowser $terminal ranger
 set $musicplayer $terminal ncmpcpp
@@ -50,7 +51,7 @@ set $clearclipboard ~/.local/scripts/application.cliphist.clear
 # Scripts
 # add an item to the notion shopping list
 set $addtoshoppinglist ~/.local/scripts/home.shoppinglist.addItem
-set $openshoppinglist qutebrowser 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
+set $openshoppinglist $browser_newwindow 'https://www.notion.so/ph3nx/Shopping-List-92d98ac3dc86460285a399c0b1176fc5'
 
 
 # differnt configs per hostname
