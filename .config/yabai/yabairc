@@ -37,3 +37,4 @@ yabai -m signal --add event=application_terminated action="yabai -m query --wind
 # force some appliactions to behave, mostly those that might be running in the background before yabai starts
 yabai -m rule --add label="Firefox" manage=on
 yabai -m rule --add label="Zscaler" manage=on
+yabai -m rule --add app="qutebrowser" manage=on
