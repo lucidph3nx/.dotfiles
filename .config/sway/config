@@ -102,7 +102,6 @@ bindsym --to-code {
   $alt+c exec $calendar
   $alt+h exec $home_assistant
   $alt+p exec $plex
-  $alt+q exec qutebrowser
   $alt+f exec $filebrowser
   $alt+m exec $musicplayer
   $alt+l exec $addtoshoppinglist
@@ -137,6 +136,7 @@ mode --pango_markup $mode_exit {
     }
     bindsym Escape mode "default
 }
+# Enter Exit mode
 bindsym --to-code $super+Shift+e mode $mode_exit
 
 #
@@ -147,6 +147,13 @@ bindsym --to-code $super+Shift+e mode $mode_exit
     bindsym $super+$down focus down
     bindsym $super+$up focus up
     bindsym $super+$right focus right
+    
+    # move focus using tree
+    bindsym $super+Left focus prev
+    bindsym $super+Down focus child
+    bindsym $super+Up focus parent
+    bindsym $super+Right focus next
+
     # Move the focused window with the same, but add Shift
     bindsym $super+Shift+$left move left
     bindsym $super+Shift+$down move down
@@ -183,7 +190,7 @@ bindsym --to-code $super+Shift+e mode $mode_exit
 
 
 # next new window either horizontal or vertical
-bindsym $super+b split4
+bindsym $super+b splith
 bindsym $super+v splitv
 
 # autotiling script
@@ -197,9 +204,6 @@ floating_modifier $super normal
 bindsym $super+Shift+space floating toggle
 # Swap focus between the tiling area and the floating area
 bindsym $super+$alt+space focus mode_toggle
-
-# Move focus to the parent container
-#bindsym $super+a focus parent
 
 # Scratchpad:
 bindsym $super+Shift+minus move scratchpad
@@ -215,6 +219,9 @@ mode "resize" {
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
     bindsym $right resize grow width 10px
+
+    # fullscreen toggle and exit
+    bindsym f fullscreen toggle ; mode "default"
 
     # Return to default mode
     bindsym Return mode "default"
@@ -237,6 +244,7 @@ mode "Move" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+# Enter move mode
 bindsym $super+m mode "Move"
 
 # use waybar instead of swaybar
@@ -245,8 +253,6 @@ bar {
 }
 
 # home automation
-# bindsym $super+$pageup exec zsh /home/ben/scripts/hass-open-blinds.sh
-# bindsym $super+$pagedown exec zsh /home/ben/scripts/hass-close-blinds.sh
 bindsym $super+$pageup exec zsh /home/ben/.local/scripts/home.office.openBlinds
 bindsym $super+$pagedown exec zsh /home/ben/.local/scripts/home.office.closeBlinds
 
@@ -261,12 +267,9 @@ for_window [app_id="qute-editor"] floating enable, resize set width 900 px heigh
 # Notification Daemon
 exec swaync
 # Toggle notification sidebar
-bindsym $super+Shift+n exec swaync-client -t -sw
-
-# ensure dbus is aware of env vars (for flameshot)
-# exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-# exec hash dbus-update-activation-environment 2>/dev/null && \
-#      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+bindsym $super+n exec swaync-client -t -sw
+# Close all notifications
+bindsym $super+Shift+n exec swaync-client --close-all
 
 # might need this for screen sharing obs?
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r 
