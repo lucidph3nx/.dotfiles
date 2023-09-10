@@ -219,6 +219,8 @@ mode "resize" {
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
     bindsym $right resize grow width 10px
+    # set to half monitor size (superwide) and exit
+    bindsym x resize set width $half_monitor_width px ; mode "default"
 
     # fullscreen toggle and exit
     bindsym f fullscreen toggle ; mode "default"

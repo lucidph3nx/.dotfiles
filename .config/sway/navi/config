@@ -6,6 +6,8 @@ output DP-3 {
   pos 0,0
   mode 5120x1440
 }
+# 5120 / 2 minus the gap of 5px
+set $half_monitor_width 2555
 # virtual monitor
 output HEADLESS-1 {
   pos 5120,0
