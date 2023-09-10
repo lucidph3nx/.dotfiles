@@ -15,10 +15,10 @@ specific_folders=(
 )
 
 # Array of specific files
-specific_files=(
-  "~/.local/scripts/tmux-projectgetter"
-  "~/.local/scripts/tmux-sessionizer"
-)
+# specific_files=(
+#   "~/.local/scripts/tmux-projectgetter"
+#   "~/.local/scripts/tmux-sessionizer"
+# )
 
 # Loop through general directories
 for location in "${locations[@]}"; do
@@ -31,7 +31,7 @@ for folder in "${specific_folders[@]}"; do
 done
 
 # Loop through specific files
-for file in "${specific_files[@]}"; do
-  find "$(eval echo $file)" -maxdepth 0 -type f
-done
-
+# for file in "${specific_files[@]}"; do
+#   find "$(eval echo $file)" -maxdepth 0 -type f
+# done
+#
