@@ -4,7 +4,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(application.tmux.sshHostGetter | fzy)
+    selected=$(cli.tmux.sshHostGetter | fzy)
 fi
 
 tmux_running=$(pgrep tmux)

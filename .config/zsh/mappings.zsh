@@ -1,5 +1,6 @@
 # Ctrl-f open tmux-sessionizer
 bindkey -s ^f "cli.tmux.projectSessioniser\n"
+bindkey -s ^s "cli.tmux.sshHostSessioniser\n"
 # Ctrl-k open k9s
 bindkey -s ^k "k9s\n"
 # Ctrl-v open nvim in current directory
