@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Array of ssh config files
+locations=(
+  "~/.ssh/config"
+  "~/.ssh/work/config"
+)
+
+# Loop through ssh hosts
+for location in "${locations[@]}"; do
+  grep -E "^Host ([^*]+)$" "$(eval echo $location)" | sed 's/Host //'
+done
+

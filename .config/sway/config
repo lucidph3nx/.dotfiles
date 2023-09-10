@@ -39,10 +39,10 @@ set $plex $browser $browser_newwindow "https://plex.$SECRET_DOMAIN"
 # terminal based applications
 set $filebrowser $terminal ranger
 set $musicplayer $terminal ncmpcpp
-set $obsidian $terminal tmux-sessionizer /home/ben/documents/obsidian/personal-vault
+set $obsidian $terminal cli.tmux.projectSessioniser /home/ben/documents/obsidian/personal-vault
 # rofi based applications
 set $passwordmanager rofi-rbw
-set $calculator ~/local/scripts/application.rofi.calculator
+set $calculator ~/.local/scripts/application.rofi.calculator
 set $clipboardmanager ~/.local/scripts/application.cliphist.list
 set $clearclipboard ~/.local/scripts/application.cliphist.clear
 

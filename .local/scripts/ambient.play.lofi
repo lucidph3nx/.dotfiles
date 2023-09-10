@@ -1,0 +1,5 @@
+#!/bin/sh
+mpc clear
+mpc insert https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1694156636/ei/_HL6ZJPHDu6B9fwPn_S-iA0/ip/101.98.36.73/id/jfKfPfyJRdk.2/itag/96/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/hls_chunk_host/rr2---sn-j5aa2a0n-fabl.googlevideo.com/playlist_duration/30/manifest_duration/30/spc/UWF9f2cZixcEONzVx15cQT17-H7gZ0g/vprv/1/playlist_type/DVR/initcwndbps/1812500/mh/rr/mm/44/mn/sn-j5aa2a0n-fabl/ms/lva/mv/m/mvi/2/pl/23/dover/11/pacing/0/keepalive/yes/fexp/24007246,51000022/beids/24350017/mt/1694134596/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,playlist_duration,manifest_duration,spc,vprv,playlist_type/sig/AOq0QJ8wRQIgPHYDFDkIL3yJs7NUidURMfJr8PQtHtp4Kv15vxmGKHYCIQCHKLFq2OOFW59vjFJho_MMpsz35pWfdZEPOMAmq8qfXQ%3D%3D/lsparams/hls_chunk_host,initcwndbps,mh,mm,mn,ms,mv,mvi,pl/lsig/AG3C_xAwRQIgIe-Lvg6R0bpKMYjM1FDfd7vKU4WdT4jTeW4PExE3aIICIQDEK4IfxYNUChdDFkOKVYzeq5bmXfYpxd9UWhTbdC0Jgw%3D%3D/playlist/index.m3u8
+mpc next
+mpc play
