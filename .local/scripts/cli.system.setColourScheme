@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+THEME=$(printf "\
+[1]  Atom One Dark\n\
+[2]  Everforest Dark\n\
+" |\
+fzy |\
+sed -E -e 's/^\[//' -e 's/].*//')
+
+if [ "$THEME"x == ""x ]; then
+    exit
+fi
+
+_switch_colour_scheme() {
+  # set theme in kitty
+  kitty +kitten themes --reload-in=all ${1}
+  # set theme in tmux
+  if [ -f ~/.config/tmux/tmux.conf ]; then
+    echo "setting tmux theme"
+    sed -E -i.bak \
+    "s/^source.*/source ~\/\.config\/tmux\/theme\/${1}\.conf/" \
+    ~/.config/tmux/tmux.conf && \
+    rm ~/.config/tmux/tmux.conf.bak
+    tmux source ~/.config/tmux/tmux.conf
+  fi
+
+
+  # restart zsh
+  exec zsh
+}
+
+if [ "$THEME" == "1" ]; then
+  _switch_colour_scheme \
+    atom_one_dark
+elif [ "$THEME" == "2" ]; then
+  _switch_colour_scheme \
+    everforest_dark
+fi

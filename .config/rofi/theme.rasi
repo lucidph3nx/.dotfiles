@@ -1,11 +1,6 @@
+@import "themes/atom_one_dark"
+
 * {
-  accentcolorgreen: #98c379;
-  accentcolormegenta: #c678dd;
-  accentcolorblue: #61afef;
-  backgroundcolor: #282C34;
-  foregroundcolor: #abb2bf;
-  selectioncolor: #61afef;
-  
   background-color: transparent;
   text-color: @foregroundcolor;
 
