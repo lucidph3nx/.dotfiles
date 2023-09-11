@@ -17,4 +17,4 @@ eval "$(rtx activate zsh)"
 eval "$(direnv hook zsh)"
 
 # coursier
-export PATH="${PATH}:/Users/ben/Library/Application Support/Coursier/bin"
+export PATH="${PATH}:${HOME}/Library/Application Support/Coursier/bin"
