@@ -6,7 +6,7 @@ output Unknown-1 {
   mode 3456x2160
   scale 1.5
 }
-set $half_monitor_width 1723 # 3456 / 2 minus the gap of 5px
+set $half_monitor_width 1723
 # remap capslock to escape and swap cmd and option
 input "type:keyboard" {
   xkb_options altwin:swap_lalt_lwin,caps:escape
