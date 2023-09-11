@@ -1,4 +1,4 @@
-@import "themes/atom_one_dark"
+@import "current-theme"
 
 * {
   background-color: transparent;

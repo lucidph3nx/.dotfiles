@@ -16,12 +16,15 @@ _switch_colour_scheme() {
   kitty +kitten themes --reload-in=all ${1}
   # set theme in tmux
   if [ -f ~/.config/tmux/tmux.conf ]; then
-    echo "setting tmux theme"
     sed -E -i.bak \
     "s/^source.*/source ~\/\.config\/tmux\/theme\/${1}\.conf/" \
     ~/.config/tmux/tmux.conf && \
     rm ~/.config/tmux/tmux.conf.bak
     tmux source ~/.config/tmux/tmux.conf
+  fi
+  # set theme for rofi
+  if [ -f ~/.config/rofi/current-theme.rasi ]; then
+    echo "@import \"themes/${1}\"" > ~/.config/rofi/current-theme.rasi
   fi
 
 
