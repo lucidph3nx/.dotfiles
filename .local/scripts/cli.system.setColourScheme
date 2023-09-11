@@ -26,6 +26,11 @@ _switch_colour_scheme() {
   if [ -f ~/.config/rofi/current-theme.rasi ]; then
     echo "@import \"themes/${1}\"" > ~/.config/rofi/current-theme.rasi
   fi
+  # set theme for k9s
+  if [ -f ~/.config/k9s/themes/${1}.yml ]; then
+    rm -f ~/.config/k9s/skin.yml
+    cp ~/.config/k9s/themes/${1}.yml ~/.config/k9s/skin.yml
+  fi
 
 
   # restart zsh

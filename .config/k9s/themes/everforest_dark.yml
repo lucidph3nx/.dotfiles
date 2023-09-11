@@ -1,15 +1,15 @@
-# OneDark presets
-foreground: &foreground "#abb2bf"
-background: &background "#282c34"
-black: &black "#080808"
-blue: &blue "#61afef"
-green: &green "#98c379"
-grey: &grey "#abb2bf"
-orange: &orange "#ffb86c"
-purple: &purple "#c678dd"
-red: &red "#e06370"
-yellow: &yellow "#e5c07b"
-yellow_bright: &yellow_bright "#d19a66"
+# everforest_dark
+foreground: &foreground "#d3c6aa"
+background: &background "#2d353b"
+black: &black "#343f44"
+blue: &blue "#7fbbb3"
+green: &green "#a7c080"
+grey: &grey "#859289"
+orange: &orange "#dbbc7f"
+purple: &purple "#d699b6"
+red: &red "#e67e80"
+yellow: &yellow "#dbbc7f"
+yellow_bright: &yellow_bright "#dbbc7f"
 
 k9s:
   body:
