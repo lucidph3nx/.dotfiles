@@ -36,7 +36,7 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 config.source('themes/onedark.py')
 
 # disable window decorations (wont work unti using Qt6)
-# config.set ('window.hide_decoration', True)
+config.set ('window.hide_decoration', True)
 
 # editor
 c.editor.command = ['kitty', '--class', 'qute-editor', '-e', 'nvim', '{}']
