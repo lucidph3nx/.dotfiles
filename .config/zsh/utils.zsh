@@ -15,6 +15,3 @@ eval "$(rtx activate zsh)"
 
 # direnv env vars by directory
 eval "$(direnv hook zsh)"
-
-# coursier
-export PATH="${PATH}:${HOME}/Library/Application Support/Coursier/bin"
