@@ -36,8 +36,5 @@ source $XDG_CONFIG_HOME/zsh/utils.zsh
 # --- key mappings - load last 
 source $XDG_CONFIG_HOME/zsh/mappings.zsh
 
-# bun completions
-[ -s "/home/ben/.bun/_bun" ] && source "/home/ben/.bun/_bun"
-
 # for when you want to debug zsh startup
 #zprof
