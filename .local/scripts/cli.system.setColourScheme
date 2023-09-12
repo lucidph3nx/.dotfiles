@@ -36,6 +36,12 @@ _switch_colour_scheme() {
     rm -f ~/.config/waybar/current-theme.css
     cp ~/.config/waybar/themes/${1}.css ~/.config/waybar/current-theme.css
   fi
+  # set theme for sway and reload
+  if [ -f ~/.config/sway/themes/${1} ]; then
+    rm -f ~/.config/sway/current-theme
+    cp ~/.config/sway/themes/${1} ~/.config/sway/current-theme
+    swaymsg reload
+  fi
 
   # restart zsh
   exec zsh

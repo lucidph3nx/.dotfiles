@@ -1,0 +1,10 @@
+# vim:ft=swayconfig
+
+# atom_one_dark
+
+set $active #98c379
+set $inactive #61afef
+set $fg #979fad
+set $bg #5c6370
+set $warn #e06c75
+

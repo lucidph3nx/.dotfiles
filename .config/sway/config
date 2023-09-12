@@ -71,10 +71,13 @@ output * bg $(find $wallpapers -type f | shuf -n 1) fill
 font pango:JetBrainsMono Nerd Font Medium, NotoSans, NotoEmoji 10
 default_border pixel 3
 hide_edge_borders none
-# class                 border  backgr. text    indicator child_border
-client.focused          #98c379 #98c379 #000000 #98c379 #98c379
-client.focused_inactive #61afef #5c6370 #ffffff #5c6370 #5c6370
-client.unfocused        #61afef #5c6370 #abb2bf #5c6370 #5c6370
+
+include ~/.config/sway/current-theme
+
+# class                 border    backgr. text  indicator child_border
+client.focused          $active   $active $fg   $active   $active
+client.focused_inactive $inactive $bg     $fg   $bg       $bg
+client.unfocused        $inactive $bg     $fg   $bg       $bg
 # general gaps on windows
 gaps inner 5
 

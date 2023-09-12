@@ -1,0 +1,10 @@
+# vim:ft=swayconfig
+
+# everforest_dark
+
+set $active #a7c080
+set $inactive #7fbbb3
+set $fg #d3c6aa
+set $bg #2d353b
+set $warn #e69875
+
