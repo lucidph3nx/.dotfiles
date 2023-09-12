@@ -31,7 +31,11 @@ _switch_colour_scheme() {
     rm -f ~/.config/k9s/skin.yml
     cp ~/.config/k9s/themes/${1}.yml ~/.config/k9s/skin.yml
   fi
-
+  # set theme for waybar
+  if [ -f ~/.config/waybar/themes/${1}.css ]; then
+    rm -f ~/.config/waybar/current-theme.css
+    cp ~/.config/waybar/themes/${1}.css ~/.config/waybar/current-theme.css
+  fi
 
   # restart zsh
   exec zsh

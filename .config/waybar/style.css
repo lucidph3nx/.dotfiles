@@ -1,3 +1,5 @@
+@import "current-theme.css";
+
 * {
   border: none;
   border-radius: 0;
@@ -7,8 +9,8 @@
 }
 
 window#waybar {
-  background-color: #282c34;
-  color: #abb2bf;
+  background-color: @background;
+  color: @foreground;
 }
 
 window {
@@ -24,24 +26,24 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-  background-color: #98c379;
+  background-color: @green;
   color: #282c34;
 }
 
 #workspaces button.urgent {
-  background-color: #cc241d;
+  background-color: @red;
 }
 
 #workspaces button:hover {
   transition-duration: 0s;
   box-shadow: inherit;
   text-shadow: inherit;
-  background: #61afef;
-  color: #282c34;
+  background: @blue;
+  color: @background;
 }
 
 #scratchpad {
-  background-color: #61afef;
+  background-color: @blue;
   color: #282c34;
   padding: 2px 5px;
 }
@@ -49,8 +51,8 @@ window#waybar.hidden {
 #mode {
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #98c379;
-  color: #3b4252;
+  background-color: @green;
+  color: @background;
 }
 
 #mode > span {
@@ -92,18 +94,18 @@ widget > * {
   padding: 0 12px;
   margin-left: 0;
   margin-right: 0;
-  color: #282828;
-  background-color: #98c379;
+  color: @black;
+  background-color: @green;
 }
 
 @keyframes blink {
   to {
-    color: #98c379;
+    color: @green;
   }
 }
 
 #tray {
-  background: #000000;
+  background: @black;
 }
 
 #pulseaudio {
@@ -111,14 +113,14 @@ widget > * {
 }
 
 label:focus {
-  background-color: #282828;
+  background-color: @background;
 }
 
 tooltip {
-  background: #504945;
+  background: @black;
 }
 
 tooltip label {
-  color: #98c379;
+  color: @green;
 }
 
