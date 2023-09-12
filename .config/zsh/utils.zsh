@@ -15,3 +15,16 @@ eval "$(rtx activate zsh)"
 
 # direnv env vars by directory
 eval "$(direnv hook zsh)"
+
+# os specific utils
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # metals and other stuff installed via courser
+  if [ ! -d "${HOME}/.local/Coursier/bin" ]; then
+    # symlink because of space in Application Support folder
+    mkdir -p "${HOME}/.local/Coursier/bin"
+    ln -s "${HOME}/Library/Application Support/Coursier/bin" "${HOME}/.local/Coursier/bin"
+  fi
+  export PATH="${PATH}:${HOME}/.local/Coursier/bin"
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  # no linux specific utils
+fi
