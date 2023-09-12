@@ -7,6 +7,10 @@ else
     selected=$(cli.tmux.sshHostGetter | fzy)
 fi
 
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
 tmux_running=$(pgrep tmux)
 
 # new session if not in tmux and tmux is not running
