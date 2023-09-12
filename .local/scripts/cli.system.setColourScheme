@@ -40,7 +40,9 @@ _switch_colour_scheme() {
   if [ -f ~/.config/sway/themes/${1} ]; then
     rm -f ~/.config/sway/current-theme
     cp ~/.config/sway/themes/${1} ~/.config/sway/current-theme
-    swaymsg reload
+    if command -v swaymgs &> /dev/null; then
+      swaymsg reload
+    fi
   fi
 
   # restart zsh
