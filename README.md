@@ -5,8 +5,13 @@
 My personal configuration files.
 </div>
 
-These configuration files apply to both my Linux and MacOS machines.
+These configuration files apply to both my Linux and macOS machines.
 I plan to try to keep them able to apply to both, but might need to split them out at some stage in the future
+
+## Colour Scheme
+
+I previously exclusively used atom one dark, but I have now built a theme switching script which can be found in `.local/scripts/cli.system.setColourScheme`.
+This script changes the theme for a range of applications, often by copying a theme file from a theme directory into a file which the application is expecting to contain theme data.
 
 ## Linux Details
 
@@ -18,9 +23,8 @@ I plan to try to keep them able to apply to both, but might need to split them o
 - browser: [firefox](https://www.mozilla.org/en-US/firefox/)
 - launcher: [rofi](https://github.com/davatorium/rofi)
 - bar: [waybar](https://github.com/Alexays/Waybar)
-- colourscheme: [based on atom one dark](https://atom.io/themes/one-dark-ui)
 
-## MacOS Details
+## macOS Details
 
 - os: [macos ventura](https://en.wikipedia.org/wiki/MacOS_Ventura)
 - wm: [yabai](https://github.com/koekeishiya/yabai)
@@ -30,5 +34,4 @@ I plan to try to keep them able to apply to both, but might need to split them o
 - browser: [firefox](https://www.mozilla.org/en-US/firefox/)
 - launcher: [macos spotlight](https://support.apple.com/en-nz/guide/mac-help/mchlp1008/mac)
 - bar: [simple-bar](https://github.com/Jean-Tinland/simple-bar)
-- colourscheme: [based on atom one dark](https://atom.io/themes/one-dark-ui)
 
