@@ -20,7 +20,7 @@ This script changes the theme for a range of applications, often by copying a th
 - shell: [zsh](https://www.zsh.org/)
 - editor: [neovim](https://neovim.io/)
 - terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
-- browser: [firefox](https://www.mozilla.org/en-US/firefox/)
+- browser: [qutebrowser](https://qutebrowser.org/) (haven't quite gotten it to play nice on mac yet)
 - launcher: [rofi](https://github.com/davatorium/rofi)
 - bar: [waybar](https://github.com/Alexays/Waybar)
 
