@@ -85,7 +85,7 @@ k9s:
       graphicColor: *yellow_bright
       showIcons: false
     yaml:
-      keyColor: *red
+      keyColor: *green
       colonColor: *grey
       valueColor: *grey
     logs:
