@@ -33,7 +33,7 @@ c.completion.open_categories = [
 
 # theming
 c.colors.webpage.preferred_color_scheme = 'dark'
-config.source('themes/onedark.py')
+config.source('current-theme.py')
 
 # disable window decorations (wont work unti using Qt6)
 config.set ('window.hide_decoration', True)

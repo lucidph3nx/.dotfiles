@@ -1,6 +1,7 @@
 // ==UserScript==
-// @name    Userstyle (qutestart.css)
+// @name    Userstyle (atom_one_dark.css)
 // @include   /^qute://start/*/
+// @include    about:blank
 // ==/UserScript==
 GM_addStyle(`
 body {
