@@ -269,6 +269,10 @@ for_window [app_id="org.gnome.Calculator"] floating enable, resize set width 300
 for_window [app_id="ranger-filepicker"] floating enable, resize set width 900 px height 600 px
 for_window [app_id="qute-editor"] floating enable, resize set width 900 px height 600 px
 
+# Applications opening on default workspaces
+assign [instance="teams-for-linux"] 2
+assign [instance="prospect mail"] 2
+
 # Notification Daemon
 exec swaync
 # Toggle notification sidebar
