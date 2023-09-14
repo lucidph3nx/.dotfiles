@@ -44,6 +44,20 @@ _switch_colour_scheme() {
       swaymsg reload
     fi
   fi
+  # set theme for qutebrowser
+  if [ -f ~/.config/qutebrowser/themes/${1}.py ]; then
+    rm -f ~/.config/qutebrowser/current-theme.py
+    cp ~/.config/qutebrowser/themes/${1}.py ~/.config/qutebrowser/current-theme.py
+  fi
+  # and the greasemonkeys script which themes the startpage
+  if [ -f ~/.config/qutebrowser/greasemonkey-disabled/${1}.css.js ]; then
+    rm -f ~/.config/qutebrowser/greasemonkey/current-theme.css.js
+    cp ~/.config/qutebrowser/greasemonkey-disabled/${1}.css.js ~/.config/qutebrowser/greasemonkey/current-theme.css.js
+  fi
+  if command -v qutebrowser &> /dev/null; then
+    qutebrowser ':config-source' &> /dev/null
+    qutebrowser ':greasemonkey-reload' &> /dev/null
+  fi
 
   # restart zsh
   exec zsh

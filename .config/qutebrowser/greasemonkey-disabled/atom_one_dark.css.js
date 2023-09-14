@@ -17,6 +17,9 @@ input {
   border-radius: 0px !important;
   font-family: "JetbrainsMonoNerdFont", monospace;
 }
+::placeholder {
+  color: #cfd7e6 !important;
+}
 .bookmarks {
   display: none;
 }
