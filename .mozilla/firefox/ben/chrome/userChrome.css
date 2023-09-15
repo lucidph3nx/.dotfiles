@@ -16,11 +16,11 @@
   --arrowpanel-menuitem-border-radius: 0 !important;
   --toolbarbutton-border-radius: 0 !important;
 
-  --toolbar-color: #98c379 !important;
-  --toolbar-bgcolor: #282c34 !important;
+  /* --toolbar-color: #98c379 !important; */
+  /* --toolbar-bgcolor: #282c34 !important; */
   
-  --toolbarbutton-active-background: #98c379 !important;
-  --toolbarbutton-hover-background: #282c34 !important;
+  /* --toolbarbutton-active-background: #98c379 !important; */
+  /* --toolbarbutton-hover-background: #282c34 !important; */
   --tab-block-margin: 2px !important;
 }
 
@@ -37,51 +37,51 @@
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  background-color: var(--identity-icon-color);
+  /* background-color: var(--identity-icon-color); */
   height: 3px;
   border-radius: 0 !important;
   margin: 0 !important;
 }
 
-.identity-color-red {
-  --identity-tab-color: #e06c75 !important;
-  --identity-icon-color: #e06c75 ! important;
-}
-
-.identity-color-blue {
-  --identity-tab-color: #61afef !important;
-  --identity-icon-color: #61afef !important;
-}
-
-.identity-color-turquoise {
-  --identity-tab-color: #abb2bf !important;
-  --identity-icon-color: #abb2bf !important;
-}
-
-.identity-color-orange {
-  --identity-tab-color: #d19a66 !important;
-  --identity-icon-color: #d19a66 !important;
-}
-
-.identity-color-pink {
-  --identity-tab-color: #c678dd !important;
-  --identity-icon-color: #c678dd !important;
-}
-
-.identity-color-yellow {
-  --identity-tab-color: #56b6c2 !important;
-  --identity-icon-color: #56b6c2 !important;
-}
+/* .identity-color-red { */
+/*   --identity-tab-color: #e06c75 !important; */
+/*   --identity-icon-color: #e06c75 ! important; */
+/* } */
+/**/
+/* .identity-color-blue { */
+/*   --identity-tab-color: #61afef !important; */
+/*   --identity-icon-color: #61afef !important; */
+/* } */
+/**/
+/* .identity-color-turquoise { */
+/*   --identity-tab-color: #abb2bf !important; */
+/*   --identity-icon-color: #abb2bf !important; */
+/* } */
+/**/
+/* .identity-color-orange { */
+/*   --identity-tab-color: #d19a66 !important; */
+/*   --identity-icon-color: #d19a66 !important; */
+/* } */
+/**/
+/* .identity-color-pink { */
+/*   --identity-tab-color: #c678dd !important; */
+/*   --identity-icon-color: #c678dd !important; */
+/* } */
+/**/
+/* .identity-color-yellow { */
+/*   --identity-tab-color: #56b6c2 !important; */
+/*   --identity-icon-color: #56b6c2 !important; */
+/* } */
 
 tab.tabbrowser-tab, .tab-background {
   font-weight: bold !important;
-  --lwt-text-color: #98c379 !important; 
-  --lwt-selected-tab-background-color: #98c379 !important;
+  /* --lwt-text-color: #98c379 !important;  */
+  /* --lwt-selected-tab-background-color: #98c379 !important; */
 }
 
 
 tab.tabbrowser-tab, .tab-background[selected="true"] {
-  --lwt-tab-text: #282c34 !important;
+  /* --lwt-tab-text: #282c34 !important; */
   --lwt-tab-line-color: none !important;
   --lwt-tabs-border-color: none !important;
 }
