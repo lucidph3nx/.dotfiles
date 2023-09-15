@@ -3,58 +3,41 @@
 // @include    https://www.reddit.com/*
 // ==/UserScript==
 GM_addStyle(`
-:root {
-    /* my atom colours */
-     --atom-red: #e06c75;
-     --atom-green: #98c379;
-     --atom-yellow: #d19a66;
-     --atom-blue: #61afef;
-     --atom-magenta: #c678dd;
-     --atom-cyan: #56b6c2;
-     --atom-black: #282c34;
-     --atom-black-light: #454C59;
-     --atom-white: #abb2bf;
-     --atom-white-light: #cfd7e6;
-     --atom-text: var(--atom-white-light);
-     --atom-text-inverse: var(--atom-black);
-     --atom-foreground: #979fad;
-     --atom-background: #282c34;
-}
 /* Hide annoying stuff */
  .give-gold-button, .goldvertisement, .embed-comment, .promoted, .nub {
      display: none !important;
 }
 /* Reset */
  *, *:before, *:after {
-     background-color: var(--atom-background) !important;
-     color: var(--atom-text) !important;
+     background-color: var(--system-theme-bg0) !important;
+     color: var(--system-theme-fg) !important;
 }
 .reddit-video-player-root * {
      background: rgba(0,0,0,0) !important;
 }
 .reddit-video-controller-root > div.reddit-video-seek-bar-root > div.seek-bar-bar.seek-bar-progress {
-     background: var(--atom-green) !important;
+     background: var(--system-theme-green) !important;
 }
 /* Default links */
  a {
-     color: var(--atom-blue) !important;
+     color: var(--system-theme-blue) !important;
 }
  a:visited {
-     color: var(--atom-magenta) !important;
+     color: var(--system-theme-magenta) !important;
 }
  a:hover {
-     color: var(--atom-magenta) !important;
+     color: var(--system-theme-magenta) !important;
 }
 /* Background */
  html, body, #sr-more-link {
-     background-color: var(--atom-background) !important;
+     background-color: var(--system-theme-bg0) !important;
 }
 /* Top bar */
  .drop-choices, .hover-bubble, .modal-dialog {
-     background: var(--atom-background) !important;
+     background: var(--system-theme-bg0) !important;
 }
  .tabmenu .selected a {
-     color: var(--atom-foreground) !important;
+     color: var(--system-theme-fg) !important;
 }
 /* Side bar */
  .listing-chooser-collapsed .grippy {
@@ -71,45 +54,45 @@ GM_addStyle(`
 }
 /* Inputs and buttons */
  input, textarea, .linkinfo .shortlink input, .new-comment .usertext-body, .morelink a, .morelink:hover a, .fancy-toggle-button a, .usertext button {
-     background: var(--atom-background) !important;
-     color: var(--atom-foreground) !important;
+     background: var(--system-theme-bg0) !important;
+     color: var(--system-theme-fg) !important;
      font-weight: normal !important;
 }
 /* Listing */
  .thing .title {
-     color: var(--atom-text) !important;
+     color: var(--system-theme-fg) !important;
 }
  .title:visited {
-     color: var(--atom-white) !important;
+     color: var(--system-theme-fg) !important;
 }
  .thing .title:hover {
-     color: var(--atom-white) !important;
+     color: var(--system-theme-fg) !important;
 }
  .expando-button {
      filter: brightness(45%) contrast(180%);
      background-color: transparent !important;
 }
  .moderator, .green {
-     color: var(--atom-green) !important;
+     color: var(--system-theme-green) !important;
 }
  .admin, .nsfw-stamp * {
-     color: var(--atom-red) !important;
+     color: var(--system-theme-red) !important;
 }
  .pagename a, .trophy-name {
-     color: var(--atom-foreground) !important;
+     color: var(--system-theme-fg) !important;
 }
  .buttons li {
      padding: 0 !important;
 }
  .buttons a {
      margin-right: 8px !important;
-     color: var(--atom-foreground) !important;
+     color: var(--system-theme-fg) !important;
 }
  .buttons a:visited {
-     color: var(--atom-foreground) !important;
+     color: var(--system-theme-fg) !important;
 }
  .buttons a:hover {
-     color: var(--atom-white) !important;
+     color: var(--system-theme-fg) !important;
 }
  .pagename, .tabmenu li, .link .midcol, .buttons a, .subreddit {
      font-weight: normal !important;
@@ -118,30 +101,30 @@ GM_addStyle(`
      display: none !important;
 }
  .recommended-link {
-     border-color: var(--atom-background) !important;
+     border-color: var(--system-theme-bg0) !important;
 }
 /* Comments */
  .link .usertext .md, blockquote, pre, code, .md blockquote {
-     border-left: solid 4px var(--atom-background) !important;
+     border-left: solid 4px var(--system-theme-bg0) !important;
 }
  .md td {
-     border: solid 1px var(--atom-background) !important;
+     border: solid 1px var(--system-theme-bg0) !important;
 }
  hr {
-     border-bottom: solid 1px var(--atom-background) !important;
+     border-bottom: solid 1px var(--system-theme-bg0) !important;
 }
  .comment .author, .morecomments a {
      font-weight: normal !important;
 }
 /* RES */
  .guider, .guiders_button, .res-fancy-toggle-button, #RESConsoleContainer, #RESShortcutsAddFormContainer {
-     background: var(--atom-background) !important;
+     background: var(--system-theme-bg0) !important;
 }
  .RESDialogSmall, .RESDropdownOptions, .RESNotification, #alert_message {
-     background: var(--atom-background) !important;
+     background: var(--system-theme-bg0) !important;
 }
  .RES-keyNav-activeElement, .RES-keyNav-activeElement .md-container {
-     background: var(--atom-background) !important;
+     background: var(--system-theme-bg0) !important;
 }
  .res-nightmode .arrow {
      filter: none !important;
@@ -185,20 +168,20 @@ GM_addStyle(`
 }
 /* Score */
  .link .score.likes {
-     color: var(--atom-red) !important;
+     color: var(--system-theme-red) !important;
 }
  .link .score.dislikes {
-     color: var(--atom-magenta) !important;
+     color: var(--system-theme-magenta) !important;
 }
  .linkinfo>div:nth-child(2)>span:nth-child(1) {
-     color: var(--atom-green) !important;
+     color: var(--system-theme-green) !important;
 }
 /* Subreddit header */
  .pagename a, .trophy-name {
-     color: var(--atom-cyan) !important;
+     color: var(--system-theme-aqua) !important;
 }
  .tabmenu .selected a {
-     color: var(--atom-cyan) !important;
+     color: var(--system-theme-aqua) !important;
      font-weight: bold;
 }
 /* Reddit logo */
@@ -215,30 +198,30 @@ GM_addStyle(`
 }
 /* Misc */
  a.edit-btn {
-     background-color: var(--atom-white-light) !important;
+     background-color: var(--system-theme-fg) !important;
      white-space: nowrap;
      float: none;
 }
  .linkinfo .shortlink input, .new-comment .usertext-body, .morelink a, .morelink:hover a, .fancy-toggle-button a {
-     background: var(--atom-background) !important;
-     color: var(--atom-white-light) !important;
+     background: var(--system-theme-bg0) !important;
+     color: var(--system-theme-fg) !important;
      font-weight: normal !important;
 }
  input, textarea {
      background: rgb(40, 44, 51) !important;
-     color: var(--atom-white-light) !important;
+     color: var(--system-theme-fg) !important;
 }
  .submit-link>div:nth-child(1)>a:nth-child(1) {
-     background: var(--atom-blue) !important;
+     background: var(--system-theme-blue) !important;
      color: rgba(248, 248, 242, 0.85) !important;
      font-weight: bold !important;
 }
  .submit-text>div:nth-child(1)>a:nth-child(1) {
-     background: var(--atom-blue) !important;
+     background: var(--system-theme-blue) !important;
      color: rgba(248, 248, 242, 0.85) !important;
      font-weight: bold !important;
 }
  a.hover {
-     color: var(--atom-cyan) !important;
+     color: var(--system-theme-aqua) !important;
 }
 `)
