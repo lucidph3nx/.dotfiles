@@ -35,7 +35,7 @@ set $browser_newwindow qutebrowser --target window
 # browser based applications
 set $calendar $browser_newwindow 'https://calendar.google.com'
 set $home_assistant $browser_newwindow "https://home-assistant.$SECRET_DOMAIN"
-set $plex $browser $browser_newwindow "https://plex.$SECRET_DOMAIN"
+set $plex $browser_newwindow "https://plex.$SECRET_DOMAIN"
 # terminal based applications
 set $filebrowser $terminal ranger
 set $musicplayer $terminal ncmpcpp
