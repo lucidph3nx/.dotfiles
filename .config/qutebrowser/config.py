@@ -10,6 +10,7 @@ c.url.start_pages = ['qute://start']
 c.url.default_page = 'qute://start'
 c.url.searchengines = {
     'DEFAULT': 'https://google.com/search?hl=en&q={}',
+    'g': 'https://google.com/search?hl=en&q={}',
     'y': 'https://www.youtube.com/results?search_query={}',
 }
 c.downloads.location.directory = '~/downloads'
