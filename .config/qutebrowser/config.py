@@ -21,6 +21,18 @@ c.content.autoplay = False
 # allow autoplay on some sites
 config.set('content.autoplay',True, 'https://app.pluralsight.com/*')
 
+# turn off geolocation
+c.content.geolocation = False
+# allow location on some sites
+config.set('content.geolocation',True, 'https://www.bunnings.co.nz')
+config.set('content.geolocation',True, 'https://www.metlink.org.nz')
+config.set('content.geolocation',True, 'https://www.newworld.co.nz')
+config.set('content.geolocation',True, 'https://www.pbtech.co.nz')
+
+# turn off notifications
+c.content.notifications.enabled = False
+
+# allow clipboard access
 c.content.javascript.clipboard = 'access'
 
 c.spellcheck.languages = ['en-AU']
@@ -46,6 +58,7 @@ c.editor.command = ['kitty', '--class', 'qute-editor', '-e', 'nvim', '{}']
 c.fonts.default_size = '10pt'
 c.fonts.default_family = 'JetbrainsMonoNerdFont'
 # tabs
+c.tabs.position = 'top'
 c.tabs.show = 'multiple'  # only show tabs if multiple tabs are open
 c.tabs.favicons.scale = 1
 c.tabs.padding = {
