@@ -46,7 +46,7 @@ c.colors.messages.warning.fg = t['fg']
 c.colors.prompts.bg = t['bg0']
 c.colors.prompts.fg = t['fg']
 
-c.colors.completion.category.bg = t['bg0']
+c.colors.completion.category.bg = t['bg3']
 c.colors.completion.category.fg = t['fg']
 c.colors.completion.fg = t['fg']
 c.colors.completion.even.bg = t['bg0']
