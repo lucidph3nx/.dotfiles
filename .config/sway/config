@@ -277,8 +277,8 @@ assign [instance="prospect mail"] 2
 exec swaync
 # Toggle notification sidebar
 bindsym $super+n exec swaync-client -t -sw
-# Close all notifications
-bindsym $super+Shift+n exec swaync-client --close-all
+# Close all notifications and close panel
+bindsym $super+Shift+n exec swaync-client --close-all && swaync-client --close-panel
 
 # might need this for screen sharing obs?
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r 
