@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name    Userstyle (jira.css)
-// @include    https://jardengroup.atlassian.net/jira/software/c/projects/WIT/*
+// @include    https://jardengroup.atlassian.net/jira/software/c/projects/PLAT/*
 // ==/UserScript==
 GM_addStyle(`
 body {
