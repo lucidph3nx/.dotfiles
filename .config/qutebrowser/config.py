@@ -93,10 +93,10 @@ c.bindings.commands['normal'] = {
     'ch': 'tab-only --next',
     'cl': 'tab-only --prev',
     # bitwarden bindings
-    '<Space>ll': 'spawn --userscript qute-bitwarden --totp',
-    '<Space>lu': 'spawn --userscript qute-bitwarden --username-only',
-    '<Space>lp': 'spawn --userscript qute-bitwarden --password-only',
-    '<Space>lt': 'spawn --userscript qute-bitwarden --totp-only',
+    '<Space>ll': 'spawn --userscript qute-bitwarden --auto-lock 604800 --totp',
+    '<Space>lu': 'spawn --userscript qute-bitwarden --auto-lock 604800 --username-only',
+    '<Space>lp': 'spawn --userscript qute-bitwarden --auto-lock 604800 --password-only',
+    '<Space>lt': 'spawn --userscript qute-bitwarden --auto-lock 604800 --totp-only',
     # youtube music download
     '<Space>md': 'spawn --userscript ytm-download',
     '<Space>y': 'yank selection',
