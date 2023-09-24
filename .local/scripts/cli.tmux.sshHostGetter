@@ -8,6 +8,6 @@ locations=(
 
 # Loop through ssh hosts
 for location in "${locations[@]}"; do
-  grep -E "^Host ([^*]+)$" "$(eval echo $location)" | sed 's/Host //'
+  grep -E "^Host ([^*]+)$" "$(eval echo $location)" | awk '{print $2}'
 done
 
