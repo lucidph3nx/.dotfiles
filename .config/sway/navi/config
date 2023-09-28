@@ -14,8 +14,7 @@ output HEADLESS-1 {
 }
 # add headless monitor
 bindsym $super+Shift+x exec swaymsg create_output HEADLESS-1
-# remove headless monitor (not always HEADLESS-1 since names arent reused for session)
-bindsym $super+x exec swaymsg output $(swaymsg -t get_outputs | jq -r '.[1]'.name) unplug
+bindsym $super+x exec swaymsg output HEADLESS-1 unplug
 
 # by default open headless monitor on workspace 0
 workspace 0 output HEADLESS-1
