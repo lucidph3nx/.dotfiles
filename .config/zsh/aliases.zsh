@@ -60,3 +60,4 @@ alias py=python
 
 alias neofetch=neowofetch
 
+alias cilium=cilium-cli
