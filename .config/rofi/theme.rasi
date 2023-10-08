@@ -56,8 +56,8 @@ element-icon {
 }
 
 element selected {
-  background-color: @selectioncolor;
+  background-color: @selectionbackground;
 }
 element-text selected {
-  color: #000000;
+  color: @selectionforeground;
 }

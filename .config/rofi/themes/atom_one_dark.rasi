@@ -4,5 +4,6 @@
   accentcolorblue: #61afef;
   backgroundcolor: #282C34;
   foregroundcolor: #abb2bf;
-  selectioncolor: #61afef;
+  selectionbackground: #4d515d;
+  selectionforeground: #ffffff;
 }

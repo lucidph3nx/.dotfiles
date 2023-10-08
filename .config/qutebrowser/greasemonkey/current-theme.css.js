@@ -1,34 +1,34 @@
 // ==UserScript==
-// @name    Userstyle (everforest_dark.css)
+// @name    Userstyle (github_light.css)
 // @include   *
 // ==/UserScript==
 GM_addStyle(`
 :root {
-  --system-theme-fg: #5c6a72;
-  --system-theme-red: #f85552;
-  --system-theme-orange: #f57d26;
-  --system-theme-yellow: #dfa000;
-  --system-theme-green: #8da101;
-  --system-theme-aqua: #35a77c;
-  --system-theme-blue: #3a94c5;
-  --system-theme-purple: #df69ba;
-  --system-theme-grey0: #a6b0a0;
-  --system-theme-grey1: #939f91;
-  --system-theme-grey2: #829181;
-  --system-theme-statusline1: #93b259;
-  --system-theme-statusline2: #708089;
-  --system-theme-statusline3: #e66868;
-  --system-theme-bg_dim: #efebd4;
-  --system-theme-bg0: #fdf6e3;
-  --system-theme-bg1: #f4f0d9;
-  --system-theme-bg2: #efebd4;
-  --system-theme-bg3: #e6e2cc;
-  --system-theme-bg4: #e0dcc7;
-  --system-theme-bg5: #bdc3af;
-  --system-theme-bg_visual: #eaedc8;
-  --system-theme-bg_red: #fbe3da;
-  --system-theme-bg_green: #f0f1d2;
-  --system-theme-bg_blue: #e9f0e9;
-  --system-theme-bg_yellow: #faedcd;
+  --system-theme-fg: #24292f;
+  --system-theme-red: #cf222e;
+  --system-theme-orange: #fb8f44;
+  --system-theme-yellow: #4d2d00;
+  --system-theme-green: #116329;
+  --system-theme-aqua: #1b7c83;
+  --system-theme-blue: #0969da;
+  --system-theme-purple: #8250df;
+  --system-theme-grey0: #6e7781;
+  --system-theme-grey1: #57606a;
+  --system-theme-grey2: #424a53;
+  --system-theme-statusline1: #0969da;
+  --system-theme-statusline2: #6e7781;
+  --system-theme-statusline3: #cf222e;
+  --system-theme-bg_dim: #ffffff;
+  --system-theme-bg0: #ffffff;
+  --system-theme-bg1: #f6f8fa;
+  --system-theme-bg2: #eaeef2;
+  --system-theme-bg3: #d0d7de;
+  --system-theme-bg4: #afb8c1;
+  --system-theme-bg5: #afb8c1;
+  --system-theme-bg_visual: #ddf4ff;
+  --system-theme-bg_red: #ffebe9;
+  --system-theme-bg_green: #dafbe1;
+  --system-theme-bg_blue: #ddf4ff;
+  --system-theme-bg_yellow: #fff8c5;
 }
 `)

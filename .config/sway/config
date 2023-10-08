@@ -274,7 +274,7 @@ assign [instance="teams-for-linux"] 2
 assign [instance="prospect mail"] 2
 
 # Notification Daemon
-exec swaync
+exec_always swaync
 # Toggle notification sidebar
 bindsym $super+n exec swaync-client -t -sw
 # Close all notifications and close panel

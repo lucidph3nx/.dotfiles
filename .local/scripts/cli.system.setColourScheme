@@ -4,6 +4,7 @@ THEME=$(printf "\
 [1]  Atom One Dark\n\
 [2]  Everforest Dark\n\
 [3]  Everforest Light\n\
+[4]  GitHub Light\n\
 " |\
 fzy |\
 sed -E -e 's/^\[//' -e 's/].*//')
@@ -39,6 +40,13 @@ _switch_colour_scheme() {
   if [ -f ~/.config/waybar/themes/${1}.css ]; then
     rm -f ~/.config/waybar/current-theme.css
     cp ~/.config/waybar/themes/${1}.css ~/.config/waybar/current-theme.css
+  fi
+  # set theme for swaync
+  if [ -f ~/.config/swaync/themes/${1}.css ]; then
+    rm -f ~/.config/swaync/current-theme.css
+    cp ~/.config/swaync/themes/${1}.css ~/.config/swaync/current-theme.css
+    # kill it (restarts with sway)
+    pkill swaync &> /dev/null
   fi
   # set theme for sway and reload
   if [ -f ~/.config/sway/themes/${1} ]; then
@@ -76,4 +84,7 @@ elif [ "$THEME" == "2" ]; then
 elif [ "$THEME" == "3" ]; then
   _switch_colour_scheme \
     everforest_light
+elif [ "$THEME" == "4" ]; then
+  _switch_colour_scheme \
+    github_light
 fi

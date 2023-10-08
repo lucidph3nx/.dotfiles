@@ -2,14 +2,16 @@
  * vim: ft=less
  */
 
-@define-color cc-bg #282c34;
+@import "current-theme.css";
 
-@define-color noti-border-color rgba(255, 255, 255, 0.15);
-@define-color noti-bg rgb(48, 48, 48);
-@define-color noti-bg-hover rgb(56, 56, 56);
-@define-color noti-bg-focus #98c379;
-@define-color noti-close-bg rgba(255, 255, 255, 0.1);
-@define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
+@define-color cc-bg @background;
+
+@define-color noti-border-color @grey;
+@define-color noti-bg @background;
+@define-color noti-bg-hover @background-system;
+@define-color noti-bg-focus @green;
+@define-color noti-close-bg @background;
+@define-color noti-close-bg-hover @background-system;
 
 @define-color bg-selected rgb(0, 128, 255);
 
@@ -33,6 +35,11 @@
   margin: 6px 12px;
   box-shadow: none;
   padding: 0;
+  border: 1px solid @noti-border-color;
+}
+.notification:hover {
+  background: @background-system;
+  color: @foreground-system;
 }
 
 .notification-content {
@@ -42,8 +49,8 @@
 }
 
 .close-button {
-  background: @noti-close-bg;
-  color: inherit;
+  background: @background;
+  color: @foreground;
   text-shadow: none;
   padding: 0;
   border-radius: 100%;
@@ -57,7 +64,9 @@
 
 .close-button:hover {
   box-shadow: none;
-  background: @noti-close-bg-hover;
+  text-shadow: none;
+  color: @foreground-system;
+  background: @background-system;
   transition: all 0.15s ease-in-out;
   border: none;
 }
@@ -75,8 +84,8 @@
 .notification-default-action:hover,
 .notification-action:hover {
   -gtk-icon-effect: none;
-  background: #98c379;
-  color: #282c34;
+  background: @background-system;
+  color: @foreground-system;
 }
 
 .notification-default-action {
@@ -160,17 +169,19 @@
   margin: 8px;
   font-size: 1.5rem;
 }
+/* Clear All Button */
 .widget-title > button {
   font-size: initial;
-  color: inherit;
+  color: @foreground;
   text-shadow: none;
-  background: @noti-bg;
+  background: @background;
   border: 1px solid @noti-border-color;
   box-shadow: none;
   border-radius: 0px;
 }
 .widget-title > button:hover {
-  background: @noti-bg-hover;
+  color: @foreground-system;
+  background: @background-system;
 }
 
 /* DND widget */
@@ -181,15 +192,15 @@
 .widget-dnd > switch {
   font-size: initial;
   border-radius: 0px;
-  background: @noti-bg;
+  background: @background-tray;
   border: 1px solid @noti-border-color;
   box-shadow: none;
 }
 .widget-dnd > switch:checked {
-  background: #61afef;
+  background: @blue;
 }
 .widget-dnd > switch slider {
-  background: #e6efff;
+  background: @background-system;
   border-radius: 0px;
 }
 

@@ -26,20 +26,21 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-  background-color: @green;
-  color: #282c34;
+  background-color: @workspace-focus-background;
+  color: @workspace-focus-foreground;
 }
 
 #workspaces button.urgent {
-  background-color: @red;
+  background-color: @workspace-urgent-background;
+  color: @workspace-urgent-foreground;
 }
 
 #workspaces button:hover {
   transition-duration: 0s;
   box-shadow: inherit;
   text-shadow: inherit;
-  background: @blue;
-  color: @background;
+  background: @workspace-hover-background;
+  color: @workspace-hover-foreground;
 }
 
 #workspaces button {

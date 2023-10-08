@@ -207,10 +207,6 @@ GM_addStyle(`
      color: var(--system-theme-fg) !important;
      font-weight: normal !important;
 }
- input, textarea {
-     background: rgb(40, 44, 51) !important;
-     color: var(--system-theme-fg) !important;
-}
  .submit-link>div:nth-child(1)>a:nth-child(1) {
      background: var(--system-theme-blue) !important;
      color: rgba(248, 248, 242, 0.85) !important;
