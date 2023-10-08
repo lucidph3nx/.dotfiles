@@ -21,7 +21,10 @@ _switch_colour_scheme() {
     "s/^source.*/source ~\/\.config\/tmux\/theme\/${1}\.conf/" \
     ~/.config/tmux/tmux.conf && \
     rm ~/.config/tmux/tmux.conf.bak
-    tmux source ~/.config/tmux/tmux.conf
+    # if tmux is running, re-source
+    if command -v tmux &>/dev/null 2>&1 && pgrep -x "tmux" &>/dev/null; then
+      tmux source ~/.config/tmux/tmux.conf
+    fi
   fi
   # set theme for rofi
   if [ -f ~/.config/rofi/current-theme.rasi ]; then
@@ -55,7 +58,7 @@ _switch_colour_scheme() {
     rm -f ~/.config/qutebrowser/greasemonkey/current-theme.css.js
     cp ~/.config/qutebrowser/greasemonkey-disabled/${1}.css.js ~/.config/qutebrowser/greasemonkey/current-theme.css.js
   fi
-  if command -v qutebrowser &> /dev/null; then
+  if command -v qutebrowser &>/dev/null 2>&1 && pgrep -x "qutebrowser" &>/dev/null; then
     qutebrowser ':config-source' &> /dev/null
     qutebrowser ':greasemonkey-reload' &> /dev/null
   fi
