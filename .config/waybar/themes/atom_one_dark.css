@@ -5,3 +5,6 @@
 @define-color black #000000;
 @define-color foreground #979fad;
 @define-color background #282c34;
+@define-color foreground-system #000000;
+@define-color background-system #98c379;
+@define-color background-tray #000000;

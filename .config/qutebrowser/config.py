@@ -29,11 +29,19 @@ config.set('content.geolocation',True, 'https://www.metlink.org.nz')
 config.set('content.geolocation',True, 'https://www.newworld.co.nz')
 config.set('content.geolocation',True, 'https://www.pbtech.co.nz')
 
+# ms teams video, audio, screen shrea
+config.set('content.desktop_capture', True, 'https://teams.microsoft.com')
+config.set('content.media.audio_capture', True, 'https://teams.microsoft.com')
+config.set('content.media.video_capture', True, 'https://teams.microsoft.com')
+config.set('content.media.audio_video_capture', True, 'https://teams.microsoft.com')
+
 # turn off notifications
 c.content.notifications.enabled = False
 
 # allow clipboard access
 c.content.javascript.clipboard = 'access'
+
+c.content.tls.certificate_errors = 'ask-block-thirdparty'
 
 c.spellcheck.languages = ['en-AU']
 

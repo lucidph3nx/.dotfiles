@@ -42,6 +42,10 @@ window#waybar.hidden {
   color: @background;
 }
 
+#workspaces button {
+  color: @foreground;
+}
+
 #scratchpad {
   background-color: @blue;
   color: #282c34;
@@ -94,8 +98,8 @@ widget > * {
   padding: 0 12px;
   margin-left: 0;
   margin-right: 0;
-  color: @black;
-  background-color: @green;
+  color: @foreground-system;
+  background-color: @background-system;
 }
 
 @keyframes blink {
@@ -105,7 +109,7 @@ widget > * {
 }
 
 #tray {
-  background: @black;
+  background: @background-tray;
 }
 
 #pulseaudio {
@@ -117,10 +121,11 @@ label:focus {
 }
 
 tooltip {
-  background: @black;
+  background: @background;
 }
 
 tooltip label {
   color: @green;
+  text-shadow: none;
 }
 

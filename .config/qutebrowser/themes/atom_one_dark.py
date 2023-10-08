@@ -1,6 +1,8 @@
 from qutebrowser.config.config import ConfigContainer  # noqa: F401
 c: ConfigContainer = c  # noqa: F821 pylint: disable=E0602,C0103
 
+c.colors.webpage.preferred_color_scheme = 'dark'
+
 # pallete
 # https://github.com/navarasu/onedark.nvim/blob/dac8c39812dae025255c9069a260e1f69d967927/lua/onedark/palette.lua
 t = {

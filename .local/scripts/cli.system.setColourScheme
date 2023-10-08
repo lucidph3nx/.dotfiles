@@ -3,6 +3,7 @@
 THEME=$(printf "\
 [1]  Atom One Dark\n\
 [2]  Everforest Dark\n\
+[3]  Everforest Light\n\
 " |\
 fzy |\
 sed -E -e 's/^\[//' -e 's/].*//')
@@ -40,7 +41,7 @@ _switch_colour_scheme() {
   if [ -f ~/.config/sway/themes/${1} ]; then
     rm -f ~/.config/sway/current-theme
     cp ~/.config/sway/themes/${1} ~/.config/sway/current-theme
-    if command -v swaymgs &> /dev/null; then
+    if command -v swaymsg &> /dev/null; then
       swaymsg reload
     fi
   fi
@@ -69,4 +70,7 @@ if [ "$THEME" == "1" ]; then
 elif [ "$THEME" == "2" ]; then
   _switch_colour_scheme \
     everforest_dark
+elif [ "$THEME" == "3" ]; then
+  _switch_colour_scheme \
+    everforest_light
 fi
