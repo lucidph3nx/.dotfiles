@@ -37,6 +37,7 @@ c.colors.webpage.bg = t['bg0']
 
 c.colors.keyhint.fg = t['fg']
 c.colors.keyhint.suffix.fg = t['red']
+c.colors.keyhint.bg = t['bg0']
 
 c.colors.messages.error.bg = t['bg_red']
 c.colors.messages.error.fg = t['fg']
