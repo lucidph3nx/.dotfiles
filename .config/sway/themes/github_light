@@ -1,0 +1,25 @@
+# vim:ft=swayconfig
+
+# everforest_light
+
+set $active #0969da
+set $inactive #57606a
+set $fg #24292f
+set $bg #ffffff
+set $warn #fb8f44
+set $danger #cf222e
+
+# GTK theming
+set $gnome "org.gnome.desktop.interface"
+seat seat0 xcursor_theme Breeze 24
+exec_always {
+    gsettings set $gnome gtk-theme 'Adwaita-Light'
+    gsettings set $gnome icon-theme 'Papirus-Light'
+    gsettings set $gnome cursor-theme 'Breeze'
+    gsettings set $gnome cursor-size '24'
+    gsettings set $gnome gtk-application-prefer-dark-theme false
+    # GTK4
+    gsettings set $gnome color-scheme 'prefer-light'
+    # default term for nemo
+    gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
+}
