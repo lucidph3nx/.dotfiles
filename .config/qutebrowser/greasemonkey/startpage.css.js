@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name    Userstyle (everforest_dark.css)
+// @name    Userstyle (startpage.css)
 // @include   /^qute://start/*/
 // @include    about:blank
 // ==/UserScript==
