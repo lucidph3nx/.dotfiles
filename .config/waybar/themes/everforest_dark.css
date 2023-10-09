@@ -9,9 +9,9 @@
 @define-color foreground-system #232a2e;
 @define-color background-system #a7c080;
 @define-color background-tray #2d353b;
-@define-color workspace-focus-foreground @foreground;
+@define-color workspace-focus-foreground @background;
 @define-color workspace-focus-background @green;
-@define-color workspace-urgent-foreground @foreground;
+@define-color workspace-urgent-foreground @background;
 @define-color workspace-urgent-background @red;
-@define-color workspace-hover-foreground @foreground;
+@define-color workspace-hover-foreground @background;
 @define-color workspace-hover-background @blue;
