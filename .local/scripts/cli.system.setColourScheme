@@ -1,21 +1,20 @@
 #!/usr/bin/env bash
 
-THEME=$(printf "\
-[1]  Atom One Dark\n\
-[2]  Everforest Dark\n\
-[3]  Everforest Light\n\
-[4]  GitHub Light\n\
-" |\
-fzy |\
-sed -E -e 's/^\[//' -e 's/].*//')
-
-if [ "$THEME"x == ""x ]; then
-    exit
+declare -A THEMES=(
+    ["atom_one_dark"]="atom_one_dark"
+    ["everforest_dark"]="everforest_dark"
+    ["everforest_light"]="everforest_light"
+    ["github_light"]="github_light"
+)
+THEME="${1:-$(printf '%s\n' "${!THEMES[@]}" | fzy)}"
+if [[ -z "${THEMES[$THEME]}" ]]; then
+    echo "Invalid theme selected"
+    exit 1
 fi
 
 _switch_colour_scheme() {
   # set theme in kitty
-  kitty +kitten themes --reload-in=all ${1}
+  kitty +kitten themes --reload-in=all ${1}  &> /dev/null
   # set theme in tmux
   if [ -f ~/.config/tmux/tmux.conf ]; then
     sed -E -i.bak \
@@ -24,7 +23,7 @@ _switch_colour_scheme() {
     rm ~/.config/tmux/tmux.conf.bak
     # if tmux is running, re-source
     if command -v tmux &>/dev/null 2>&1 && pgrep -x "tmux" &>/dev/null; then
-      tmux source ~/.config/tmux/tmux.conf
+      tmux source ~/.config/tmux/tmux.conf  &> /dev/null
     fi
   fi
   # set theme for rofi
@@ -53,7 +52,7 @@ _switch_colour_scheme() {
     rm -f ~/.config/sway/current-theme
     cp ~/.config/sway/themes/${1} ~/.config/sway/current-theme
     if command -v swaymsg &> /dev/null; then
-      swaymsg reload
+      swaymsg reload  &> /dev/null
     fi
   fi
   # set theme for qutebrowser
@@ -75,16 +74,4 @@ _switch_colour_scheme() {
   exec zsh
 }
 
-if [ "$THEME" == "1" ]; then
-  _switch_colour_scheme \
-    atom_one_dark
-elif [ "$THEME" == "2" ]; then
-  _switch_colour_scheme \
-    everforest_dark
-elif [ "$THEME" == "3" ]; then
-  _switch_colour_scheme \
-    everforest_light
-elif [ "$THEME" == "4" ]; then
-  _switch_colour_scheme \
-    github_light
-fi
+_switch_colour_scheme "${THEMES[$THEME]}"
