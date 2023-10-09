@@ -1,0 +1,9 @@
+* {
+  accentcolorgreen: #a7c080;
+  accentcolormegenta: #d699b6;
+  accentcolorblue: #7fbbb3;
+  backgroundcolor: #2d353b;
+  foregroundcolor: #d3c6aa;
+  selectionbackground: #9da9a0;
+  selectionforeground: #543a48;
+}
