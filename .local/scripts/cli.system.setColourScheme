@@ -55,6 +55,17 @@ _switch_colour_scheme() {
       swaymsg reload  &> /dev/null
     fi
   fi
+  # switch theme if on macos
+  if command -v osascript &> /dev/null; then
+    # if name of theme includes dark, set dark mode
+    if [[ $1 == *"_dark"* ]]; then
+      osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
+    fi
+    # if name of theme includes light, set light mode
+    if [[ $1 == *"_light"* ]]; then
+      osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to false'
+    fi
+  fi
   # set theme for qutebrowser
   if [ -f ~/.config/qutebrowser/themes/${1}.py ]; then
     rm -f ~/.config/qutebrowser/current-theme.py
