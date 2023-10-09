@@ -1,0 +1,11 @@
+/* github_light */
+@define-color green #116329;
+@define-color red #cf222e;
+@define-color blue #0969da;
+@define-color black #24292f;
+@define-color grey #57606a;
+@define-color foreground #24292f;
+@define-color background #ffffff;
+@define-color foreground-system #ffffff;
+@define-color background-system #0969da;
+@define-color background-tray #57606a;
