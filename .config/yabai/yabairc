@@ -28,7 +28,7 @@ yabai -m config active_window_border_color 0xff98c379
 yabai -m config normal_window_border_color 0xff5c6370
 
 # leave a gap for the bar
-yabai -m config external_bar all:30:0
+# yabai -m config external_bar all:30:0
 
 # automatically focus other window when closing another
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
