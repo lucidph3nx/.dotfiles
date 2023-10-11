@@ -7,9 +7,10 @@ output Unknown-1 {
   scale 1.5
 }
 set $half_monitor_width 1723
-# remap capslock to escape and swap cmd and option
+# NOTE: I am no longer remapping caps:escape, I am using caps2esc util so I get ctrl as well as esc
+# remap swap cmd and option
 input "type:keyboard" {
-  xkb_options altwin:swap_lalt_lwin,caps:escape
+  xkb_options altwin:swap_lalt_lwin
 }
 
 input "type:touchpad" {
