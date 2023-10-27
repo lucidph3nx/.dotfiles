@@ -9,7 +9,7 @@ alias l='exa -la'
 alias tree='exa --tree -la'
 
 # bat instead of cat
-alias cat='bat'
+# alias cat='bat'
 
 # ripgrep instead of grep
 alias grep='rg'
