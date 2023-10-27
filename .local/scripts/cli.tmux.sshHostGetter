@@ -9,5 +9,6 @@ locations=(
 # Loop through ssh hosts
 for location in "${locations[@]}"; do
   grep -E "^Host ([^*]+)$" "$(eval echo $location)" | awk '{print $2}'
+  # grep -E "^  Hostname ([^*]+)$" "$(eval echo $location)" | awk '{print $2}' | sort | uniq
 done
 
