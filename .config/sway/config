@@ -97,6 +97,22 @@ bindsym --to-code {
   $super+f exec $nvim_session_launcher
 }
 
+bindsym $super+grave mode "Macron"
+mode "Macron" {
+  bindsym a exec wtype ā, mode "default"
+  bindsym Shift+a exec wtype Ā, mode "default"
+  bindsym e exec wtype ē, mode "default"
+  bindsym Shift+e exec wtype Ē, mode "default"
+  bindsym i exec wtype ī, mode "default"
+  bindsym Shift+i exec wtype Ī, mode "default"
+  bindsym o exec wtype ō, mode "default"
+  bindsym Shift+o exec wtype Ō, mode "default"
+  bindsym u exec wtype ū, mode "default"
+  bindsym Shift+u exec wtype Ū, mode "default"
+  
+  bindsym Escape mode "default"
+}
+
 ## Application Bindings
 bindsym --to-code {
   $alt+Return exec $terminal
@@ -111,6 +127,7 @@ bindsym --to-code {
   $alt+Shift+l exec $openshoppinglist
   $alt+o exec $obsidian
 }
+
 
 ## Media Controls
 bindsym --to-code {
