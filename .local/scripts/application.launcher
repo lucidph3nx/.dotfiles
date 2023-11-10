@@ -1,6 +1,8 @@
 #!/bin/sh
 
+monitor="$(swaymsg -t get_outputs | jq -c '.[] | select(.focused) | select(.id)' | jq -c '.name')"
+
 # style for app picker
 rofi_style_dmenu='entry { placeholder: "drun"; }'
 
-rofi -show drun -theme-str "$rofi_style_dmenu"
+rofi -monitor "$monitor" -show drun -theme-str "$rofi_style_dmenu"

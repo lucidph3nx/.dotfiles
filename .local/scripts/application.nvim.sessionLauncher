@@ -1,5 +1,7 @@
 #!/bin/sh
 
+monitor="$(swaymsg -t get_outputs | jq -c '.[] | select(.focused) | select(.id)' | jq -c '.name')"
+
 # rofi style
 rofi_style_tmuxsessionizer='inputbar { children: [entry]; border-color: @accentcolorblue;} entry { placeholder: "Select Project"; } element-icon { enabled: false; }'
 
@@ -9,7 +11,7 @@ echo $rofi_style_tmuxsessionizer
 terminal="kitty"
 
 # Get the selection from tmux project getter
-selection=$(~/.local/scripts/cli.tmux.projectGetter | rofi -dmenu -theme-str "$rofi_style_tmuxsessionizer")
+selection=$(~/.local/scripts/cli.tmux.projectGetter | rofi -monitor "$monitor" -dmenu -theme-str "$rofi_style_tmuxsessionizer")
 # Check if selection is not empty
 if [ -n "$selection" ]; then
   # Run the tmux sessioniser with the selected session
