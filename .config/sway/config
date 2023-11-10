@@ -6,9 +6,6 @@
 focus_follows_mouse no
 mouse_warping none
 
-# Mode Variables
-set $mode_timeout 1
-
 # Keyboard
 # super for "window actions"
 set $super Mod4
@@ -104,7 +101,7 @@ bindsym --to-code {
 }
 
 bindsym $super+grave mode "Macron"
-bindsym --release $super+grave exec sleep $mode_timeout && swaymsg mode "default"
+bindsym --release $super+grave exec sleep 2 && swaymsg mode "default"
 mode "Macron" {
   bindsym a exec wtype ā, mode "default"
   bindsym Shift+a exec wtype Ā, mode "default"
@@ -165,7 +162,7 @@ mode --pango_markup $mode_exit {
 }
 # Enter Exit mode
 bindsym --to-code $super+Shift+e mode $mode_exit
-bindsym --release $super+Shift+e exec sleep $mode_timeout && swaymsg mode "default"
+bindsym --release $super+Shift+e exec sleep 3 && swaymsg mode "default"
 
 
 #
