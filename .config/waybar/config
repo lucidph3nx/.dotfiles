@@ -3,9 +3,10 @@
   "layer": "top",
   "position": "top",
   "height": 25,
+  // "output": "HDMI-A-1",
 
   "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "mpd"],
-  "modules-center": ["sway/window"],
+  "modules-center": [], //["sway/window"],
   "modules-right": [
     "tray",
     "pulseaudio",
