@@ -83,6 +83,9 @@ client.focused_inactive $inactive $bg     $fg   $bg       $bg
 client.unfocused        $inactive $bg     $fg   $bg       $bg
 # general gaps on windows
 gaps inner 5
+# set smart gaps etc if super-ultrawide
+exec_always zsh ~/.config/sway/scripts/set_gaps.sh
+
 
 ### Key bindings
 

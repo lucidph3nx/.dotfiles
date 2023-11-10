@@ -6,22 +6,3 @@ output DP-3 {
   pos 0,0
   mode 5120x1440
 }
-set $half_monitor_width 2552
-# virtual monitor
-output HEADLESS-1 {
-  pos 5120,0
-  mode 2560x1440
-}
-# add headless monitor
-bindsym $super+Shift+x exec swaymsg create_output HEADLESS-1
-bindsym $super+x exec swaymsg output HEADLESS-1 unplug
-
-# by default open headless monitor on workspace 0
-workspace 0 output HEADLESS-1
-# by default, open obs studio in workspace 9
-assign [app_id="obs"] 9
-
-# solo window should be centered
-smart_gaps inverse_outer
-# solo window should be 50% width horizontal padding for single window, make life bearable with a super-ultrawide
-gaps horizontal 1280

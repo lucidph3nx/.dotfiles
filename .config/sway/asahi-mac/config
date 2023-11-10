@@ -6,7 +6,6 @@ output Unknown-1 {
   mode 3456x2160
   scale 1.5
 }
-set $half_monitor_width 1723
 # NOTE: I am no longer remapping caps:escape, I am using caps2esc util so I get ctrl as well as esc
 # remap swap cmd and option
 input "type:keyboard" {
