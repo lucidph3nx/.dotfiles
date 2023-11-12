@@ -34,7 +34,7 @@ t = {
     'bg_yellow': '#ebd09c',
 }
 
-c.colors.webpage.bg = t['bg0']
+# c.colors.webpage.bg = t['bg0']
 
 c.colors.keyhint.fg = t['fg']
 c.colors.keyhint.suffix.fg = t['fg']
