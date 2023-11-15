@@ -1,6 +1,0 @@
-#!/bin/sh
-lofi=$(yt-dlp -g 'https://www.youtube.com/watch?v=jfKfPfyJRdk')
-mpc clear
-mpc insert $lofi
-mpc next
-mpc play
