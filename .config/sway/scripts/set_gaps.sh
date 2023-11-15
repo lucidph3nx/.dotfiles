@@ -7,4 +7,8 @@ if [ $width -gt 5000 ]; then
   swaymsg smart_gaps inverse_outer
   swaymsg gaps horizontal $(($width/4))
   swaymsg gaps horizontal all set $(($width/4))
+else
+  swaymsg smart_gaps off
+  swaymsg gaps horizontal 0
+  swaymsg gaps horizontal all set 0
 fi
