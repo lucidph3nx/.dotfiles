@@ -13,9 +13,11 @@ x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop
 application/octet-stream=com.ultimaker.cura
 x-scheme-handler/nxm=ModOrganizer-steamtinkerlaunch-dl.desktop
 x-scheme-handler/nxm-protocol=ModOrganizer-steamtinkerlaunch-dl.desktop
+text/plain=org.gnome.gedit.desktop
 
 [Added Associations]
 image/jpeg=gimp.desktop;vimiv.desktop;
 image/webp=vimiv.desktop;
 image/png=vimiv.desktop;
 application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;calibre-ebook-viewer.desktop;
+text/plain=org.gnome.gedit.desktop;
