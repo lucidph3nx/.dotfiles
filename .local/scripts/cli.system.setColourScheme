@@ -21,11 +21,12 @@ _switch_colour_scheme() {
   sed -i '/DELETEBELOW/Q' ~/.config/kitty/kitty.conf
   # set theme in tmux
   if [ -f ~/.config/tmux/tmux.conf ]; then
-    sed -E -i.bak \
-    "s/^source.*/source ~\/\.config\/tmux\/theme\/${1}\.conf/" \
-    ~/.config/tmux/tmux.conf && \
-    rm ~/.config/tmux/tmux.conf.bak
-    # if tmux is running, re-source
+    cp ~/.config/tmux/themes/${1}.conf ~/.config/tmux/current_theme.conf
+    # sed -E -i.bak \
+    # "s/^source.*/source ~\/\.config\/tmux\/theme\/${1}\.conf/" \
+    # ~/.config/tmux/tmux.conf && \
+    # rm ~/.config/tmux/tmux.conf.bak
+    # # if tmux is running, re-source
     if command -v tmux &>/dev/null 2>&1 && pgrep -x "tmux" &>/dev/null; then
       tmux source ~/.config/tmux/tmux.conf  &> /dev/null
     fi
