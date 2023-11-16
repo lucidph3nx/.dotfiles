@@ -13,8 +13,12 @@ if [[ -z "${THEMES[$THEME]}" ]]; then
 fi
 
 _switch_colour_scheme() {
+  # add placeholder line to kitty
+  echo "DELETEBELOW" >> ~/.config/kitty/kitty.conf
   # set theme in kitty
   kitty +kitten themes --reload-in=all ${1}  &> /dev/null
+  # remove those stupid added lines in the kitty conf
+  sed -i '/DELETEBELOW/Q' ~/.config/kitty/kitty.conf
   # set theme in tmux
   if [ -f ~/.config/tmux/tmux.conf ]; then
     sed -E -i.bak \
