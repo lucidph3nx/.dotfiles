@@ -18,7 +18,11 @@ _switch_colour_scheme() {
   # set theme in kitty
   kitty +kitten themes --reload-in=all ${1}  &> /dev/null
   # remove those stupid added lines in the kitty conf
-  sed -i '/DELETEBELOW/Q' ~/.config/kitty/kitty.conf
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    sed -i '' '/DELETEBELOW/Q' ~/.config/kitty/kitty.conf
+  else
+    sed -i '/DELETEBELOW/Q' ~/.config/kitty/kitty.conf
+  fi
   # set theme in tmux
   if [ -f ~/.config/tmux/tmux.conf ]; then
     cp ~/.config/tmux/themes/${1}.conf ~/.config/tmux/current_theme.conf
