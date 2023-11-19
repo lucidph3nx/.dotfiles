@@ -19,7 +19,7 @@ cleaned_response=$(echo "$response" | awk '{print $NF}')
 echo $cleaned_response
 
 if [ "$cleaned_response" == "OK" ]; then
-  notify-send --icon /home/ben/pictures/blocky.svg "Blocky" "Blocking disabled for $duration"
+  notify-send --expire-time 5000 --icon /home/ben/pictures/blocky.svg "Blocky" "Blocking disabled for $duration"
 else
   notify-send --icon /home/ben/pictures/blocky.svg "Blocky" "Error: $response"
 fi
