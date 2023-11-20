@@ -12,6 +12,7 @@
     "pulseaudio",
     "custom/pulseaudio-cycle",
     "custom/office-temp",
+    "custom/office-humidity",
     "custom/notification",
     "network",
     "battery",
@@ -56,8 +57,16 @@
   "custom/office-temp": {
     "return-type": "string",
     "interval": 60,
-    "format": "{}",
+    "format": " {}",
     "exec": "$HOME/.local/scripts/cli.home.office.getTemperature",
+    "on-click": "qutebrowser --target window 'https://home-assistant.tinfoilforest.nz/lovelace/default_view'"
+  },
+
+  "custom/office-humidity": {
+    "return-type": "string",
+    "interval": 60,
+    "format": " {}",
+    "exec": "$HOME/.local/scripts/cli.home.office.getHumidity",
     "on-click": "qutebrowser --target window 'https://home-assistant.tinfoilforest.nz/lovelace/default_view'"
   },
 
