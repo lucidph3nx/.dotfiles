@@ -1,9 +1,13 @@
 #!/bin/bash
 
+# location of blocky bin
+blocky="/home/ben/.local/bin/blocky"
+
 # disable duration
 duration="10m"
 
 # port-forward primary, TODO: include secondary dns
+KUBECONFIG=/home/ben/.config/kube/config-home \
 kubectl port-forward svc/blocky-primary 4000:4000 -n networking > /dev/null &
 # Store the process ID of the background task
 PORT_FORWARD_PID=$!
@@ -12,7 +16,7 @@ PORT_FORWARD_PID=$!
 sleep 0.5
 
 # disable blocky blocking for 10 min
-response=$(blocky blocking disable --duration $duration 2>&1)
+response=$($blocky blocking disable --duration $duration 2>&1)
 
 echo $response
 cleaned_response=$(echo "$response" | awk '{print $NF}')
