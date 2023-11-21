@@ -64,7 +64,7 @@ c.editor.command = ['kitty', '--class', 'qute-editor', '-e', 'nvim', '{}']
 
 # font
 c.fonts.default_size = '10pt'
-c.fonts.default_family = 'JetbrainsMonoNerdFont'
+c.fonts.default_family = 'JetBrains Mono'
 # tabs
 c.tabs.position = 'top'
 c.tabs.show = 'multiple'  # only show tabs if multiple tabs are open
