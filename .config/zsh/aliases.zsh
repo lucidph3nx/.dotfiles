@@ -36,13 +36,6 @@ alias kop="~/code/dev-tools/kubectl-1.3.7-docker/kubectl.sh"
 # youtube download script for music
 alias ytm-download="yt-dlp  --add-metadata --format m4a --youtube-skip-dash-manifest -i -o '~/music/%(artist)s/%(album)s/%(title)s.%(ext)s' --sponsorblock-remove 'music_offtopic'"
 
-# os specific aliases
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  # no macos specific alises
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  alias task=go-task
-fi
-
 # for sshing into things that don't know kitty
 alias ssh='TERM=xterm-color ssh'
 
