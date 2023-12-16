@@ -5,7 +5,7 @@
   "height": 25,
   // "output": "HDMI-A-1",
 
-  "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "mpd"],
+  "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "hyprland/workspaces", "mpd"],
   "modules-center": [], //["sway/window"],
   "modules-right": [
     "tray",
