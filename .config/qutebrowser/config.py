@@ -3,7 +3,7 @@ c = c  # noqa: F821 pylint: disable=E0602,C0103
 config = config  # noqa: F821 pylint: disable=E0602,C0103
 
 # load configs done via gui
-# config.load_autoconfig()
+config.load_autoconfig(False)
 
 # homepage
 c.url.start_pages = ['qute://start']
