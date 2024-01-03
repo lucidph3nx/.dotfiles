@@ -14,6 +14,10 @@ alias tree='exa --tree -la'
 # ripgrep instead of grep
 alias grep='rg'
 
+# use lua5.1 with luarocks
+alias lua='lua5.1'
+alias luarocks='luarocks --lua-version=5.1'
+
 #nvim
 alias {v,vim}=nvim
 
