@@ -17,7 +17,6 @@ plugins=(
 	git
   git-auto-fetch
   history
-	asdf
   zsh-autosuggestions
   zsh-syntax-highlighting
   vi-mode

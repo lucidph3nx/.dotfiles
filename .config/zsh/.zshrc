@@ -37,4 +37,4 @@ source $XDG_CONFIG_HOME/zsh/utils.zsh
 source $XDG_CONFIG_HOME/zsh/mappings.zsh
 
 # for when you want to debug zsh startup
-#zprof
+# zprof

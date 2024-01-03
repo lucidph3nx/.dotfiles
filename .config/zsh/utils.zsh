@@ -10,8 +10,8 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 # add python binaries to PATH
 export PATH="${PATH}:${HOME}/.local/share/python/bin"
 
-# rtx version manager - hopefully the last I'll ever need
-eval "$(rtx activate zsh)"
+# mise version manager - hopefully the last I'll ever need
+eval "$(mise activate zsh)"
 
 # direnv env vars by directory
 eval "$(direnv hook zsh)"
