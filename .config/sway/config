@@ -11,6 +11,15 @@ mouse_warping none
 set $super Mod4
 # alt for "application actions"
 set $alt Mod1
+# input config
+input "type:keyboard" {
+  # Te Reo Macrons
+  xkb_layout "nz"
+  xkb_variant "mao"
+  # Right Super for macrons
+  xkb_options lv3:rwin_switch
+}
+
 
 # other keys that need better names
 set $pageup Prior
@@ -98,23 +107,6 @@ bindsym --to-code {
   $super+y exec $clipboardmanager
   $super+Shift+y exec $clearclipboard
   $super+f exec $nvim_session_launcher
-}
-
-bindsym $super+grave mode "Macron"
-bindsym --release $super+grave exec sleep 2 && swaymsg mode "default"
-mode "Macron" {
-  bindsym a exec wtype ā, mode "default"
-  bindsym Shift+a exec wtype Ā, mode "default"
-  bindsym e exec wtype ē, mode "default"
-  bindsym Shift+e exec wtype Ē, mode "default"
-  bindsym i exec wtype ī, mode "default"
-  bindsym Shift+i exec wtype Ī, mode "default"
-  bindsym o exec wtype ō, mode "default"
-  bindsym Shift+o exec wtype Ō, mode "default"
-  bindsym u exec wtype ū, mode "default"
-  bindsym Shift+u exec wtype Ū, mode "default"
-  
-  bindsym Escape mode "default"
 }
 
 ## Application Bindings
