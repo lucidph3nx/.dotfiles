@@ -3,7 +3,7 @@ c = c  # noqa: F821 pylint: disable=E0602,C0103
 config = config  # noqa: F821 pylint: disable=E0602,C0103
 
 # load configs done via gui
-config.load_autoconfig(False)
+config.load_autoconfig()
 
 # homepage
 c.url.start_pages = ['qute://start']
@@ -29,7 +29,7 @@ config.set('content.geolocation',True, 'https://www.metlink.org.nz')
 config.set('content.geolocation',True, 'https://www.newworld.co.nz')
 config.set('content.geolocation',True, 'https://www.pbtech.co.nz')
 
-# ms teams video, audio, screen shrea
+# ms teams video, audio, screen share
 config.set('content.desktop_capture', True, 'https://teams.microsoft.com')
 config.set('content.media.audio_capture', True, 'https://teams.microsoft.com')
 config.set('content.media.video_capture', True, 'https://teams.microsoft.com')
