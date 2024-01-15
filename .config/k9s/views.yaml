@@ -11,4 +11,12 @@ views:
       - '%CPU/L'
       - '%MEM/L'
       - NODE
-
+  v1/nodes:
+    columns:
+      - AGE
+      - NAME
+      - STATUS
+      - ROLE
+      - VERSION
+      - PODS
+      - INTERNAL-IP
