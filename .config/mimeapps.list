@@ -15,6 +15,7 @@ x-scheme-handler/nxm=ModOrganizer-steamtinkerlaunch-dl.desktop
 x-scheme-handler/nxm-protocol=ModOrganizer-steamtinkerlaunch-dl.desktop
 text/plain=org.gnome.gedit.desktop
 model/stl=com.ultimaker.cura.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
 
 [Added Associations]
 image/jpeg=gimp.desktop;vimiv.desktop;
@@ -23,3 +24,4 @@ image/png=vimiv.desktop;
 application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop;calibre-ebook-viewer.desktop;
 text/plain=org.gnome.gedit.desktop;
 model/stl=com.ultimaker.cura.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
