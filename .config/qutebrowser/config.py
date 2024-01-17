@@ -12,6 +12,7 @@ c.url.searchengines = {
     'DEFAULT': 'https://google.com/search?hl=en&q={}',
     'g': 'https://google.com/search?hl=en&q={}',
     'y': 'https://www.youtube.com/results?search_query={}',
+    'nw': 'https://www.newworld.co.nz/shop/Search?q={}',
 }
 c.downloads.location.directory = '~/downloads'
 # content settings
@@ -100,6 +101,8 @@ c.bindings.commands['normal'] = {
     # close tabs left and right
     'ch': 'tab-only --next',
     'cl': 'tab-only --prev',
+    # tab give (pop out)
+    'tg': 'tab-give',
     # bitwarden bindings
     '<Space>ll': 'spawn --userscript qute-bitwarden --auto-lock 604800 --totp',
     '<Space>lu': 'spawn --userscript qute-bitwarden --auto-lock 604800 --username-only',
