@@ -39,8 +39,10 @@ set $runscripts ~/.local/scripts/application.scripts.launcher
 set $nvim_session_launcher ~/.local/scripts/application.nvim.sessionLauncher
 # Applications
 set $terminal kitty 
-set $browser qutebrowser
-set $browser_newwindow qutebrowser --target window
+# set $browser qutebrowser
+# set $browser_newwindow qutebrowser --target window
+set $browser firefox
+set $browser_newwindow firefox --new-window
 # browser based applications
 set $calendar $browser_newwindow 'https://calendar.google.com'
 set $home_assistant $browser_newwindow "https://home-assistant.$SECRET_DOMAIN"
