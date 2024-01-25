@@ -81,27 +81,6 @@
             ]
           },
           {
-            "description": "Open Zscaler Script on option z",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "z",
-                  "modifiers": {
-                    "mandatory": [
-                      "option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a '/Applications/kitty.app' --new --args --hold --directory=~/code/zscaler-automatic-login /Users/ben/.local/bin/poetry run python main.py"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
             "description": "Open Ranger option f",
             "manipulators": [
               {

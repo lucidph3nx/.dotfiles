@@ -7,3 +7,6 @@ bindkey -s ^k "k9s --headless\n"
 bindkey -s ^v "nvim\n"
 # Ctrl-p open python
 bindkey -s ^p "python\n"
+
+# Ctrl-z to run zscaler script
+bindkey -s ^z "cd ~/code/zscaler-automatic-login && poetry run python main.py\n"
