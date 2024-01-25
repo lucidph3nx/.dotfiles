@@ -1,0 +1,14 @@
+" vim: set ft=tridactyl:
+
+" Unbind
+unbind --mode=normal t
+
+" Binds
+bind o fillcmdline open
+bind O fillcmdline tabopen
+bind cl tabclosealltoright
+bind ch tabclosealltoleft
+bind tg tabdetach
+
+" Quickmarks
+quickmark i instagram.com
