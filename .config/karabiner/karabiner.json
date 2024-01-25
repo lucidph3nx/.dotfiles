@@ -81,11 +81,11 @@
             ]
           },
           {
-            "description": "Open Qutebrowser option q",
+            "description": "Open Zscaler Script on option z",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "q",
+                  "key_code": "z",
                   "modifiers": {
                     "mandatory": [
                       "option"
@@ -94,7 +94,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/opt/homebrew/bin/qutebrowser --config-py ~/.config/qutebrowser/config.py"
+                    "shell_command": "open -a '/Applications/kitty.app' --new --args --hold --directory=~/code/zscaler-automatic-login /Users/ben/.local/bin/poetry run python main.py"
                   }
                 ],
                 "type": "basic"
