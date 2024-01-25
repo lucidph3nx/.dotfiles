@@ -15,3 +15,6 @@ quickmark i instagram.com
 
 " Editor
 set editorcmd kitty --class qute-editor -e nvim
+
+" Theme
+colors everforest
