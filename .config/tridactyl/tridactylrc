@@ -30,3 +30,6 @@ set editorcmd kitty --class qute-editor -e nvim
 
 " Theme
 colors everforest
+
+" Disable
+blacklistadd https://monkeytype.com/
