@@ -1,5 +1,7 @@
 /* reminder, to enter debug in firefox Ctrl-Alt-Shift-I */
 
+/* most of this is sourced from https://github.com/Dook97/firefox-qutebrowser-userchrome */
+
 :root {
   font-family: 'JetBrainsMono Nerd Font', monospace !important;
 	--tab-active-bg-color: #3d484d;
