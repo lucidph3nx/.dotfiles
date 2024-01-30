@@ -1,6 +1,7 @@
 [user]
 	email = ben@tinfoilforest.nz
 	name = lucidph3nx
+	signingkey = /home/ben/.ssh/homelab_id_ed25519.pub
 [credential]
 	helper = store
 [push]
@@ -13,3 +14,7 @@
 	allow = always
 [init]
 	defaultBranch = main
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
