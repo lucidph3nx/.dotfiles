@@ -32,6 +32,16 @@
     font-family: JetBrains Mono, monospace !important;
   }
 }
+/* squared customised youtube */
+@-moz-document url-prefix("https://www.youtube.com") {
+  * {
+    border-radius: 0px !important;
+  }
+
+  body {
+    font-family: JetBrains Mono, monospace !important;
+  }
+}
 
 /* squared customised github */
 @-moz-document url-prefix("https://github.com") {
