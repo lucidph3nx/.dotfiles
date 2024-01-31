@@ -2,8 +2,6 @@
 	email = ben@tinfoilforest.nz
 	name = lucidph3nx
 	signingkey = /home/ben/.ssh/lucidph3nx-ed25519-signingkey-navi.pub
-[credential]
-	helper = store
 [push]
 	autoSetupRemote = true
 [url "git@github.com:"]
