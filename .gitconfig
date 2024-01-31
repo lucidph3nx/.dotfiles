@@ -1,7 +1,7 @@
 [user]
 	email = ben@tinfoilforest.nz
 	name = lucidph3nx
-	signingkey = /home/ben/.ssh/lucidph3nx-ed25519-signingkey.pub
+	signingkey = ~/.ssh/lucidph3nx-ed25519-signingkey.pub
 [credential]
 	helper = store
 [push]
