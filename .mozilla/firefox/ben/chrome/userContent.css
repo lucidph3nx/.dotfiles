@@ -174,7 +174,7 @@
   .entry.unvoted,
   .entry.likes,
   .entry.dislikes {
-    width: auto !important;
+    flex-grow: 1;
   }
 
   /* header area */
