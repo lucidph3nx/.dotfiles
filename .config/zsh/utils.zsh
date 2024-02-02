@@ -17,14 +17,14 @@ eval "$(mise activate zsh)"
 eval "$(direnv hook zsh)"
 
 # os specific utils
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  # metals and other stuff installed via courser
-  if [ ! -d "${HOME}/.local/share/coursier/bin" ]; then
-    # symlink because of space in Application Support folder
-    mkdir -p "${HOME}/.local/share/coursier"
-    ln -s "${HOME}/Library/Application Support/Coursier/bin" "${HOME}/.local/share/coursier"
-  fi
-  export PATH="${PATH}:${HOME}/.local/share/coursier/bin"
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  export PATH="${PATH}:${HOME}/.local/share/coursier/bin"
-fi
+# if [[ "$OSTYPE" == "darwin"* ]]; then
+#   # metals and other stuff installed via courser
+#   if [ ! -d "${HOME}/.local/share/coursier/bin" ]; then
+#     # symlink because of space in Application Support folder
+#     mkdir -p "${HOME}/.local/share/coursier"
+#     ln -s "${HOME}/Library/Application Support/Coursier/bin" "${HOME}/.local/share/coursier"
+#   fi
+#   export PATH="${PATH}:${HOME}/.local/share/coursier/bin"
+# elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+#   export PATH="${PATH}:${HOME}/.local/share/coursier/bin"
+# fi
