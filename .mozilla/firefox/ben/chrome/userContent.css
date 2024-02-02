@@ -169,8 +169,11 @@
     width: 70px !important;
     flex-shrink: 0 !important;
   }
-  .entry {
-    flex-wrap: nowrap !important;
+  /* prevent post headings and subreddits from wrapping */
+  .entry.unvoted,
+  .entry.likes,
+  .entry.dislikes {
+    width: 100% !important;
   }
 
   /* header area */
