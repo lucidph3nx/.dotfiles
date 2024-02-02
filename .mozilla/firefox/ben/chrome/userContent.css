@@ -170,10 +170,11 @@
     flex-shrink: 0 !important;
   }
   /* prevent post headings and subreddits from wrapping */
+  .entry,
   .entry.unvoted,
   .entry.likes,
   .entry.dislikes {
-    width: 100% !important;
+    width: auto !important;
   }
 
   /* header area */
