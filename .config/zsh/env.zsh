@@ -13,7 +13,7 @@ export PF_INFO="ascii title os kernel pkgs wm shell editor"
 
 # kubernetes, with host defaults
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  export KUBECONFIG=/home/ben/.config/kube/config-work
+  export KUBECONFIG=/Users/ben/.config/kube/config-work
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
   export KUBECONFIG=/home/ben/.config/kube/config-home
 fi
