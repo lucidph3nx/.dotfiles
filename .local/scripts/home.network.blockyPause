@@ -16,7 +16,7 @@ PORT_FORWARD_PID=$!
 sleep 0.5
 
 # disable blocky blocking for 10 min
-response=$($blocky blocking disable --duration $duration 2>&1)
+response=$($blocky blocking disable --duration $duration --groups default 2>&1)
 
 echo $response
 cleaned_response=$(echo "$response" | awk '{print $NF}')
