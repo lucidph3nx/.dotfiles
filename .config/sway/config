@@ -289,6 +289,8 @@ for_window [app_id="qute-editor"] floating enable, resize set width 900 px heigh
 # Applications opening on default workspaces
 assign [instance="teams-for-linux"] 2
 assign [instance="prospect mail"] 2
+assign [instance="discord"] 2
+assign [instance="webcord"] 2
 
 # Notification Daemon
 exec_always swaync
