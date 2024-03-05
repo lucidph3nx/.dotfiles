@@ -1,4 +1,4 @@
-# one day
+
 # xwayland disable
 # NOTE: last time I tried, steam client wouldnt start...
 
@@ -18,6 +18,9 @@ input "type:keyboard" {
   xkb_variant "mao"
   # Right Super for macrons
   xkb_options lv3:rwin_switch
+  # keyrepeat settings
+  repeat_delay 225
+  repeat_rate 60
 }
 
 
