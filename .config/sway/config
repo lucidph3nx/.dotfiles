@@ -171,12 +171,6 @@ bindsym --release $super+Shift+e exec sleep 3 && swaymsg mode "default"
     bindsym $super+$up focus up
     bindsym $super+$right focus right
     
-    # move focus using tree
-    bindsym $super+Left focus prev
-    bindsym $super+Down focus child
-    bindsym $super+Up focus parent
-    bindsym $super+Right focus next
-
     # Move the focused window with the same, but add Shift
     bindsym $super+Shift+$left move left
     bindsym $super+Shift+$down move down
