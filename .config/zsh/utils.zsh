@@ -11,7 +11,8 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 export PATH="${PATH}:${HOME}/.local/share/python/bin"
 
 # mise version manager - hopefully the last I'll ever need
-eval "$(mise activate zsh)"
+# eval "$(mise activate zsh)"
+. /opt/asdf-vm/asdf.sh
 
 # direnv env vars by directory
 eval "$(direnv hook zsh)"
