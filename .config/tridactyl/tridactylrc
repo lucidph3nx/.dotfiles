@@ -19,10 +19,10 @@ bind <Escape> composite mode normal | nohlsearch
 " Quickmarks
 quickmark c calendar.google.com
 quickmark g github.com
-" quickmark i instagram.com
+quickmark i instagram.com
 quickmark j https://jardengroup.atlassian.net/jira/software/c/projects/PLAT/boards/191
 quickmark m messenger.com
-" quickmark r reddit.com
+quickmark r reddit.com
 quickmark w https://www.metservice.com/towns-cities/locations/wellington
 quickmark y youtube.com
 
