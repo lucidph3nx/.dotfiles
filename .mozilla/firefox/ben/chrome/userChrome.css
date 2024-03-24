@@ -136,11 +136,7 @@ toolbar .toolbarbutton-1 { padding: 0 0 !important; }
 
 /* --- DEBLOAT URLBAR ----------------------------------- */
 
-#identity-box { display: none; }
-#pageActionButton { display: none; }
 #pocket-button { display: none; }
-/* #urlbar-zoom-button { display: none; } */
-#tracking-protection-icon-container { display: none !important; }
 #reader-mode-button{ display: none !important; }
 #star-button { display: none; }
 #star-button-box:hover { background: inherit !important; }
